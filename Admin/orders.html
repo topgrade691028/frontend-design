@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<title>Uber Eats</title>
+		<link media="all" rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/flatpickr.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<script src="js/flatpickr.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')</script>
+		<script src="js/select2.min.js" defer></script>
+		<script src="js/jquery.main.js" defer></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header id="header">
+				<div class="header-holder"><strong class="logo"><a href="#"><img src="images/logo.png" alt="Uber Eats Logo" width="177" height="45"></a></strong>
+					<nav id="nav"><a class="nav-opener" href="#"><span>Open</span></a>
+						<div class="nav-drop">
+							<div class="nav-drop">
+								<ul class="primary-menu">
+									<li class="menu-item"><a href="index.html"><i class="icon-dashboard"></i><i class="icon-dashboard-active"></i>Dashboard</a></li>
+									<li class="menu-item active"><a class="active" href="orders.html"><i class="icon-orders"></i><i class="icon-orders-active"></i>Orders</a></li>
+									<li class="menu-item"><a href="payments.html"><i class="icon-payment"></i><i class="icon-payment-active"></i>Payments<i class="notification">03</i></a></li>
+									<li class="menu-item"><a href="products.html"><i class="icon-products"></i><i class="icon-products-active"></i>Products</a></li>
+									<li class="menu-item"><a href="categories.html"><i class="icon-category"></i><i class="icon-category-active"></i>Categories</a></li>
+									<li class="menu-item"><a href="#"><i class="icon-dashboard"></i><i class="icon-dashboard-active"></i>Settings</a>
+										<ul style="margin-top: 20px;">
+										   <li class="menu-item"><a href="businessinfo.html"><i class="icon-help"></i><i class="icon-help-active"></i>Bussiness Info</a></li>
+										   <li class="menu-item"><a href="holiday-hours.html"><i class="icon-calendar"></i><i class="icon-calendar-active"></i>Holiday Hours</a></li>
+										   <li class="menu-item"><a href="pickup-times.html"><i class="icon-times"></i><i class="icon-times-active"></i>Pickup Times</a></li>      
+										   <li class="menu-item" style="margin-bottom: 0;"><a href="opening-hours.html"><i class="icon-calendar"></i><i class="icon-calendar-active"></i>Opening Hours</a></li>
+										</ul>
+									 </li>
+									<li class="menu-item"><a href="user.html"><i class="icon-user"></i><i class="icon-user-active"></i>Users</a></li>
+									<li class="menu-item"><a href="help.html"><i class="icon-info_circle"></i><i class="icon-help-active"></i>Help</a></li>
+									<li class="menu-item active"><a class="active" href="#"><i class="icon-logout"></i><i class="icon-logout-active"></i>Logout</a></li>
+								 </ul>
+							</div>
+						</div>
+					</nav>
+	               <div class="mobile_bel_icon mobile_only notification_drop">
+	                  <a href="#"><i class="icon-notification"></i><span>4</span></a>
+	                  <div class="notify_menu">
+	                     <a href="#">Notification <span>1</span></a>
+	                     <a href="#">Notification <span>2</span></a>
+	                     <a href="#">Notification <span>3</span></a>
+	                     <a href="#">Notification <span>4</span></a>
+	                  </div>
+	               </div>
+				</div>
+			</header>
+			<main class="orders" id="main">
+				<div class="container">
+					<div class="title-wrapper">
+						<h1>orders</h1>
+							
+	                  <ul class="top-icons desktopOnly">
+	                     <li class="notification_drop">
+	                        <a href="#"><i class="icon-notification"></i><span>4</span></a>
+	                        <div class="notify_menu">
+	                           <a href="#">Notification <span>1</span></a>
+	                           <a href="#">Notification <span>2</span></a>
+	                           <a href="#">Notification <span>3</span></a>
+	                           <a href="#">Notification <span>4</span></a>
+	                        </div>
+	                     </li>
+	                  </ul>
+					</div>
+					<div class="tab-row fade-tabset">
+						<div class="tab-wrap">
+							<ul class="tabset">
+								<li class="active"><a href="#tab-1">Orders</a></li>
+								<li><a href="#tab-2">Items Sold</a></li>
+							</ul><a class="btn btn-primary" href="#"><i class="i icon-upload"></i>Export Order Data</a>
+						</div>
+						<div class="tab-content">
+							<div class="tab active" id="tab-1">
+								<div class="select-date orders-date">
+								  <input
+									class="flatpickr-range flatpickr-input"
+									type="text"
+									placeholder="Select Date.."
+									readonly="readonly"
+								  />
+								</div>
+								<div class="orders-info__items df-row">
+									<div class="col-xs-12 col-sm-6 col-lg-3">
+										<div class="card orders-info__item">
+											<div class="orders-info__name">Total Orders</div>
+											<div class="orders-info__number">03</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-lg-3">
+										<div class="card orders-info__item">
+											<div class="orders-info__name">Accepted Orders</div>
+											<div class="orders-info__number">03</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-lg-3">
+										<div class="card orders-info__item">
+											<div class="orders-info__name">Gross Revenue</div>
+											<div class="orders-info__number">$37.20</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-lg-3">
+										<div class="card orders-info__item">
+											<div class="orders-info__name">Average Order Value</div>
+											<div class="orders-info__number">$12.40</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<table class="order-table order-table-style w-100">
+										<thead>
+											<tr>
+												<th>ID</th>
+												<th>Location</th>
+												<th>Status</th>
+												<th>Created At</th>
+												<th>Expected By</th>
+												<th>Order Type</th>
+												<th>Payment</th>
+												<th>Total</th>
+												<th>Customer Type</th>
+												<th>Customer</th>
+												<th>Device</th>
+												<th></th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-label="ID" style="color: #ff8332">2149950</td>
+												<td data-label="Location">LOS NARNJOS TAQUERIA</td>
+												<td data-label="Status"><a class="btn btn-red" href="#">REJECTED</a></td>
+												<td data-label="Created At">06:17 PM 2021-12-06</td>
+												<td data-label="Expected By">ASAP (AROUND 15 minutes)</td>
+												<td data-label="Order Type">PICK UP</td>
+												<td data-label="Payment">CASH</td>
+												<td data-label="Total">35.62</td>
+												<td data-label="Customer Type">MEMBER</td>
+												<td data-label="Customer" style="color: #ff8332">Kellie Hufnagel</td>
+												<td data-label="Device" style="font-size: 30px;"><i class="fa fa-desktop fa-6" aria-hidden="true"></i></td>
+												<td ><a class="btn btn-eye" href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+												<td style="padding-top: 20px;"><a href="#" class="text-black" ><i class="icon-more"></i></a></td>
+											</tr>
+											<tr>
+												<td data-label="ID" style="color: #ff8332">2149950</td>
+												<td data-label="Location">LOS NARNJOS TAQUERIA</td>
+												<td data-label="Status"><a class="btn btn-red" href="#">REJECTED</a></td>
+												<td data-label="Created At">06:17 PM 2021-12-06</td>
+												<td data-label="Expected By">ASAP (AROUND 15 minutes)</td>
+												<td data-label="Order Type">PICK UP</td>
+												<td data-label="Payment">CASH</td>
+												<td data-label="Total">35.62</td>
+												<td data-label="Customer Type">MEMBER</td>
+												<td data-label="Customer" style="color: #ff8332">Kellie Hufnagel</td>
+												<td data-label="Device" style="font-size: 30px;"><i class="fa fa-desktop fa-6" aria-hidden="true"></i></td>
+												<td ><a class="btn btn-eye" href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+												<td style="padding-top: 20px;"><a href="#" class="text-black" ><i class="icon-more"></i></a></td>
+											</tr>
+											<tr>
+												<td data-label="ID" style="color: #ff8332">2149950</td>
+												<td data-label="Location">LOS NARNJOS TAQUERIA</td>
+												<td data-label="Status"><a class="btn btn-green" href="#">ACCEPTED</a></td>
+												<td data-label="Created At">06:17 PM 2021-12-06</td>
+												<td data-label="Expected By">ASAP (AROUND 15 minutes)</td>
+												<td data-label="Order Type">PICK UP</td>
+												<td data-label="Payment">CASH</td>
+												<td data-label="Total">35.62</td>
+												<td data-label="Customer Type">MEMBER</td>
+												<td data-label="Customer" style="color: #ff8332">Kellie Hufnagel</td>
+												<td data-label="Device" style="font-size: 30px;"><i class="fa fa-desktop fa-6" aria-hidden="true"></i></td>
+												<td ><a class="btn btn-eye" href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+												<td style="padding-top: 20px;"><a href="#" class="text-black" ><i class="icon-more"></i></a></td>
+											</tr>
+											<tr>
+												<td data-label="ID" style="color: #ff8332">2149950</td>
+												<td data-label="Location">LOS NARNJOS TAQUERIA</td>
+												<td data-label="Status"><a class="btn btn-green" href="#">ACCEPTED</a></td>
+												<td data-label="Created At">06:17 PM 2021-12-06</td>
+												<td data-label="Expected By">ASAP (AROUND 15 minutes)</td>
+												<td data-label="Order Type">PICK UP</td>
+												<td data-label="Payment">CASH</td>
+												<td data-label="Total">35.62</td>
+												<td data-label="Customer Type">MEMBER</td>
+												<td data-label="Customer" style="color: #ff8332">Kellie Hufnagel</td>
+												<td data-label="Device" style="font-size: 30px;"><i class="fa fa-desktop fa-6" aria-hidden="true"></i></td>
+												<td ><a class="btn btn-eye" href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+												<td style="padding-top: 20px;"><a href="#" class="text-black" ><i class="icon-more"></i></a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="tab" id="tab-2"></div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

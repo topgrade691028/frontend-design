@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restora</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico%7cRaleway:400,500,700%7cRoboto:400,500,700&display=swap" rel="stylesheet">
+
+    <link media="all" rel="stylesheet" href="css/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.main.js" defer></script>
+    <style>
+        body {
+            background-color: #fbfbfb;
+            overflow-y: scroll;
+        }
+        
+        .categoriesWrapper .catNav ul li a i {
+            padding-right: 28px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header" class="navbar-fixed">
+            <div class="container flex-container main-menu">
+                <div class="top-menu">
+                    <nav class="menu-holder home-nav not-home"><a href="#" class="nav-opener"><span></span></a></nav>
+                    <a href="#" class="logo">
+                        <span class="img-holder">
+								<img src="images/logo.png" alt="Restora">
+							</span>
+                        <span class="text-holder">
+								<span class="brand">Restora</span>
+                        <span class="slogan">Speak with the taste</span>
+                        </span>
+                    </a>
+                    <!-- <form class="search-form">
+                        <button type="submit"  class="serch-btn" name="submit"><i class="flaticon-user"></i></button>
+                                                <input type="text" class="search-box" placeholder="Type Something..">
+
+                        </form> -->
+
+                    <div></div>
+                    <a class="cancel-payment" style="display: none;">
+                        <div class="close"></div>
+                    </a>
+                </div>
+                <nav class="menu-holder">
+                    <ul class="nav">
+                        <li class="active"><a href="index.html">home</a></li>
+                        <li><a href="menu.html">menu</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                        <li style="display: flex; align-items: center; justify-content: center;">
+                            <a class="search-bar" href="my-account.html">
+                                <div class="login-user" style="margin-top: 0;"></div>
+                            </a>
+                            <a class="desktop-hidden" href="my-account.html">
+                                Account
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="btn-holder">
+                        <a href="ordernow.html" class="btn btn-small btn-primary">order now</a>
+                    </div>
+                    <div class="btn-holder mobile-hidden">
+                        <a href="my-account.html">
+                            <p class="user"></p>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main id="main">
+            <section class="hero-section bg-cover order-banner" style="background-color: #000">
+                <div class="align-wrap subHeader">
+                    <div class="container">
+                        <h1>Order Now</h1>
+                    </div>
+                </div>
+            </section>
+            <div class="innerPageContent">
+                <div class="container categoriesContainer">
+                    <div class="categoriesWrapper align-items-none">
+                        <div class="catNav">
+                            <div class="catNavWrap">
+                                <div class="catNavOuter">
+                                    <div class="categoriesmenu">
+                                        <ul class="navigation" id="mainNav">
+                                            <li>
+                                                <a style="text-decoration: none;" href="#" class="active"><i class="order"></i>MY ORDER</a>
+                                            </li>
+                                            <li>
+                                                <a style="text-decoration: none;" href="#"><i class="account"></i>My Account</a>
+                                            </li>
+                                            <li>
+                                                <a style="text-decoration: none;" href="#"><i class="sign-out"></i>Logout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="priceProducts" style="position:fixed; display:none;">
+                                        <p>Subtotal<br><span>$5.99</span></p>
+                                        <p>Delivery Charge<br><span>$4.00</span></p>
+                                        <p>Total<br><span>$9.99</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catDetail">
+                            <div class="row stickyElementsContainer">
+                                <div class="col-lg-75">
+                                    <div class="single-order-page">
+                                        <!--<h3 class="page-title">SINGLE ORDER</h3>-->
+                                        <div class="single-order-info">
+                                            <h3>ORDER #123456</h3>
+                                            <p>21/12/2019, 08.11 </p>
+                                        </div>
+                                        <div class="single-order-info-details">
+                                            <div class="row status-bottom clearfix">
+                                                <div class="item pull-left text-center">Items <span>2 items</span></div>
+                                                <div class="item pull-left text-center">Total <span>$8.02</span></div>
+                                                <div class="item pull-right text-center">E.T.A<span>30 mins</span> </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="single-order-page-col">
+                                            <div class="orders-name">Your Order Status</div>
+                                            <div class="orders-status-col anable ">
+                                                <h4>Order Received</h4>
+                                                <p>We're received your order</p>
+                                            </div>
+                                            <div class="orders-status-col anable">
+                                                <h4>Preparing for your food</h4>
+                                                <p>Your testy food is being Prepared</p>
+                                            </div>
+                                            <div class="orders-status-col anable">
+                                                <h4>Out for delivery</h4>
+                                                <p>Your food has been send out for delivery.</p>
+                                            </div>
+                                            <div class="orders-status-col anable ">
+                                                <h4>Delivery On Time </h4>
+                                                <p>We've successfully delivered your order ontime</p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-25">
+                                    <div class="cartElementWrap sidebar single-order-page-cart">
+                                        <div class="cartOuterWrap">
+                                            <div class="priceProducts" style="display:none;">
+                                                <p>Subtotal<br><span>$5.99</span></p>
+                                                <p>Delivery Charge<br><span>$4.00</span></p>
+                                                <p>Total<br><span>$9.99</span></p>
+                                            </div>
+                                            <h3 class="catNavTitle mobile-hidden" style="margin-top:10px !important;">Cart</h3>
+                                            <div class="cartWrap">
+                                                <h4 class="cartTitle">Your order</h4>
+                                                <ul class="cartOrderList">
+                                                    <li>
+                                                        <div class="orderLabel-col">
+                                                            <span class="orderLabel">Borek</span>
+                                                            <div class="orderAddRemoveBtns flex-container">
+                                                                <span class="orderQty text-center">	2</span>
+                                                            </div>
+                                                            <span class="orderPrice">£ 8.90</span>
+                                                        </div>
+                                                        <div class="orderinfo">Size: Large Toppings:Corn, Bacon (x2), Ketchup Drink: Cola</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="orderLabel-col">
+                                                            <span class="orderLabel">Borek</span>
+                                                            <div class="orderAddRemoveBtns flex-container">
+                                                                <span class="orderQty text-center">	2</span>
+                                                            </div>
+                                                            <span class="orderPrice">£ 8.90</span>
+                                                        </div>
+                                                        <div class="orderinfo">Size: Large Toppings:Corn, Bacon (x2), Ketchup Drink: Cola</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="orderLabel-col">
+                                                            <span class="orderLabel">Borek</span>
+                                                            <div class="orderAddRemoveBtns flex-container">
+                                                                <span class="orderQty text-center">	2</span>
+                                                            </div>
+                                                            <span class="orderPrice">£ 8.90</span>
+                                                        </div>
+                                                        <div class="orderinfo">Size: Large Toppings:Corn, Bacon (x2), Ketchup Drink: Cola</div>
+                                                    </li>
+                                                </ul>
+                                                <div class="flex-container cartTotalAmount">
+                                                    <span>Total</span>
+                                                    <span>£ 26.70</span>
+                                                </div>
+                                                <!-- <button class="chkOutBtn">Go to checkout</button>											 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: 30px;">
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="mobile-hidden">
+                <div class="container">
+                    <strong class="logo">
+					<span class="img-holder">
+						<img src="images/logo.png" alt="Restora">
+					</span>
+					<span class="text-holder">
+						<span class="brand">Restora</span>
+						<span class="slogan">Speak with the taste</span>
+					</span>
+				</strong>
+                    <div class="footer-text">
+                        <p>Restora!! Now That Your Tastes<br>Have Grown Up!</p>
+                    </div>
+                    <strong class="heading">contact information</strong>
+                    <div class="row">
+                        <div class="contact-block col-md-33">
+                            <div class="phone"></div>
+                            <strong class="title">phone</strong>
+                            <a class="tel" href="tel:+01987654321">+01 987654321(Toll free)</a>
+                        </div>
+                        <div class="contact-block col-md-33">
+                            <div class="location"></div>
+                            <strong class="title">address</strong>
+                            <address class="address">B-9223  Your Address Here,City,<br>Country.987097.</address>
+                        </div>
+                        <div class="contact-block col-md-33">
+                            <div class="envelope"></div>
+                            <strong class="title">email</strong>
+                            <a class="email" href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#115;&#116;&#111;&#114;&#097;&#046;&#099;&#111;&#109;">&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#115;&#116;&#111;&#114;&#097;&#046;&#099;&#111;&#109;</a>
+                        </div>
+                    </div>
+                    <div class="social-holder">
+                        <strong class="title">share the taste</strong>
+                        <ul class="social-media">
+                            <li>
+                                <a href="#">
+                                    <p class="facebook"></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="instagram"></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <a href="#" id="viewCart">
+                <div class="store-detail">
+                    <ul style="display: block;">
+                        <li>
+                            <p style="color:white;font-size: 16px;font-weight: 700; text-align: center;">View Ordered Items</p>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+            <div class="text-restora">
+                <p style="text-align:center">@Restora - 2019</p>
+            </div>
+        </footer>
+    </div>
+    <div class="catItemPopup">
+        <div class="catItemPopupInner">
+            <div class="catItemPopupContent">
+                <div class="catItemPopupContentInner">
+                    <button class="catItemPopupClose">X</button>
+                    <h4>Misket Kofte</h4>
+                    <p>Seasoned and pan fried meatballs garnished with sliced onions and chopped...</p>
+                    <small><b>Choose one</b></small>
+                    <ul class="chooseDealBtns flex-container">
+                        <li>
+                            <input hidden="hidden" id="plan" type="radio" name="plan">
+                            <label for="plan">Individual</label>
+                        </li>
+                        <li>
+                            <input hidden="hidden" type="radio" id="plan1" name="plan">
+                            <label for="plan1"> 
+								<div>Platter</div>
+								<div>+ £ 8.90</div>
+							</label>
+
+                        </li>
+                    </ul>
+                    <div class="orderAddRemoveBtns popupBtns flex-container">
+                        <div class="orderRemoveBtn">
+                            <button onclick="cartIncrement(event, -1)"><span></span></button>
+                        </div>
+                        <span class="orderQty">	2</span>
+                        <div class="orderAddBtn">
+                            <button onclick="cartIncrement(event, 1)"><span></span></button>
+                        </div>
+                    </div>
+                    <button class="chkOutBtn">Add £ 17.80</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" value="0" id="selectedval">
+    <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+
+    <script src="js/card.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        $('#viewCart').click(function(event) {
+            if ($("body").find('.search-form').css('display') == 'block') {
+                $("body").find('.search-form').fadeOut();
+            } else if ($('#viewCart li:nth-child(1) p').text() != 'Go Back') {
+                event.preventDefault();
+                $('body').css('overflow', 'hidden');
+                $("body").find(".catItemPopup").fadeOut();
+                $('.cancel-payment').show();
+                $('.search-bar').hide();
+                $('.priceProducts').show();
+                $('.input-coupon').show();
+                $('.categoriesmenu').hide();
+                $('#viewCart li:nth-child(1) p').text('Go Back');
+                $('.cartElementWrap').fadeIn();
+                $('.cartOuterWrap').css('height', $(window).height());
+                $('.cartWrapfooter').show();
+                $(this).find('div').css("background-color", '#ff5722');
+            } else {
+                event.preventDefault();
+                $('.cancel-payment').hide();
+                $('.search-bar').show();
+                $('.priceProducts').hide();
+                $('.input-coupon').attr("style", "display:none !important");
+                $('.categoriesmenu').show();
+                $('#viewCart li:nth-child(1) p').text('View Ordered Items');
+                $('.cartElementWrap').fadeOut();
+                $('.cartOuterWrap').css('height', $(window).height());
+                $('#viewCart').find('div').css("background-color", '#18c319');
+                $('body').css('overflow', 'auto');
+                $('body').css('position', 'unset');
+
+            }
+
+            setInterval(function() {
+                var fullheight = window.innerHeight;
+                var header1 = document.getElementById('header').clientHeight;
+                var header2 = document.getElementsByClassName('priceProducts')[0].clientHeight;
+                var footer = document.getElementsByClassName('store-detail')[0].clientHeight;
+                var totals = header1 + header2 + footer + 20;
+                var final = fullheight - totals;
+                $('.cartWrap').attr('style', 'max-height: ' + final + 'px !important');
+            }, 100);
+
+        });
+
+
+        $(".cancel-payment div").click(function(e) {
+            event.preventDefault();
+            //$('body').css('overflow', 'hidden');
+            $('.cancel-payment').hide();
+            $('.search-bar').show();
+            $('.priceProducts').hide();
+            $('.input-coupon').attr("style", "display:none !important");
+            $('.categoriesmenu').show();
+            $('#viewCart li:nth-child(1) p').text('View Ordered Items');
+            $('.cartElementWrap').fadeOut();
+            $('.cartOuterWrap').css('height', $(window).height());
+            $('#viewCart').find('div').css("background-color", '#18c319');
+            //$('body').css('position', 'initial');
+            $('body').css('overflow', 'auto');
+            $('body').css('position', 'unset');
+        });
+    </script>
+</body>
+
+</html>

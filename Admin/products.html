@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <title>Uber Eats</title>
+      <link media="all" rel="stylesheet" href="css/style.css">
+
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+      <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')</script>
+      <script src="js/select2.min.js" defer></script>
+      <script src="js/jquery.main.js" defer></script>
+      <script src="js/products.js" defer></script>
+
+   </head>
+   <body>
+      <div id="wrapper">
+
+         <div class="confirm_delete confirm_delete_products">
+				<div class="confirm_delete_cont">
+				   <p>Are you sure you want to delete?</p>
+				   <div class="confirm_btn">
+					  <button class="confirmDeleteProduct btn btn-primary">Yes</button>
+					  <button class="noDeleteProduct btn btn-primary">No</button>
+				   </div>
+				</div>
+			 </div>
+
+         <header id="header">
+            <div class="header-holder">
+               <strong class="logo"><a href="#"><img src="images/logo.png" alt="Uber Eats Logo" width="177" height="45"></a></strong>
+               <nav id="nav">
+                  <a class="nav-opener" href="#"><span>Open</span></a>
+                  <div class="nav-drop">
+							<ul class="primary-menu">
+								<li class="menu-item"><a href="index.html"><i class="icon-dashboard"></i><i class="icon-dashboard-active"></i>Dashboard</a></li>
+								<li class="menu-item"><a href="orders.html"><i class="icon-orders"></i><i class="icon-orders-active"></i>Orders</a></li>
+								<li class="menu-item"><a href="payments.html"><i class="icon-payment"></i><i class="icon-payment-active"></i>Payments<i class="notification">03</i></a></li>
+								<li class="menu-item active"><a class="active" href="products.html"><i class="icon-products"></i><i class="icon-products-active"></i>Products</a></li>
+								<li class="menu-item"><a href="categories.html"><i class="icon-category"></i><i class="icon-category-active"></i>Categories</a></li>
+								<li class="menu-item"><a href="#"><i class="icon-dashboard"></i><i class="icon-dashboard-active"></i>Settings</a>
+								   <ul style="margin-top: 20px;">
+									  <li class="menu-item"><a href="businessinfo.html"><i class="icon-help"></i><i class="icon-help-active"></i>Bussiness Info</a></li>
+									  <li class="menu-item"><a href="holiday-hours.html"><i class="icon-calendar"></i><i class="icon-calendar-active"></i>Holiday Hours</a></li>
+									  <li class="menu-item"><a href="pickup-times.html"><i class="icon-times"></i><i class="icon-times-active"></i>Pickup Times</a></li>      
+									  <li class="menu-item" style="margin-bottom: 0;"><a href="opening-hours.html"><i class="icon-calendar"></i><i class="icon-calendar-active"></i>Opening Hours</a></li>
+								   </ul>
+								</li>
+								<li class="menu-item"><a href="user.html"><i class="icon-user"></i><i class="icon-user-active"></i>Users</a></li>
+								<li class="menu-item"><a href="help.html"><i class="icon-info_circle"></i><i class="icon-help-active"></i>Help</a></li>
+								<li class="menu-item active"><a class="active" href="#"><i class="icon-logout"></i><i class="icon-logout-active"></i>Logout</a></li>
+							 </ul>
+						</div>
+               </nav>
+               <div class="mobile_bel_icon mobile_only notification_drop">
+                     <a href="#"><i class="icon-notification"></i><span>4</span></a>
+                  <div class="notify_menu">
+                     <a href="#">Notification <span>1</span></a>
+                     <a href="#">Notification <span>2</span></a>
+                     <a href="#">Notification <span>3</span></a>
+                     <a href="#">Notification <span>4</span></a>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <main id="main">
+            <div class="container">
+               <div class="title-wrapper">
+                  <h1>products</h1>
+                  
+                  <ul class="top-icons desktopOnly">
+                     <li class="notification_drop">
+                           <a href="#"><i class="icon-notification"></i><span>4</span></a>
+                        <div class="notify_menu">
+                           <a href="#">Notification <span>1</span></a>
+                           <a href="#">Notification <span>2</span></a>
+                           <a href="#">Notification <span>3</span></a>
+                           <a href="#">Notification <span>4</span></a>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="products-top-bar">
+                  <div class="products-number"> <span class="products-count">84</span>Products</div>
+                  <div class="products-top-bar-text">Happy with your changes? Publish them to the app.</div>
+                  <a class="btn btn-primary" href="#">Publish Changes</a>
+               </div>
+               <div class="card-title">List of menu 
+                  <div class="custome_toltip">
+                     <a href="#"><i class="icon-info_circle"></i></a>
+                     <span class="toltip_text">Tooltip text</span>
+                  </div>
+               </div>
+               <div class="list-products">
+                  <div class="card open-close">
+                     <div class="opener">
+                        <div class="title-wrap">
+                           <h2>Traditional Suppers</h2>
+                        </div>
+                        <div class="btn-wrap">
+                           <!-- <a class="btn btn-default collapse" href="#"><i class="icon-minimize"></i>Collapse</a> -->
+                           <a class="btn btn-default inactive btn-delete">Delete</a>
+                           <a class="btn btn-default inactive btn-modify">Modify</a>
+                           <a class="btn btn-primary item-expand btn-add-product" >Add Product</a>
+                        </div>
+                        <div class="items-number product_number_number">
+                           Items • <span class="count">22</span> 
+                           <div class="collaps_btn"><i class="icon-arrow_down"></i></div>
+                        </div>
+                     </div>
+                     <div class="slide">
+                        <div class="df-row sortable_list">
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box">
+                                 <img class="item-image" src="images/sangrilla.png" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (1 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.90</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box">
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (2 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$7.60</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Scampi</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.95</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box">
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (1 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.90</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (2 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$7.60</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Scampi</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.95</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (1 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.90</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (2 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$7.60</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Scampi</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.95</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card open-close">
+                     <div class="opener">
+                        <div class="title-wrap">
+                           <h2>Chips</h2>
+                        </div>
+                        <div class="btn-wrap">
+                           <!-- <a class="btn btn-default collapse" href="#"><i class="icon-minimize"></i>Collapse</a> -->
+                           <a class="btn btn-default inactive btn-delete">Delete</a>
+                           <a class="btn btn-default inactive btn-modify">Modify</a>
+                           <a class="btn btn-primary item-expand btn-add-product" >Add Product</a>
+                        </div>
+                        <div class="items-number product_number_number">
+                           Items • <span class="count">07</span>
+                           <div class="collaps_btn"><i class="icon-arrow_down"></i></div>
+                        </div>
+                     </div>
+                     <div class="slide">
+                        <div class="df-row sortable_list">
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (1 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.90</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (2 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$7.60</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Scampi</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.95</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card open-close">
+                     <div class="opener">
+                        <div class="title-wrap">
+                           <h2>Freshly Baked Pizza</h2>
+                        </div>
+                        <div class="btn-wrap">
+                           <!-- <a class="btn btn-default collapse" href="#"><i class="icon-minimize"></i>Collapse</a> -->
+                           <a class="btn btn-default inactive btn-delete">Delete</a>
+                           <a class="btn btn-default inactive btn-modify">Modify</a>
+                           <a class="btn btn-primary item-expand btn-add-product" >Add Product</a>
+                        </div>
+                        <div class="items-number product_number_number">
+                           Items • <span class="count">09</span>
+                           <div class="collaps_btn"><i class="icon-arrow_down"></i></div>
+                        </div>
+                     </div>
+                     <div class="slide">
+                        <div class="df-row sortable_list">
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (1 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.90</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (2 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$7.60</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Scampi</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.95</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card open-close">
+                     <div class="opener">
+                        <div class="title-wrap">
+                           <h2>Pakoras</h2>
+                        </div>
+                        <div class="btn-wrap">
+                           <!-- <a class="btn btn-default collapse" href="#"><i class="icon-minimize"></i>Collapse</a> -->
+                           <a class="btn btn-default inactive btn-delete" >Delete</a>
+                           <a class="btn btn-default inactive btn-modify" >Modify</a>
+                           <a class="btn btn-primary item-expand btn-add-product" >Add Product</a>
+                        </div>
+                        <div class="items-number product_number_number">
+                           Items • <span class="count">02</span>
+                           <div class="collaps_btn"><i class="icon-arrow_down"></i></div>
+                        </div>
+                     </div>
+                     <div class="slide">
+                        <div class="df-row sortable_list">
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (1 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.90</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (2 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$7.60</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Scampi</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.95</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card open-close">
+                     <div class="opener">
+                        <div class="title-wrap">
+                           <h2>Drinks</h2>
+                        </div>
+                        <div class="btn-wrap">
+                           <!-- <a class="btn btn-default collapse" href="#"><i class="icon-minimize"></i>Collapse</a> -->
+                           <a class="btn btn-default inactive btn-delete">Delete</a>
+                           <a class="btn btn-default inactive btn-modify">Modify</a>
+                           <a class="btn btn-primary item-expand btn-add-product" >Add Product</a>
+                        </div>
+                        <div class="items-number product_number_number">
+                           Items • <span class="count">02</span>
+                           <div class="collaps_btn"><i class="icon-arrow_down"></i></div>
+                        </div>
+                     </div>
+                     <div class="slide">
+                        <div class="df-row sortable_list">
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (1 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.90</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (2 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$7.60</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Scampi</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.95</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card open-close">
+                     <div class="opener">
+                        <div class="title-wrap">
+                           <h2>Ice Creams</h2>
+                        </div>
+                        <div class="btn-wrap">
+                           <!-- <a class="btn btn-default collapse" href="#"><i class="icon-minimize"></i>Collapse</a> -->
+                           <a class="btn btn-default inactive btn-delete" >Delete</a>
+                           <a class="btn btn-default inactive btn-modify" >Modify</a>
+                           <a class="btn btn-primary item-expand btn-add-product" >Add Product</a>
+                        </div>
+                        <div class="items-number product_number_number">
+                           Items • <span class="count">12</span>
+                           <div class="collaps_btn"><i class="icon-arrow_down"></i></div>
+                        </div>
+                     </div>
+                     <div class="slide">
+                        <div class="df-row sortable_list">
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (1 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.90</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (2 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$7.60</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Scampi</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.95</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card open-close">
+                     <div class="opener">
+                        <div class="title-wrap">
+                           <h2>Extras</h2>
+                        </div>
+                        <div class="btn-wrap">
+                           <!-- <a class="btn btn-default collapse" href="#"><i class="icon-minimize"></i>Collapse</a> -->
+                           <a class="btn btn-default inactive btn-delete" >Delete</a>
+                           <a class="btn btn-default inactive btn-modify" >Modify</a>
+                           <a class="btn btn-primary item-expand btn-add-product" >Add Product</a>
+                        </div>
+                        <div class="items-number product_number_number">
+                           Items • <span class="count">05</span>
+                           <div class="collaps_btn"><i class="icon-arrow_down"></i></div>
+                        </div>
+                     </div>
+                     <div class="slide">
+                        <div class="df-row sortable_list">
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (1 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.90</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Fish (2 pieces)</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$7.60</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-lg-4">
+                              <a class="item-box" >
+                                 <img class="item-image" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+                                 <div class="item-text">
+                                    <h5>Scampi</h5>
+                                    <div class="item-description">Add Description</div>
+                                    <div class="item-price">$4.95</div>
+                                 </div>
+                                 <i class="icon-drop"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="popup-holder">
+               <div class="lightbox" id="popup">
+                  <div class="tab-row fade-tabset">
+                     <ul class="tabset" style="margin: 0;">
+                       <li class="active"><a href="#tab-1">Product Settings</a></li>
+                       <li><a href="#tab-2">Product Options</a></li>
+                     </ul>
+                  <div class="tab-content">
+                     <div class="tab active" id="tab-1">
+                        <div class="new-product">
+                           <div class="new-product__top df-row">
+                              <div class="col-xs-12 col-md-7">
+                                 <div class="new-product__image-block">
+                                    <img class="new-product__image" src="images/product-1.png" srcset="images/product-1.png 1x, images/product-1@2x.png 2x, images/product-1@3x.png 3x" alt="image description">
+                                    <div class="new-product__image-btn-block"><a class="new-product__image-btn" href="#"><i class="icon-trashcan"></i></a><a class="new-product__image-btn" href="#"><i class="icon-edit"></i></a></div>
+                                 </div>
+                              </div>
+                              <div class="col-xs-12 col-md-5">
+                                 <div class="new-product__text-block">
+                                    <p>Make sure the item is</p>
+                                    <ul>
+                                       <li>Ready To Serve</li>
+                                       <li>Bright Lit</li>
+                                       <li>Large & Centered</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <form class="new-product__form" action="#" method="post">
+                              <div class="row df-row flex-start">
+                                 <div class="col-xs-12 col-md-6">
+                                    <label for="name">Product Tittle</label>
+                                    <input id="name" type="text" placeholder="e.g. Blueberry Pancakes" name="name" title="Name">
+                                 </div>
+                                 <div class="col-xs-12 col-md-6">
+                                    <label>Allergies</label>
+                                    <div class="select-wrap">
+                                       <select>
+                                          <option>Select</option>
+                                          <option>Select 1</option>
+                                          <option>Select 2</option>
+                                       </select>
+                                    </div>
+                                    <div class="input-wrap input-switch">
+                                       <input id="allergens" type="checkbox" name="Allergens">
+                                       <label for="allergens">This Item Has No Allergens.</label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row df-row flex-start">
+                                 <div class="col-xs-12 col-md-6">
+                                    <label for="description">Description</label>
+                                    <textarea name="description" id="description" placeholder="Brief Description..." title="Description"></textarea>
+                                    <label for="description" style="margin-bottom: 30px;">this should give customers all the information to understand.</label>
+                                 </div>
+                                 <div class="col-xs-12 col-md-6 new-product__alcohol">
+                                    <div class="row">
+                                       <label>Is This Alcohol, Or Another Age-Restricted Product?</label>
+                                    </div>
+                                    <div class="row">
+                                       <input id="yes" type="radio" name="alcohol" checked="checked">
+                                       <label for="yes">Yes<span class="checkmark-block"><i class="icon-checkmark"></i></span></label>
+                                       <input id="no" type="radio" name="alcohol">
+                                       <label for="no">No<span class="checkmark-block"><i class="icon-checkmark"></i></span></label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row df-row flex-start">
+                                 <div class="col-xs-12 col-md-6">
+                                    <label>Category</label>
+                                    <div class="select-wrap">
+                                       <select>
+                                          <option>Select</option>
+                                          <option>Select 1</option>
+                                          <option>Select 2</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row df-row flex-end new-product__price-block">
+                                 <div class="col-xs-12 col-sm-3">
+                                    <label for="price">Price</label>
+                                    <div class="new-product__price">
+                                       <input id="price" type="number" placeholder="0.00" name="price" title="price">
+                                    </div>
+                                 </div>
+                                 <div class="col-xs-12 col-sm-3">
+                                    <label for="tax-rate">Tax Rate</label>
+                                    <input id="tax-rate" type="number" placeholder="0.00" name="tax-rate" title="tax rate">
+                                 </div>
+                                 <div class="col-xs-12 col-sm-6">
+                                    <div class="btn-wrap pull-right new-product__btn-block"><a class="close btn btn-default" href="#">Cancel</a><a class="btn btn-primary btn-save-product"><i class="icon-close"></i>Add Item</a></div>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="tab" id="tab-2"></div>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,3874 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <title>Restora</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico%7cRaleway:400,500,700%7cRoboto:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link media="all" rel="stylesheet" href="css/main.css?version=3.2" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.main.js" defer></script>
+    <style data-vmid="font-styles">
+      @font-face {
+        font-family: OrderityBasis;
+        src: url("fonts/Orderity-Regular-optimised.woff2") format("woff2"),
+          url("fonts/Orderity-Regular-optimised.woff") format("woff");
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      body {
+        font-feature-settings: "tnum"; // Enable tabular numbers
+      }
+    </style>
+
+    <style>
+      body {
+              background-color: #f7f7f7;
+              overflow-y: scroll;
+          }
+
+          @media only screen and (max-width: 767px) and (min-width: 200px) {
+              .store-detail ul i {
+                  color: #000;
+                  font-size: 19px;
+                  padding-right: 30px;
+              }
+              .catItemPopup .catItemPopupContentInner.itemPopup {
+                  max-width: 445px !important;
+              }
+          }
+
+          @media only screen and (min-width: 768px) {
+              .catItemPopup .catItemPopupContentInner.itemPopup {
+                  max-width: 100% !important;
+              }
+              .catItemPopup .catItemPopupContentInner.itemPopup {
+                  max-width: 550px !important;
+              }
+          }
+
+          .custom_scroll::-webkit-scrollbar-track {
+              -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+              border-radius: 10px;
+              background-color: #F5F5F5;
+          }
+
+          .custom_scroll::-webkit-scrollbar {
+              width: 6px;
+              background-color: #000000;
+              height: 4px;
+          }
+
+          .custom_scroll::-webkit-scrollbar-thumb {
+              border-radius: 10px;
+              -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+              background-color: #000000;
+          }
+
+          .catItemPopup .multiple .chooseDealBtns li {
+              width: 100%;
+              margin-right: 0;
+          }
+
+          .catItemPopup .chooseDealBtns li {
+              width: 100%;
+              font-size: 14px;
+              min-width: 100%;
+              float: left;
+          }
+
+          .catItemPopup .chooseDealBtns {
+              /*overflow: auto;*/
+              width: 100%;
+              flex-wrap: wrap;
+              float: left;
+          }
+
+          .popup-scroll {
+              max-height: 300px;
+              overflow-y: auto;
+              margin-top: 5px;
+              margin-bottom: 5px;
+          }
+
+          @media only screen and (max-width: 1920px) and (min-width: 1440px) {
+              .popup-scroll {
+                  max-height: 370px;
+              }
+              .cartOrderList {
+                  max-height: 300px;
+              }
+          }
+
+          .itemPopup small {
+              font-size: 1rem;
+              width: 100%;
+              float: left;
+              text-align: left;
+              padding: 10px 15px;
+              background: #f9fafb;
+          }
+
+          .itemPopup .chooseDealBtns label {
+              border-right: none;
+              border-top: none;
+              border-left: none;
+              border-bottom: 2px solid #dbdbdb;
+              display: block;
+              padding: 20px 0;
+              height: auto;
+              float: left;
+              width: 100%;
+          }
+
+          .itemPopup .chooseDealBtns li+li {
+              margin: 0;
+          }
+
+          .chooseDealBtns label div:first-child {
+              float: left;
+          }
+
+          .chooseDealBtns label div {
+              float: right;
+              padding-right: 20px;
+              padding-left: 20px;
+          }
+
+          #tabs a {
+              color: black !important;
+              display: block;
+          }
+
+          .selectCollectionBtn label {
+              padding: 8px 0 !important;
+              height: auto !important;
+          }
+
+          #tabs li a label {
+              background: #ebebeb;
+              color: black;
+              border: 1px solid #ebebeb;
+              border-radius: 0px;
+          }
+
+          .inactive label {
+              background: white !important;
+              opacity: 1 !important;
+          }
+
+          .postcode_input {
+              color: black;
+              width: 100%;
+              z-index: 1;
+              margin-top: -20px;
+              display: block;
+              outline: 0px;
+              border-width: 0px 0px 1px;
+              border-color: initial;
+              border-image: initial;
+              border-bottom: 1px groove;
+              border-style: groove;
+              background: transparent;
+          }
+
+          span.quant_text {
+              position: absolute;
+              margin-top: -25px;
+              cursor: pointer;
+              border: 1px solid #64cb86;
+              border-radius: 50%;
+              background: #ffffff;
+              line-height: 23px;
+              width: 23px;
+              height: 23px;
+              right: -10px;
+          }
+
+          #success {
+              background: #03a679;
+              color: #f0f0f0;
+          }
+
+          #failure {
+              background: #ff3939;
+              color: #f0f0f0;
+          }
+
+          .notify {
+              position: fixed;
+              bottom: 30px;
+              width: 300px;
+              left: 50%;
+              margin-left: -150px;
+              height: 0;
+              box-sizing: border-box;
+              color: white;
+              text-align: center;
+              background: black;
+              overflow: hidden;
+              box-sizing: border-box;
+              transition: height .2s;
+              z-index: 999999;
+          }
+
+          #notifyType:before {
+              display: block;
+              margin-top: 15px;
+          }
+
+          .notify-active {
+              height: 63px;
+          }
+
+          .coupon-applied:before {
+            Content: "Your coupon was applied";
+          }
+          .success:before {
+              Content: "Item Added to cart";
+          }
+
+          .failure:before {
+              Content: "Item removed";
+          }
+
+          .cartOrderList::-webkit-scrollbar-track {
+              -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+              border-radius: 10px;
+              background-color: #F5F5F5;
+          }
+
+          .cartOrderList::-webkit-scrollbar {
+              width: 4px;
+              background-color: #64cb86;
+              height: 4px;
+          }
+
+          .cartOrderList::-webkit-scrollbar-thumb {
+              border-radius: 10px;
+              -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+              background-color: #64cb86;
+          }
+
+          .option_title {
+              font-size: 1.42857rem;
+              line-height: 1.4;
+              font-family: OrderityBasis, Arial, sans-serif;
+              font-weight: 600;
+          }
+      }
+    </style>
+    <!-- changes SD Start -->
+    <style>
+      .search-active.cross {
+        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQcHH35R_QlCEzgLaEsFVlcD0mkF1P95lymMQ&usqp=CAU);
+        background-size: cover;
+      }
+
+      #search_submit.cross {
+        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQcHH35R_QlCEzgLaEsFVlcD0mkF1P95lymMQ&usqp=CAU) !important;
+        background-size: cover !important;
+      }
+
+      ._error {
+        font-weight: bold;
+        color: red !important;
+        border: 1px red solid !important;
+      }
+
+      @-webkit-keyframes buzz-out-error {
+        10% {
+          -webkit-transform: translateX(3px) rotate(2deg);
+          transform: translateX(3px) rotate(2deg);
+        }
+        20% {
+          -webkit-transform: translateX(-3px) rotate(-2deg);
+          transform: translateX(-3px) rotate(-2deg);
+        }
+        30% {
+          -webkit-transform: translateX(3px) rotate(2deg);
+          transform: translateX(3px) rotate(2deg);
+        }
+        40% {
+          -webkit-transform: translateX(-3px) rotate(-2deg);
+          transform: translateX(-3px) rotate(-2deg);
+        }
+        50% {
+          -webkit-transform: translateX(2px) rotate(1deg);
+          transform: translateX(2px) rotate(1deg);
+        }
+        60% {
+          -webkit-transform: translateX(-2px) rotate(-1deg);
+          transform: translateX(-2px) rotate(-1deg);
+        }
+        70% {
+          -webkit-transform: translateX(2px) rotate(1deg);
+          transform: translateX(2px) rotate(1deg);
+        }
+        80% {
+          -webkit-transform: translateX(-2px) rotate(-1deg);
+          transform: translateX(-2px) rotate(-1deg);
+        }
+        90% {
+          -webkit-transform: translateX(1px) rotate(0);
+          transform: translateX(1px) rotate(0);
+        }
+        100% {
+          -webkit-transform: translateX(-1px) rotate(0);
+          transform: translateX(-1px) rotate(0);
+        }
+      }
+
+      .buzz-out-error {
+        -webkit-animation-name: buzz-out-error;
+        animation-name: buzz-out-error;
+        -webkit-animation-duration: 0.75s;
+        animation-duration: 0.75s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+      }
+
+      .required_text._hidden,
+      ._hidden {
+        display: none;
+      }
+
+      .required_text {
+        color: #191919;
+        border: 1px black solid;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 14px;
+        float: right;
+      }
+
+      .sid_lbl,
+      .itemPopup .chooseDealBtns label.sid_lbl {
+        cursor: default;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        align-content: stretch !important;
+        padding: 0px !important;
+        width: 100% !important;
+        transition: width 2s !important;
+        border-top: 1px solid transparent !important;
+        border-bottom: 1px solid transparent !important;
+        padding: 0px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        font-size: 16px !important;
+      }
+
+      .sid_lbl .s_icon {
+        display: flex;
+        overflow: hidden;
+        transition: all 0.2s;
+        flex-basis: 0%;
+        justify-content: center;
+        font-size: 28px;
+        line-height: 0.7em;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Morse_code_dot.svg/1024px-Morse_code_dot.svg.png);
+        background-repeat: no-repeat;
+        background-size: 0.65em;
+        background-position: center center;
+      }
+
+      .sid_lbl .s_label {
+        padding: 5px;
+        padding-left: 10px;
+        display: flex;
+        flex-grow: 1;
+      }
+
+      .sid_lbl .s_price {
+        display: flex;
+        width: 100px !important;
+        padding: 5px;
+        justify-content: flex-end;
+      }
+
+      .sid_lbl.active {
+        background: #dadada3d;
+        color: black !important;
+      }
+
+      .sid_lbl.active .s_label {
+        /*padding-left:0px;*/
+      }
+
+      .sid_lbl.active .s_icon {
+        overflow: none;
+        flex-basis: 8%;
+      }
+
+      .sid_lbl_mul {
+        cursor: default;
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        align-content: stretch;
+        padding: 0px;
+        width: 100%;
+        transition: width 2s;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        padding: 5px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        font-size: 16px !important;
+        margin-top: -1px;
+      }
+
+      .sid_lbl_mul .s_pill {
+        display: flex;
+        overflow: hidden;
+        transition: all 0.15s;
+        transition-timing-function: ease-in;
+        flex-basis: 0%;
+        justify-content: center;
+        font-size: 20px;
+        line-height: 1.2em;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        align-self: center;
+        font-weight: bold;
+      }
+
+      .sid_lbl_mul .s_pill .pill_inner {
+        font-size: 10px;
+        background: black;
+        color: #fff;
+        display: flex;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        height: inherit;
+        flex-shrink: 1;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-radius: 10px;
+        height: 18px;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+      }
+
+      .sid_lbl_mul .s_label {
+        padding: 8px;
+        padding-left: 10px;
+        display: flex;
+        flex-grow: 1;
+        font-size: 15px;
+        align-items: center;
+      }
+
+      .sid_lbl_mul .s_price {
+        display: flex;
+        width: 100px !important;
+        padding: 8px;
+        font-size: 15px;
+        align-items: center;
+        text-align: right;
+        justify-content: flex-end;
+      }
+
+      .sid_lbl_mul.active {
+        color: black !important;
+        /*background: #c0f5c0;*/
+      }
+
+      .sid_lbl_mul.active .s_label {
+        /*padding-left:0px;*/
+      }
+
+      .sid_lbl_mul.active .s_pill {
+        overflow: none;
+        flex-basis: 8%;
+      }
+      /*.sid_lbl_mul.active .s_actions
+        {
+            overflow: none;
+            flex-basis: 5%;
+        }*/
+
+      .sid_lbl_mul .s_actions img {
+        height: 18px;
+      }
+
+      .noselect {
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently
+                                          supported by Chrome, Edge, Opera and Firefox */
+      }
+
+      .cartOuterWrap.fixed {
+        position: fixed;
+        top: 0px;
+        width: 387px;
+      }
+
+      .cartOuterWrap.fixed-bottom {
+        bottom: 675px;
+        top: auto;
+      }
+
+      .cartElementWrap.sidebar {
+        position: relative;
+        height: 100%;
+      }
+
+      .catNavWrap {
+        position: relative;
+        min-height: 100%;
+      }
+
+      @media screen and (max-width: 767px) {
+        .cartElementWrap.sidebar {
+          position: fixed;
+        }
+        .notify {
+          bottom: 100px;
+        }
+      }
+    </style>
+    <!-- changes SD End -->
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div class="notify"><span id="notifyType" class=""></span></div>
+      <header id="header" class="navbar-fixed">
+        <div class="container flex-container main-menu">
+          <div class="top-menu mobile-menu">
+            <nav class="menu-holder home-nav not-home">
+              <a href="#" class="nav-opener"><span></span></a>
+            </nav>
+            <a href="#" class="logo">
+              <span class="img-holder">
+                <img src="images/logo.png" alt="Restora" />
+              </span>
+              <span class="text-holder">
+                <span class="brand">Restora</span>
+                <span class="slogan">Speak with the taste</span>
+              </span>
+            </a>
+            <div></div>
+            <div class="mobileSearch">
+              <div class="preTopNav-Items searchBar">
+                <input
+                  type="text"
+                  id="searchMobile"
+                  placeholder="What're you looking for ?"
+                />
+                <div class="searchIcon-wrapper">
+                  <img class="searchIcon" src="images/search.png" />
+                  <img class="searchClose" src="images/close.png" />
+                </div>
+              </div>
+              <!-- <button type="submit" class="serch-btn" name="submit">
+                <div class="search-active"></div>
+              </button>
+              <input
+                type="text"
+                class="search-box"
+                placeholder="Type Something.."
+              /> -->
+            </div>
+            <!-- <div></div> -->
+            <!-- <a class="search-bar" style="margin: unset">
+              <div class="search"></div>
+            </a> -->
+            <a class="cancel-payment" style="display: none">
+              <div class="close"></div>
+            </a>
+          </div>
+          <nav class="menu-holder">
+            <ul class="nav">
+              <li><a href="index.html">home</a></li>
+              <li><a href="menu.html">menu</a></li>
+              <li><a href="about.html">about</a></li>
+              <li><a href="contact.html">contact</a></li>
+              <li
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <a class="search-bar" href="my-account.html">
+                  <div class="login-user" style="margin-top: 0"></div>
+                </a>
+                <a class="desktop-hidden" href="my-account.html"> Account </a>
+              </li>
+            </ul>
+            <div class="btn-holder">
+              <a href="ordernow.html" class="btn btn-small btn-primary"
+                >order now</a
+              >
+            </div>
+            <div class="btn-holder mobile-hidden">
+              <a href="my-account.html">
+                <p class="user"></p>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main id="main">
+        <section
+          class="hero-section bg-cover order-banner"
+          style="background-color: #000"
+        >
+          <div class="align-wrap subHeader">
+            <div class="container">
+              <!--<h1>Order Now</h1>-->
+            </div>
+          </div>
+        </section>
+        <div class="innerPageContent">
+          <div class="container categoriesContainer">
+            <div class="categoriesWrapper align-items-none">
+              <div class="catNav">
+                <div class="catNavWrap">
+                  <div class="catNavOuter">
+                    <div class="categoriesmenu">
+                      <h4 class="catNavTitle hide-cat-on-mobile">Categories</h4>
+                      <ul class="navigation" id="mainNav">
+                        <li>
+                          <a
+                            style="text-decoration: none"
+                            href="javascript:void(0);"
+                            onclick="scrollToCategory('1')"
+                            class="active"
+                            id="coodi1"
+                            >Sushi</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            style="text-decoration: none"
+                            href="javascript:void(0);"
+                            onclick="scrollToCategory('2')"
+                            id="coodi2"
+                            >Hot food</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            style="text-decoration: none"
+                            href="javascript:void(0);"
+                            onclick="scrollToCategory('3')"
+                            id="coodi3"
+                            >Sushi platters</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            style="text-decoration: none"
+                            href="javascript:void(0);"
+                            onclick="scrollToCategory('4')"
+                            id="coodi4"
+                            >Coodiments</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            style="text-decoration: none"
+                            href="javascript:void(0);"
+                            onclick="scrollToCategory('5')"
+                            id="coodi5"
+                            >Drinks</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            style="text-decoration: none"
+                            href="javascript:void(0);"
+                            onclick="scrollToCategory('6')"
+                            id="coodi6"
+                            >Snacks</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="goto-cart">
+                    <i class="cart-grey"></i>
+                    <p style="font-size: 16px; font-weight: 700">View Cart</p>
+                  </div>
+                </div>
+              </div>
+              <div class="catDetail">
+                <div class="row stickyElementsContainer">
+                  <div class="col-lg-75" style="position: relative">
+                    <div class="desktopSearch">
+                      <form action="" autocomplete="on">
+                        <!-- <input
+                          id="search"
+                          name="search"
+                          type="text"
+                          placeholder="What're we looking for ?"
+                        /><input
+                          id="search_submit"
+                          value="Rechercher"
+                          type="submit"
+                        /><input
+                          id="search_submit_close"
+                          value="Rechercher"
+                          type="submit"
+                        /> -->
+                        <div class="preTopNav-Items searchBar">
+                          <input
+                            type="text"
+                            id="searchDesktop"
+                            placeholder="What're you looking for ?"
+                          />
+                          <div class="searchIcon-wrapper">
+                            <img class="searchIcon" src="images/search.png" />
+                            <img class="searchClose" src="images/close.png" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="foodList">
+                      <h4 class="catNavTitle cat-new-color" id="1">Sushi</h4>
+                      <ul class="navDetailList row page-section" listIndex="1">
+                        <li class="col-md-50">
+                          <a href="javacript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="100016"
+                                />
+                                <h4>Sushi 1</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating. Sushi 1
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img
+                                  src="images/pizza.jpg"
+                                  alt="Pizza"
+                                  style="width: 150px"
+                                />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javacript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="100017"
+                                />
+                                <h4>Sushi 2</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating. Sushi 2
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img
+                                  src="images/pizza.jpg"
+                                  alt="Pizza"
+                                  style="width: 150px"
+                                />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javacript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="100018"
+                                />
+                                <h4>Sushi 3</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating. Sushi 3
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javacript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="100019"
+                                />
+                                <h4>Sushi 4</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating. Sushi 4
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="foodList">
+                      <h4 class="catNavTitle cat-new-color" id="2">Hot food</h4>
+                      <ul class="navDetailList row page-section" listIndex="2">
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1671649"
+                                />
+                                <h4 class="title">Hot Food 1</h4>
+                                <p>
+                                  Aubergine slashed down the middle and stuffed
+                                  with onions, garlic and tomatoes HOt Food. Hot
+                                  Food 1
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1616649"
+                                />
+                                <h4 class="title">Hot Food 2</h4>
+                                <p>
+                                  Aubergine slashed down the middle and stuffed
+                                  with onions, garlic and tomatoes HOt Food. Hot
+                                  Food 1
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Hot Food 3</h4>
+                                <p>
+                                  Aubergine slashed down the middle and stuffed
+                                  with onions, garlic and tomatoes HOt Food. Hot
+                                  Food 1
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Hot Food 4</h4>
+                                <p>
+                                  Aubergine slashed down the middle and stuffed
+                                  with onions, garlic and tomatoes HOt Food. Hot
+                                  Food 1
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="foodList">
+                      <h4 class="catNavTitle cat-new-color" id="3">
+                        Sushi Platters
+                      </h4>
+                      <ul class="navDetailList row page-section" listIndex="3">
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Sushi Platter 1</h4>
+                                <p>
+                                  Deep fried filo pastry filled with creamy.
+                                  Turkish with cheese and parsley.Sushi Platter
+                                  1
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Sushi Platter 2</h4>
+                                <p>
+                                  Deep fried filo pastry filled with creamy.
+                                  Turkish with cheese and parsley.Sushi Platter
+                                  1
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Sushi Platter 3</h4>
+                                <p>
+                                  Deep fried filo pastry filled with creamy.
+                                  Turkish with cheese and parsley.Sushi Platter
+                                  1
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Sushi Platter 4</h4>
+                                <p>
+                                  Deep fried filo pastry filled with creamy.
+                                  Turkish with cheese and parsley.Sushi Platter
+                                  1
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="foodList">
+                      <h4 class="catNavTitle cat-new-color" id="4">
+                        Coodiments
+                      </h4>
+                      <ul class="navDetailList row page-section" listIndex="4">
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Coodiments 1</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating. Coodiments 2
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Coodiments 2</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating. Coodiments 2
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Coodiments 3</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating. Coodiments 2
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Coodiments 4</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating. Coodiments 2
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="foodList">
+                      <h4 class="catNavTitle cat-new-color" id="5">Drinks</h4>
+                      <ul class="navDetailList row page-section" listIndex="5">
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Kalamar 1</h4>
+                                <p>
+                                  Deep fried filo pastry filled with creamy.
+                                  Turkish with cheese and parsley.
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Kalamar 2</h4>
+                                <p>
+                                  Deep fried filo pastry filled with creamy.
+                                  Turkish with cheese and parsley.
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Kalamar 3</h4>
+                                <p>
+                                  Deep fried filo pastry filled with creamy.
+                                  Turkish with cheese and parsley.
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Kalamar 4</h4>
+                                <p>
+                                  Deep fried filo pastry filled with creamy.
+                                  Turkish with cheese and parsley.
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="foodList">
+                      <h4 class="catNavTitle cat-new-color" id="6">Snacks</h4>
+                      <ul class="navDetailList row page-section" listIndex="6">
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Kalamar 1</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating.
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Kalamar 2</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating.
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Kalamar 3</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating.
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-50">
+                          <a href="javascript:void(0);">
+                            <div class="flex-container">
+                              <div class="navDetaildesc">
+                                <input
+                                  id="item_id"
+                                  type="hidden"
+                                  value="1615649"
+                                />
+                                <h4 class="title">Kalamar 4</h4>
+                                <p>
+                                  Delicate fried squid in a light seasoned
+                                  coating.
+                                </p>
+                                <span class="price" data-price="4.45"
+                                  >£ 4.45</span
+                                >
+                              </div>
+                              <div>
+                                <img style="width: 150px" />
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="space70"></div>
+                    <ul
+                      class="
+                        navDetailList0
+                        row0
+                        page-section0
+                        _hidden
+                        _noresults
+                      "
+                    >
+                      <h4
+                        class="catNavTitle cat-new-color"
+                        id="1"
+                        style="display: none"
+                      >
+                        &nbsp;
+                      </h4>
+                      <li
+                        class="col-md-50"
+                        style="
+                          width: 100% !important;
+                          max-width: inherit !important;
+                          margin: auto;
+                          /* padding: 0px; */
+                          margin-atop: 100px;
+                        "
+                      >
+                        <a href="javascript:void(0);">
+                          <div class="flex-container">
+                            <input id="item_id" type="hidden" value="1319874" />
+                            <h4>No Results</h4>
+                            <span class="price">&nbsp;</span>
+                          </div>
+                          <div class="navDetaildesc">
+                            <p>No Results Found</p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-25">
+                    <div class="cartElementWrap sidebar">
+                      <div class="cartOuterWrap">
+                        <h3 class="catNavTitle mobile-hidden">Cart</h3>
+                        <div class="cartWrap custom_scroll">
+                          <h4 class="cartTitle">Your order</h4>
+                          <div class="order_round_main">
+                            <div class="order_round_sub_l">
+                              <div class="order_round_sub">
+                                <div class="order_icon">
+                                  <img src="images/delivery.svg" />
+                                </div>
+                                <div class="order_icon_text">
+                                  Delivery<br />
+                                  25-30 Mins
+                                </div>
+                              </div>
+                            </div>
+                            <div class="order_round_sub_r">
+                              <div class="order_round_sub">
+                                <div class="order_icon">
+                                  <img src="images/collection.svg" />
+                                </div>
+                                <div class="order_icon_text">
+                                  Collection<br />
+                                  Unavalable
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="order_round_sub_m">
+                              <div class="order_round_sub">
+                                <div class="order_icon">
+                                  <img src="images/delivery_blue.svg" />
+                                </div>
+                                <div class="order_icon_text_m">
+                                  Delivery<br />
+                                  25-30 Mins
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <ul
+                            class="cartOrderList scrollbar-macosx"
+                            id="cartOrderList"
+                          ></ul>
+                          <div
+                            class="input-coupon mobile-hidden"
+                            style="
+                              display: block;
+                              width: 100%;
+                            "
+                          >
+                            <div
+                              class="input1 row"
+                              style="
+                                margin: 0;
+                                width: 100%;
+                                background: white;
+                                padding-top: 15px;
+                              "
+                            >
+                              <div
+                                class="hide_placeholder"
+                                style="
+                                  position: relative;
+                                  width: 80%;
+                                  display: block;
+                                "
+                              >
+                                <div class="background coupon-code">
+                                  CAOK65517
+                                </div>
+                                <input
+                                  placeholder="Coupon Code"
+                                  class="effect-16"
+                                  style="color: black"
+                                  id="firstlabel"
+                                  style="
+                                    outline: 0;
+                                    width: 100%;
+                                    border: 0;
+                                    z-index: 1;
+                                    margin-top: -20px;
+                                    border-bottom: 1px;
+                                    border-style: groove;
+                                    background: transparent;
+                                    display: block;
+                                  "
+                                />
+                                <input class="coupon_applied" type="hidden" value="0"/>
+                                <label
+                                  style="top: 1px; text-align: left !important"
+                                  >Coupon Code</label
+                                >
+                                <span
+                                  class="focus-border"
+                                  style="top: 27px"
+                                ></span>
+                              </div>
+                              <div
+                                style="
+                                  width: 20%;
+                                  display: flex;
+                                  text-align: center;
+                                "
+                              >
+                                <a
+                                  style="
+                                    width: 23px;
+                                    height: 23px;
+                                    background: #000000;
+                                    border-radius: 30px;
+                                    text-align: center;
+                                    margin-left: 20px;
+                                    color: white;
+                                  "
+                                >
+                                  <p style="margin: -2px" class="submit_coupon">></p>
+                                </a>
+                              </div>
+                            </div>
+                            <!-- <div
+                              class="input2"
+                              style="
+                                position: relative;
+                                display: block;
+                                background: white;
+                                margin-top: 20px;
+                                width: 100%;
+                                padding-right: 0px;
+                              "
+                            >
+                              <div
+                                class="hide_placeholder"
+                                style="
+                                  position: relative;
+                                  width: 100%;
+                                  display: block;
+                                "
+                              >
+                                <div class="background allergic">
+                                  e.g. allergic
+                                </div>
+                                <input
+                                  placeholder="Notes"
+                                  class="effect-16"
+                                  style="color: black"
+                                  id="secondlabel"
+                                  style="
+                                    outline: 0;
+                                    width: 100%;
+                                    border: 0;
+                                    z-index: 1;
+                                    margin-top: -20px;
+                                    border-bottom: 1px;
+                                    border-style: groove;
+                                    background: transparent;
+                                    display: block;
+                                  "
+                                />
+                                <label
+                                  style="top: 1px; text-align: left !important"
+                                  >Notes</label
+                                >
+                                <span
+                                  class="focus-border"
+                                  style="top: 27px"
+                                ></span>
+                              </div>
+                            </div> -->
+                          </div>
+                          <div class="priceProducts" style="margin-top: 15px;">
+                            <p>
+                              Subtotal <br /><span
+                                >$<span class="sub_total">5.99</span></span
+                              >
+                            </p>
+                            <p>
+                              Delivery Charge <br /><span>$4.00</span>
+                            </p>
+                            <p class="cart_discount" style="display: none;">
+                              Discount <br /><span>$<span class="cart_discount_price">0</span></span>
+                            </p>
+                            <p>
+                              Total <br /><span
+                                >$<span class="total cart_total_price"
+                                  >0</span
+                                ></span
+                              >
+                            </p>
+                          </div>
+                          <!-- <div
+                            class="flex-container cartTotalAmount mobile-hidden"
+                          >
+                            <span>Total</span>
+                            <span class="cart_total"
+                              >£ <span class="cart_total_price">0</span></span
+                            >
+                          </div> -->
+                          <a href="payment.html"
+                            ><button
+                              class="
+                                chkOutBtn
+                                checkout-button-cart
+                                mobile-hidden
+                              "
+                            >
+                              Go to checkout
+                            </button></a
+                          >
+                        </div>
+                      </div>
+                      <div class="collection col-md-50" style="display: none">
+                        <div class="collectionDiv">
+                          <a href="">
+                            <div class="flex-container">
+                              <h4>Collection Popup</h4>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer id="footer">
+        <div class="mobile-hidden">
+          <div class="container">
+            <strong class="logo">
+              <span class="img-holder">
+                <img src="images/logo.png" alt="Restora" />
+              </span>
+              <span class="text-holder">
+                <span class="brand">Restora</span>
+                <span class="slogan">Speak with the taste</span>
+              </span>
+            </strong>
+            <div class="footer-text">
+              <p>Restora!! Now That Your Tastes <br />Have Grown Up!</p>
+            </div>
+            <strong class="heading">contact information</strong>
+            <div class="row">
+              <div class="contact-block col-md-33">
+                <div class="phone"></div>
+                <strong class="title">phone</strong>
+                <a class="tel" href="tel:+01987654321"
+                  >+01 987654321(Toll free)</a
+                >
+              </div>
+              <div class="contact-block col-md-33">
+                <div class="location"></div>
+                <strong class="title">address</strong>
+                <address class="address">
+                  B-9223 Your Address Here,City,<br />Country.987097.
+                </address>
+              </div>
+              <div class="contact-block col-md-33">
+                <div class="envelope"></div>
+                <strong class="title">email</strong>
+                <a
+                  class="email"
+                  href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#115;&#116;&#111;&#114;&#097;&#046;&#099;&#111;&#109;"
+                  >&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#115;&#116;&#111;&#114;&#097;&#046;&#099;&#111;&#109;</a
+                >
+              </div>
+            </div>
+            <div class="social-holder">
+              <strong class="title">share the taste</strong>
+              <ul class="social-media">
+                <li>
+                  <a href="#">
+                    <p class="facebook"></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p class="instagram"></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="input-coupon" style="display: none !important; width: 100%">
+          <div
+            class="input1 row"
+            style="
+              margin: 0;
+              width: 100%;
+              background: white;
+              padding-top: 15px;
+              padding-left: 30px;
+              padding-right: 30px;
+            "
+          >
+            <div
+              class="hide_placeholder"
+              style="position: relative; width: 80%; display: block"
+            >
+              <div class="background coupon-code">CAOK65517</div>
+              <input
+                placeholder=""
+                class="effect-16 couponCode"
+                style="color: black"
+                id="firstlabel"
+              />
+              <input class="coupon_applied1" type="hidden" value="0"/>
+              <label style="top: 1px; text-align: left !important"
+                >Coupon Code</label
+              >
+              <span class="focus-border" style="top: 27px"></span>
+            </div>
+            <div style="width: 20%; display: flex; text-align: center">
+              <a
+                style="
+                  width: 23px;
+                  height: 23px;
+                  background: black;
+                  border-radius: 30px;
+                  text-align: center;
+                  margin-left: 20px;
+                  color: white;
+                "
+              >
+                <p style="margin: -3px" class="submit_coupon">></p>
+              </a>
+            </div>
+          </div>
+          <!--<div class="input2" style="position: relative; display:block;background: white;margin-top: 20px; width:100%;   padding-top: 20px;      padding-left: 30px;padding-right: 30px;">
+                    <div class="hide_placeholder" style="position: relative; width: 100%; display:block">
+                        <div class="background allergic">e.g. allergic</div>
+                        <input placeholder="" class="effect-16 allergic-note" style="color:black" id="secondlabel">
+                        <label style="top: 1px;text-align: left !important;">Note1s</label>
+                                                                    <span class="focus-border" style="top: 27px;"></span>
+                                                                </div>
+                                                            </div>-->
+        </div>
+        <a href="#" id="viewCart">
+          <div class="store-detail">
+            <ul>
+              <li>
+                <i class="cart"></i>
+                <span
+                  ><span class="mobile_cart_item_total">0</span> Items: $<span
+                    class="cart_total_price"
+                    >0</span
+                  ></span
+                >
+              </li>
+              <li>
+                <p style="color: white; font-size: 16px; font-weight: 700">
+                  View Cart
+                </p>
+              </li>
+            </ul>
+          </div>
+        </a>
+        <div class="text-restora">
+          <p style="text-align: center">@Restora - 2019</p>
+        </div>
+      </footer>
+    </div>
+    <div class="catItemPopup">
+      <div class="catItemPopupInner">
+        <div class="catItemPopupContent">
+          <div class="catItemPopupContentInner itemPopup">
+            <button class="catItemPopupClose">
+              <img src="images/close_icon.svg" />
+            </button>
+            <div
+              class="popup-header-texts"
+              style="
+                box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+                padding: 30px;
+                padding-bottom: 10px;
+              "
+            >
+              <h4 id="item_title" style="margin-bottom: 0px">Misket Kofte</h4>
+            </div>
+            <div class="popup-scroll custom_scroll">
+              <img id="item_image" src="images/pizza_big.jpg" />
+              <p id="item_description" style="padding-left: 20px; padding-right: 20px">
+                Seasoned and pan fried meatballs garnished with sliced onions
+                and chopped...
+              </p>
+              <div class="single"></div>
+              <div class="multiple"></div>
+            </div>
+            <div class="popup-footer">
+              <div
+                class="shadow-ting"
+                style="
+                  padding-top: 5px;
+                  width: 100%;
+                  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.12);
+                "
+              >
+                <span></span>
+              </div>
+              <div class="orderAddRemoveBtns popupBtns flex-container">
+                <div class="orderRemoveBtn">
+                  <div
+                    class="cart-icon cart_decrement"
+                    _onclick="cartIncrement(event, -1)"
+                  >
+                    <img src="images/minus.svg" />
+                  </div>
+                </div>
+                <span
+                  class="orderQty"
+                  style="
+                    font-family: OrderityBasis, Arial, sans-serif;
+                    color: #2a3846;
+                    font-size: 2.57143rem;
+                  "
+                  >1</span
+                >
+                <div class="orderAddBtn">
+                  <div
+                    class="cart-icon cart_increment"
+                    _onclick="cartIncrement(event, 1)"
+                  >
+                    <img src="images/add-button.svg" />
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" name="item_id" value="" class="item_id" />
+              <input
+                type="hidden"
+                name="item_price"
+                class="item_price"
+                value=""
+              />
+              <input
+                type="hidden"
+                name="total_price"
+                class="total_price"
+                value=""
+              />
+              <input
+                type="hidden"
+                name="subtotal_price"
+                class="subtotal_price"
+                value=""
+              />
+              <button class="chkOutBtn addToCartV2" style="width: 80%">
+                Add To Order £<span class="ckh_price">17.80</span></button
+              ><span class="addToCart"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collectionPopup">
+      <div class="collectionPopupInner">
+        <div class="collectionPopupContent">
+          <div class="collectionPopupContentInner" style="max-width: 500px">
+            <!--<button class="catItemPopupClose">X</button>-->
+            <br />
+            <ul
+              id="tabs"
+              class="selectCollectionBtn chooseDealBtns flex-container"
+              style="max-width: 250px; margin-left: auto; margin-right: auto"
+            >
+              <li>
+                <input
+                  hidden="hidden"
+                  id="delivery"
+                  type="text"
+                  value="1"
+                  name="delivery"
+                />
+                <a id="tab1">
+                  <label for="plan" style="font-size: 18px"
+                    ><img
+                      width="40px"
+                      src="images/delivery.svg"
+                    />Delivery</label
+                  >
+                </a>
+              </li>
+              <li>
+                <input
+                  hidden="hidden"
+                  type="text"
+                  value="0"
+                  id="collection"
+                  name="collection"
+                />
+                <a id="tab2" class="inactive">
+                  <label for="plan" style="font-size: 18px"
+                    ><img
+                      width="40px"
+                      src="images/collection.svg"
+                    />Collection</label
+                  >
+                </a>
+              </li>
+            </ul>
+            <div style="margin: 30px 0">
+              <div
+                class="tab container"
+                id="tab1C"
+                style="margin: auto; margin-top: 39px; max-width: 320px"
+              >
+                <p>Please enter your delivery postcode</p>
+                <div
+                  class="col-input input-effect hide_placeholder"
+                  style="
+                    z-index: 9999;
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 27px;
+                  "
+                >
+                  <div class="background" style="position: relative; top: 8px">
+                    e.g. SE146AA
+                  </div>
+                  <input
+                    class="effect-16 postcode_input"
+                    type="text"
+                    name="postcode"
+                    maxlength="8"
+                    style="padding-bottom: 10px; text-transform:uppercase"
+                  />
+                  <label style="text-align: left">POSTCODE</label>
+                  <span class="focus-border"></span>
+                </div>
+                <button class="submit_postcode">Continue</button>
+              </div>
+              <div
+                class="tab container"
+                id="tab2C"
+                style="max-width: 300px; display: none"
+              >
+                <p style="margin-bottom: 6px">
+                  <strong>Collection Address</strong>
+                </p>
+                <p style="color: black; font-weight: normal; font-size: 14px">
+                  Restora Kebap
+                  <br />
+                  13-494 Bromley Road <br />
+                  Bromley <br />
+                  BR3 4AS
+                </p>
+                <button class="chkOutBtn">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <input type="hidden" value="0" id="selectedval" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="js/card.js"></script>
+    <script>
+      $(document).ready(function () {
+        cartPtint();
+        if ($(window).width() < 767) {
+          var bodyWidth = window.innerWidth - 30;
+          var myDiv = $(".platterBtn");
+          //var scrollto = myDiv.offset().right + (myDiv.width() / 2);
+          myDiv.animate({
+            scrollLeft: bodyWidth / 2 + "px",
+          });
+        }
+        $("#tabs a#tab1").click(function () {
+          $("input#delivery").val("1");
+          $("input#collection").val("0");
+          console.log($("input#delivery").val());
+          console.log($("input#collection").val());
+        });
+        $("#tabs a#tab2").click(function () {
+          $("input#delivery").val("0");
+          $("input#collection").val("1");
+          console.log($("input#delivery").val());
+          console.log($("input#collection").val());
+        });
+      });
+
+      var doubleTouchStartTimestamp = 0;
+      $(document).bind("touchstart", function (event) {
+        var now = +new Date();
+        if (doubleTouchStartTimestamp + 500 > now) {
+          event.preventDefault();
+        }
+        doubleTouchStartTimestamp = now;
+      });
+
+      $(".navDetailList li a").click(function (event) {
+        if ($("body").find(".search-form").css("display") == "block") {
+          $("body").find(".search-form").fadeOut();
+          // $('.catItemPopup').fadeIn();
+        } else {
+          event.preventDefault();
+          if ($(window).width() < 767) {
+            var bodyWidth = window.innerWidth - 30;
+
+            $(".catItemPopup .chooseDealBtns li").attr(
+              "style",
+              "min-width: " + (bodyWidth / 3 - 30) + "px !important"
+            );
+          }
+
+          $(".catItemPopup").fadeIn();
+
+          var item_id = $(this).find("#item_id").val();
+          var title = $(this).find("h4").html();
+          var description = $(this).find("p").html();
+          var price = $(this).find(".price").data("price");
+
+          $(".total_price").val(price);
+          $(".subtotal_price").val(price);
+          $(".item_price").val(price);
+
+          var response = [
+            {
+              product_id: "100016",
+              have_options: "1",
+              option: [
+                {
+                  option_id: "12",
+                  restaurant_id: "112",
+                  option_title: "Size",
+                  options_position: "1",
+                  option_required: "YES",
+                  select_type: "single",
+                  sub_options: [
+                    {
+                      sub_option_id: "17",
+                      option_id: "13",
+                      sub_option_name: "Small",
+                      sub_option_price: "5.99",
+                      sub_option_position: "1",
+                    },
+                    {
+                      sub_option_id: "18",
+                      option_id: "13",
+                      restaurant_id: "112",
+                      sub_option_name: "Large",
+                      sub_option_price: "9.99",
+                      sub_option_position: "2",
+                    },
+                  ],
+                },
+                {
+                  option_id: "13",
+                  restaurant_id: "112",
+                  option_title: "Sauces",
+                  options_position: "1",
+                  select_type: "single",
+                  sub_options: [
+                    {
+                      sub_option_id: "17",
+                      option_id: "13",
+                      sub_option_name: "Small+",
+                      sub_option_price: "5.99",
+                      sub_option_position: "1",
+                    },
+                    {
+                      sub_option_id: "18",
+                      option_id: "13",
+                      restaurant_id: "112",
+                      sub_option_name: "Large+",
+                      sub_option_price: "9.99",
+                      sub_option_position: "2",
+                    },
+                    {
+                      sub_option_id: "19",
+                      option_id: "13",
+                      restaurant_id: "112",
+                      sub_option_name: "Large++",
+                      sub_option_price: "19.99",
+                      sub_option_position: "3",
+                    },
+                    {
+                      sub_option_id: "20",
+                      option_id: "13",
+                      restaurant_id: "112",
+                      sub_option_name: "Large+++",
+                      sub_option_price: "29.99",
+                      sub_option_position: "4",
+                    },
+                  ],
+                },
+                {
+                  option_id: "14",
+                  option_title: "Toppings",
+                  options_position: "2",
+                  option_required: "YES",
+                  select_type: "multiple",
+                  sub_options: [
+                    {
+                      sub_option_id: "17",
+                      option_id: "13",
+                      restaurant_id: "112",
+                      sub_option_name: "Peperoni",
+                      sub_option_price: "2.99",
+                      sub_option_position: "1",
+                    },
+                    {
+                      sub_option_id: "18",
+                      option_id: "13",
+                      restaurant_id: "112",
+                      sub_option_name: "Corns",
+                      sub_option_price: "1.99",
+                      sub_option_position: "2",
+                    },
+                  ],
+                },
+              ],
+            },
+
+            {
+              product_id: "100017",
+              have_options: "0",
+            },
+          ];
+
+          window["_response"] = response;
+          //alert("!!!");
+          //console.log(response);
+
+          var item = {
+            selected_quantity: 1,
+            base_price: $(".item_price").val(),
+            total: $(".item_price").val(),
+          };
+          window["_item"] = item;
+          $(".catItemPopup .orderQty").text("1");
+
+          $(".addToCartV2")
+            .off("click")
+            .on("click", function () {
+              var valid = checkIfItemCanBeAdded(item);
+
+              //alert(valid);
+              if (valid) $(".addToCart").trigger("click");
+            });
+
+          $(".cart_increment")
+            .off("click")
+            .on("click", function () {
+              var qty = item.selected_quantity;
+              if (qty == undefined || qty == null) qty = 1;
+              qty++;
+              item.selected_quantity = qty;
+              $(".catItemPopup .orderQty").text(qty);
+              $(".ckh_price").text(calculateTotal(item));
+            });
+          $(".cart_decrement")
+            .off("click")
+            .on("click", function () {
+              var qty = item.selected_quantity;
+              if (qty == undefined || qty == null) qty = 0;
+              if (qty > 1) qty--;
+              item.selected_quantity = qty;
+              $(".catItemPopup .orderQty").text(qty);
+              $(".ckh_price").text(calculateTotal(item));
+            });
+
+          $(response).each(function (index_item, data_item) {
+            if (data_item.product_id == item_id) {
+              window["_item"] = data_item;
+              var item = data_item; //response;
+              item.base_price = parseFloat($(".item_price").val());
+              item.selected_quantity = 1;
+              item.total = item.base_price;
+
+              /* Reset Quantity Text to 1 */
+              $(".catItemPopup .orderQty").text("1");
+
+              $(".addToCartV2")
+                .off("click")
+                .on("click", function () {
+                  var valid = checkIfItemCanBeAdded(item);
+
+                  //alert(valid);
+                  if (valid) $(".addToCart").trigger("click");
+                });
+
+              /* 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Add Functionality for Add To Cart Buttons
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    */
+              $(".cart_increment")
+                .off("click")
+                .on("click", function () {
+                  var qty = item.selected_quantity;
+                  if (qty == undefined || qty == null) qty = 1;
+                  qty++;
+                  item.selected_quantity = qty;
+                  $(".catItemPopup .orderQty").text(qty);
+                  $(".ckh_price").text(calculateTotal(item));
+                });
+              $(".cart_decrement")
+                .off("click")
+                .on("click", function () {
+                  var qty = item.selected_quantity;
+                  if (qty == undefined || qty == null) qty = 0;
+                  if (qty > 1) qty--;
+                  item.selected_quantity = qty;
+                  $(".catItemPopup .orderQty").text(qty);
+                  $(".ckh_price").text(calculateTotal(item));
+                });
+
+              if (data_item.have_options == 1) {
+                $(data_item.option).each(function (index_option, data_option) {
+                  if (data_option.select_type == "single" || 1 == 1) {
+                    var option_type = data_option.select_type;
+
+                    var option_container = $("<div></div>");
+
+                    var required_html = "";
+                    if (data_option.option_required == "YES") {
+                      required_html =
+                        "<span class='required_text required_text" +
+                        data_option.option_id +
+                        "'>Required</span>";
+                    }
+                    var option_header = $(
+                      "<small><b class='option_title'>" +
+                        data_option.option_title +
+                        "</b>" +
+                        required_html +
+                        "</small>"
+                    );
+                    $(option_container).append(option_header);
+
+                    var ul = $(
+                      "<ul class='chooseDealBtns sizeBtn flex-container size_list'></ul>"
+                    );
+
+                    $(data_option.sub_options).each(function (
+                      index_suboption,
+                      data_suboption
+                    ) {
+                      //var sub_option_name = data_suboption.sub_option_name;
+                      var _class = "sid_lbl";
+                      var single_multiple_html = "<span class='s_icon'></span>";
+                      if (option_type == "multiple") {
+                        single_multiple_html =
+                          "<div class='s_pill'><span class='pill_inner'>0</span></div>";
+                        _class = "sid_lbl_mul";
+                      }
+
+                      var _id =
+                        "litem_" +
+                        data_option.option_id +
+                        "_" +
+                        data_suboption.sub_option_id;
+                      var litem = $(
+                        "<li><div id='" +
+                          _id +
+                          "' class='" +
+                          _class +
+                          " noselect'> " +
+                          single_multiple_html +
+                          " <span class='s_label'>" +
+                          data_suboption.sub_option_name +
+                          "</span> <span class='s_price'>£ " +
+                          data_suboption.sub_option_price +
+                          "</span> </div> </li>"
+                      );
+
+                      litem.attr("suboption_index", index_suboption);
+                      litem.attr("option_index", index_option);
+
+                      $(litem).on("click", function () {
+                        var suboption_index = $(this).attr("suboption_index");
+                        var suboption =
+                          data_option.sub_options[parseInt(suboption_index)];
+
+                        var option_index = $(this).attr("option_index");
+                        //alert(data_item.option);
+                        var option = data_item.option[parseInt(option_index)];
+
+                        /* Update Quantity Limit for Suboption Here */
+                        suboption.quantity_limit = 2;
+
+                        evaluateOption(suboption, option, item);
+                      });
+
+                      ul.append(litem);
+                      option_container.append(ul);
+                      //alert();
+                      var parentContainer = null;
+                      if (option_type == "single") {
+                        parentContainer = $(".single");
+                      } else if (option_type == "multiple") {
+                        parentContainer = $(".multiple");
+                      }
+                      $(parentContainer).append(option_container);
+                    });
+                  }
+                });
+              }
+            }
+          });
+
+          $(".chooseDealBtns").data("itemPrice", price);
+
+          $(".ckh_price").html(price);
+          $(".item_id").val(item_id);
+
+          $("#item_title").html(title);
+          $("#item_description").html(description);
+          if ($(".single").contents().length == 0) {
+            $(".shadow-ting").css("visibility", "hidden");
+          }
+          <!-- calculate scrollbar of item middle-->
+          if ($(window).width() < 767) {
+            setInterval(function () {
+              var pop_fullheight = window.innerHeight;
+              var pop_header1 =
+                document.getElementsByClassName("popup-header-texts")[0]
+                  .clientHeight;
+              var pop_footer =
+                document.getElementsByClassName("popup-footer")[0].clientHeight;
+              var pop_totals = pop_header1 + pop_footer + 20;
+              var final = pop_fullheight - pop_totals;
+
+              $(".popup-scroll").attr(
+                "style",
+                "max-height: " + final + "px !important"
+              );
+            }, 100);
+          }
+          <!-- calculate scrollbar of item middle-->
+
+          $("body").css("overflow", "hidden");
+        }
+
+        if ($(window).width() > 767) {
+          $("body").css("margin-right", getScrollbarWidth() + "px");
+        }
+      });
+
+      function calculateTotal(item) {
+        /*
+         ** Calculates Total for an Item (including option prices)
+         */
+        var total = item.base_price;
+
+        var option_price = 0;
+        for (var i in item.option) {
+          var option = item.option[i];
+          for (var j in option.sub_options) {
+            var sub_option = option.sub_options[j];
+            var price = parseFloat(sub_option.sub_option_price);
+            if (sub_option.selected_quantity) {
+              price = price * sub_option.selected_quantity;
+            }
+            if (sub_option.selected == true) {
+              option_price += parseFloat(price);
+              total += price;
+            }
+          }
+        }
+        item.option_price = option_price;
+
+        if (item.selected_quantity) {
+          total = total * item.selected_quantity;
+        }
+        total = total.toFixed(2);
+
+        item.total = total;
+        return total;
+      }
+
+      function checkIfItemCanBeAdded(item) {
+        var valid = true;
+        var errId = "";
+        for (var i in item.option) {
+          var option = item.option[i];
+          if (option.option_required == "YES") {
+            if (!option.value) {
+              valid = false;
+              if (errId == "") {
+                errId = ".required_text" + option.option_id;
+              }
+              //alert(".required_text"+option.option_id);
+              $(".required_text" + option.option_id).addClass("_error");
+              $(".required_text" + option.option_id).addClass("buzz-out-error");
+              //break;
+            } else {
+              $(".required_text" + option.option_id).removeClass("_error");
+            }
+          }
+        }
+        if (errId != "") {
+          $(".popup-scroll").scrollTo(errId);
+        }
+        setTimeout(function () {
+          $(".buzz-out-error").removeClass("buzz-out-error");
+        }, 1000);
+        return valid;
+      }
+
+      function generateCartItemHTML(item) {
+        /*
+         ** Generates Cart HTML to render in Cart for the newly added itemm
+         */
+        var title = $("#item_title").html();
+        var options_summary = generateOptionsSummary(item);
+        var base_price = item.base_price;
+
+        //alert(base_price+","+item.option_price+","+(base_price+item.option_price));
+        if (item.option_price) base_price += item.option_price;
+        if (base_price.toFixed) base_price = base_price.toFixed(2);
+        var item_html =
+          '<li data-item-li-price="' +
+          base_price +
+          '"><div class="orderLabel-col"><span class="orderLabel">' +
+          title +
+          '</span><div class="orderAddRemoveBtns flex-container"><div class="orderRemoveBtn"><div class="cart-icon" onclick="cartIncrement(event, -1, true)"><img src="images/minus.svg"></div></div><span class="orderQty">' +
+          item.selected_quantity +
+          '</span> <div class="orderAddBtn"><div class="cart-icon" onclick="cartIncrement(event, 1, true)"><img src="images/add-button.svg"></div> </div></div><span class="orderPrice">£ <span class="total_li_price">' +
+          item.total +
+          '</span></span></div><div class="orderinfo">' +
+          options_summary +
+          '</div><input type="hidden" name="item_id" val="' +
+          item.product_id +
+          '"> </li>';
+        return item_html;
+      }
+
+      function generateOptionsSummary(item) {
+        /*
+         ** Generates Selected Options Summary to show in Cart : e.g. Size: Large Toppings: Peperoni (x2), Corns (x2)
+         */
+        var _options = [];
+        for (var i in item.option) {
+          var option = item.option[i];
+          if (option.value)
+            _options.push(option.option_title + ": " + option.value);
+        }
+        _options = _options.join(" ");
+        return _options;
+      }
+
+      function evaluateOption(suboption, option, item) {
+        /*
+         ** Selects / Unselects an suboption
+         ** 1. If it is a radio, selects only one value by deselecting other options in the parent option object
+         ** 2. Sets an attribute to denote whether suboption is selected or not
+         ** 3. Marks the parent option as Valid / Invalid based on whether it is Required or Not
+         */
+
+        var elem_id_selector =
+          "#litem_" + option.option_id + "_" + suboption.sub_option_id;
+        //alert(elem_id_selector);
+        if (option.select_type == "single") {
+          /* Since option type is Single, remove any other Selected value from its siblings, before proceeding  */
+          for (var i in option.sub_options) {
+            var _suboption = option.sub_options[i];
+            ///_suboption.selected = false;
+
+            /* Get the associated element Selector for the concerned suboption */
+            var _elem_selector =
+              "#litem_" + option.option_id + "_" + _suboption.sub_option_id;
+
+            /* If the looped suboption is NOT the selected suboption, then remove Selection */
+            if (_suboption.sub_option_id != suboption.sub_option_id) {
+              _suboption.selected = false;
+              $(_elem_selector).removeClass("active");
+            }
+          }
+          /* Mark current suboption as selected */
+          suboption.selected = true;
+          //alert(elem_id_selector);
+          $(elem_id_selector).addClass("active");
+          option.value = suboption.sub_option_name;
+          /* Mark current option as VALID */
+          option.valid = true;
+        } else if (option.select_type == "multiple") {
+          //alert();
+          //var _value = [];
+          //var _elem_selector = "#litem_"+option.option_id + "_" + _suboption.sub_option_id;
+
+          /* Mark option as selected */
+          suboption.selected = true;
+
+          /* Add 'Active' class to the associated HTML Element (For CSS Effect and highlight) */
+          $(elem_id_selector).addClass("active");
+
+          /* Calculate Quantity Selected (after selecting this suboption) */
+          var existingQuantity = suboption.selected_quantity;
+          if (existingQuantity) {
+            if (existingQuantity < suboption.quantity_limit) {
+              suboption.selected_quantity++;
+            } else {
+              suboption.selected_quantity = 0;
+            }
+          } else {
+            suboption.selected_quantity = 1;
+          }
+
+          /* If quantity selected = 0, then remove 'active' class from the associated HTML element */
+          existingQuantity = suboption.selected_quantity;
+
+          $(elem_id_selector).find(".pill_inner").text(existingQuantity);
+          if (existingQuantity == 0) {
+            $(elem_id_selector).removeClass("active");
+            /* Since quantity is 0, remove selected attribute */
+            suboption.selected = false;
+          }
+
+          /* Calculate Number of Selected Options for this SubOption */
+          var numberOfSelectedOptions = 0;
+          var _value = [];
+          for (var i in option.sub_options) {
+            var _suboption = option.sub_options[i];
+            if (_suboption.selected == true) {
+              /* Push a meaningful value for the Selected Option | e.g. Perperoni (x2) */
+              _value.push(
+                _suboption.sub_option_name +
+                  " (x" +
+                  _suboption.selected_quantity +
+                  ")"
+              );
+
+              numberOfSelectedOptions++;
+            }
+            //_suboption.selected = false;
+          }
+          _value = _value.join(", ");
+
+          /* Set the value for the parent option. E.g. if Option = TOPPINGS, set option.value = 'Peperoni (x2), Corns (x1)' */
+          option.value = _value;
+
+          /* If number of selected options is greater than 0 AND the parent option is Required, then mark it as VALID */
+          if (option.option_required == "YES") {
+            if (numberOfSelectedOptions > 0) {
+              /* Option is required and at least 1 selection has been made, so mark option as VALID */
+              option.valid = true;
+            } else {
+              /* Option is required but no selection has been made, so mark option as INVALID */
+              option.valid = false;
+            }
+          }
+        }
+
+        /* Get Added Item Total */
+        var total = calculateTotal(item);
+
+        /* Show total in Add to Cart Button's Placeholder */
+        $(".ckh_price").text(total);
+
+        /* Remove Errors by calling this method */
+        //checkIfItemCanBeAdded(item);
+
+        console.log("ooo", suboption, option);
+      }
+
+      /*
+                                                                                                                                                                                                                                                                                                                                                                    var counter = 0;
+                                                                                                                                                                                                                                                                                                                                                                    $('.calc').each(function() {
+                                                                                                                                                                                                                                                                                                                                                                        if ($(this).attr('type') == 'checkbox') {
+                                                                                                                                                                                                                                                                                                                                                                            $(this).next('label').append('<span class="quant_text" style="display:none">0</span>');
+                                                                                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                                                                                    });*/
+      /*$(document).on('click', '.calc', function() {
+
+                                                                                                                                                                                                                                                                                                                                                                        var popParent = $(this).parents('.itemPopup');
+                                                                                                                                                                                                                                                                                                                                                                        var qty = popParent.find('.orderQty').html();
+                                                                                                                                                                                                                                                                                                                                                                        //console.log(qty);
+
+                                                                                                                                                                                                                                                                                                                                                                        var sum = 0;
+                                                                                                                                                                                                                                                                                                                                                                        var itemPrice = $('.chooseDealBtns').data('itemPrice');
+                                                                                                                                                                                                                                                                                                                                                                        if ($(this).attr('type') == 'checkbox') {
+                                                                                                                                                                                                                                                                                                                                                                            var click_start = $(this).attr('data-start');
+                                                                                                                                                                                                                                                                                                                                                                            //if(!$(this).hasClass("ignore_click_increment")) click_start++;
+                                                                                                                                                                                                                                                                                                                                                                            click_start++;
+                                                                                                                                                                                                                                                                                                                                                                            $(this).attr('data-click', click_start);
+                                                                                                                                                                                                                                                                                                                                                                            $(this).attr('data-start', click_start);
+                                                                                                                                                                                                                                                                                                                                                                            var click_quant = $(this).attr('data-click');
+                                                                                                                                                                                                                                                                                                                                                                            var limit_quant = $(this).attr('data-limit');
+                                                                                                                                                                                                                                                                                                                                                                            if (click_quant <= limit_quant) {
+                                                                                                                                                                                                                                                                                                                                                                                $(this).prop('checked', true);
+                                                                                                                                                                                                                                                                                                                                                                                $(this).next('label').children('.quant_text').html(click_quant).css('display', 'inline-block');
+                                                                                                                                                                                                                                                                                                                                                                                var click_qty = parseFloat(click_quant * ($(this).val()));
+                                                                                                                                                                                                                                                                                                                                                                                $(this).attr('data-main-price', click_qty);
+                                                                                                                                                                                                                                                                                                                                                                                total_sum_checkbox();
+                                                                                                                                                                                                                                                                                                                                                                            } else {
+                                                                                                                                                                                                                                                                                                                                                                                $(this).prop('checked', false);
+                                                                                                                                                                                                                                                                                                                                                                                $(this).next('label').children('.quant_text').css('display', 'none');
+                                                                                                                                                                                                                                                                                                                                                                                $(this).attr('data-click', 0);
+                                                                                                                                                                                                                                                                                                                                                                                $(this).attr('data-start', 0);
+                                                                                                                                                                                                                                                                                                                                                                                $(this).attr('data-main-price', 0);
+                                                                                                                                                                                                                                                                                                                                                                                total_sum_checkbox();
+                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                        } else if ($(this).attr('type') == 'radio') {
+                                                                                                                                                                                                                                                                                                                                                                            var click_qty = parseFloat($(this).val());
+                                                                                                                                                                                                                                                                                                                                                                            $(this).attr('data-main-price', click_qty);
+                                                                                                                                                                                                                                                                                                                                                                            total_sum_checkbox();
+                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                        function total_sum_checkbox(value) {
+                                                                                                                                                                                                                                                                                                                                                                            $('.calc:checked').each(function() {
+                                                                                                                                                                                                                                                                                                                                                                                sum += Number($(this).attr('data-main-price'))
+                                                                                                                                                                                                                                                                                                                                                                            });
+                                                                                                                                                                                                                                                                                                                                                                        };
+
+                                                                                                                                                                                                                                                                                                                                                                        var Total_price = qty * (sum + itemPrice);
+                                                                                                                                                                                                                                                                                                                                                                        $('.subtotal_price').val((sum + itemPrice).toFixed(2));
+                                                                                                                                                                                                                                                                                                                                                                        $('.ckh_price').text(Total_price.toFixed(2));
+
+                                                                                                                                                                                                                                                                                                                                                                        $('.total_price').val(Total_price.toFixed(2));
+
+                                                                                                                                                                                                                                                                                                                                                                    });*/
+
+      if ($("#cartOrderList").find("li").length == 0) {
+        $("#cartOrderList").append(
+          '<p class="cart_empty_text">Cart is empty.</p>'
+        );
+        $(".cartWrap")
+          .find(".input-coupon")
+          .addClass("hide_div")
+          .removeClass("show_div");
+      }
+      $(".addToCart").click(function () {
+        $(".cartWrap")
+          .find(".input-coupon")
+          .removeClass("hide_div")
+          .addClass("show_div");
+        var title = $("#item_title").html();
+        var subtotal = $(".subtotal_price").val();
+        var total = $(".total_price").val();
+        var item_id = $(".item_id").val();
+
+        var click_quant = 0;
+        var pop_item_quant = $(".catItemPopupInner").find(".orderQty").text();
+        //var single_array = new Array();
+        //var multiple_array = new Array();
+
+        var topping_name = new Array();
+        var whole_text_size = "";
+        var option_title = "";
+
+        var obj = {}; // Define object
+
+        /*$('.calc:checked').each(function() {
+                                                                                                                                                                                                                                                                                                                                                                                                            var option_fieldset = $(this).closest('fieldset');
+                                                                                                                                                                                                                                                                                                                                                                                                            option_title = option_fieldset.find('.option_title').html();
+
+                                                                                                                                                                                                                                                                                                                                                                                                            var name = $(this).attr('name');
+
+                                                                                                                                                                                                                                                                                                                                                                                                            if ($(this).attr('type') == 'checkbox') {
+
+                                                                                                                                                                                                                                                                                                                                                                                                                click_quant = $(this).attr('data-click');
+                                                                                                                                                                                                                                                                                                                                                                                                                var whole_text = ' ' + $(this).next('label').children('div:first-child').html() + ' (x' + click_quant + ')';
+                                                                                                                                                                                                                                                                                                                                                                                                                if (obj[name]) {
+                                                                                                                                                                                                                                                                                                                                                                                                                    obj[name].push(whole_text);
+                                                                                                                                                                                                                                                                                                                                                                                                                } else {
+                                                                                                                                                                                                                                                                                                                                                                                                                    obj[name] = [whole_text];
+                                                                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                                                            } else if ($(this).attr('type') == 'radio') {
+                                                                                                                                                                                                                                                                                                                                                                                                                whole_text_size = $(this).next('label').children('div:first-child').html();
+
+                                                                                                                                                                                                                                                                                                                                                                                                                if (obj[name]) {
+                                                                                                                                                                                                                                                                                                                                                                                                                    obj[name].push(whole_text_size);
+                                                                                                                                                                                                                                                                                                                                                                                                                } else {
+                                                                                                                                                                                                                                                                                                                                                                                                                    obj[name] = [whole_text_size];
+                                                                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                                                        });*/
+
+        var item_len = Object.keys(obj).length;
+        var total_item_list = "";
+        for (let [key, value] of Object.entries(obj)) {
+          total_item_list += key + ": " + value + " ";
+        }
+
+        //alert(JSON.stringify(response));
+        //alert(item_id);
+        /*var item_html = '<li data-item-li-price="' + subtotal + '"><div class="orderLabel-col"><span class="orderLabel">' + title + '</span><div class="orderAddRemoveBtns flex-container"><div class="orderRemoveBtn"><div class="cart-icon" onclick="cartIncrement(event, -1, true)"><img src="images/minus.svg"></div></div><span class="orderQty">' + pop_item_quant + '</span> <div class="orderAddBtn"><div class="cart-icon" onclick="cartIncrement(event, 1, true)"><img src="images/add-button.svg"></div> </div></div><span class="orderPrice">£ <span class="total_li_price">' + total + '</span></span></div><div class="orderinfo">' + total_item_list + '</div><input type="hidden" name="item_id" val="' + item_id + '"> </li>';*/
+
+        //alert(JSON.stringify(window["_item"]));
+        var item_html = generateCartItemHTML(window["_item"]);
+
+        $("#cartOrderList").find(".cart_empty_text").remove();
+        $(".checkout-button-cart").prop("disabled", false);
+        $(".cartWrap")
+          .find(".checkout-button-cart")
+          .removeClass("disabled-button");
+        $("#footer").find(".store-detail").removeClass("disabled-button");
+        $(".cartWrap").find(".cartTotalAmount").removeClass("hide_div");
+        $("#cartOrderList").append(item_html);
+        /*var cart_total_rate = 0;
+                                                                                                                                                                                                                                                                                                                                                                                                        $('#cartOrderList').find('.total_li_price').each(function(index, el) {
+                                                                                                                                                                                                                                                                                                                                                                                                           cart_total_rate += parseFloat($(this).text());
+                                                                                                                                                                                                                                                                                                                                                                                                        });
+                                                                                                                                                                                                                                                                                                                                                                                                        $('.cart_total_price').text(cart_total_rate.toFixed(2));*/
+
+        //sidsid
+        cartJson();
+
+        // using When & then methods.
+        $.when($(".catItemPopup").fadeOut()).then(function () {
+          $(".calc").prop("checked", false);
+          $(".single").html("");
+          $(".multiple").html("");
+
+          $("body").css("overflow", "auto");
+          $("body").css("position", "unset");
+          if ($(window).width() > 767) {
+            $("body").css("margin-right", "0px");
+          }
+        });
+        $(".notify").toggleClass("notify-active");
+        $("#notifyType").toggleClass("success");
+        setTimeout(function () {
+          $(".catItemPopup").find(".orderQty").text("1");
+          $(".shadow-ting").css("visibility", "visible");
+          $(".notify").removeClass("notify-active");
+          $("#notifyType").removeClass("success");
+        }, 1000);
+
+        cart_item_number();
+      });
+
+      //cart Json
+
+      function cartJson() {
+        jsonObj = [];
+        var cart_empty = 1;
+
+        if ($("#cartOrderList li").length >= 1) {
+          cart_empty = 0;
+          $("#cartOrderList")
+            .find("li")
+            .each(function (index, el) {
+              var item_title = $(this).find(".orderLabel").html();
+              var item_price = $(this).find(".total_li_price").html();
+              var item_single_price = $(this).attr("data-item-li-price");
+              var item_qty = $(this).find(".orderQty").html();
+
+              var options = $(this).find(".orderinfo").html();
+              var has_options = 0;
+              if (options != "") {
+                has_options = 1;
+              }
+
+              item = {};
+              item["item_title"] = item_title;
+              item["qty"] = item_qty;
+              item["single_price"] = item_single_price;
+              item["total_price"] = item_price;
+
+              item["has_options"] = has_options;
+              item["options"] = options;
+
+              jsonObj.push(item);
+            });
+        }
+
+        var cart_id = "100016";
+        var cart_session = {
+          cart_id: cart_id,
+          is_empty: cart_empty,
+
+          cart_content: jsonObj,
+        };
+
+        console.log(cart_session);
+      }
+
+      function cartPtint() {
+        var cart_id = "100016";
+        var cart_data = {
+          cart_id: cart_id,
+          is_empty: "0",
+
+          cart_content: [
+            {
+              item_title: "Sushi 1",
+              qty: "3",
+              single_price: "20.43",
+              total_price: "61.29",
+              has_options: "1",
+              options: "Size: Small Sauces: Large+ ",
+            },
+            {
+              item_title: "Sushi 1",
+              qty: "2",
+              single_price: "24.40",
+              total_price: "48.80",
+              has_options: "1",
+              options: "Size: Large Toppings:  Peperoni (x2), Corns (x2) ",
+            },
+            {
+              item_title: "Hot Food 1",
+              qty: "3",
+              single_price: "4.45",
+              total_price: "13.35",
+              has_options: "0",
+              options: " ",
+            },
+          ],
+        };
+
+        $(cart_data).each(function (index, data) {
+          var cart_content = data.cart_content;
+          $(cart_content).each(function (index, data) {
+            var item_title = data.item_title;
+            var qty = data.qty;
+            var single_price = data.single_price;
+            var total_price = data.total_price;
+            var has_options = data.has_options;
+            var options = data.options;
+
+            var item_html =
+              '<li data-item-li-price="' +
+              single_price +
+              '"><div class="orderLabel-col"><span class="orderLabel">' +
+              item_title +
+              '</span><div class="orderAddRemoveBtns flex-container"><div class="orderRemoveBtn"><div class="cart-icon" onclick="cartIncrement(event, -1, true)"><img src="images/minus.svg"></div></div><span class="orderQty">' +
+              qty +
+              '</span> <div class="orderAddBtn"><div class="cart-icon" onclick="cartIncrement(event, 1, true)"><img src="images/add-button.svg"></div> </div></div><span class="orderPrice">£ <span class="total_li_price">' +
+              total_price +
+              '</span></span></div><div class="orderinfo">' +
+              options +
+              '</div><input type="hidden" name="item_id" val="' +
+              cart_id +
+              '"> </li>';
+
+            $("#cartOrderList").find(".cart_empty_text").remove();
+            $(".cartWrap")
+              .find(".input-coupon")
+              .removeClass("hide_div")
+              .addClass("show_div");
+            $("#cartOrderList").append(item_html);
+            cart_item_number();
+          });
+        });
+      }
+
+      function cart_item_number() {
+        var total_item = $("#cartOrderList li").length;
+        var total_item_count = 0;
+        $("#cartOrderList li").each(function () {
+          total_item_count += parseInt($(this).find(".orderQty").text(), 10);
+          // console.log($(this).find('.orderQty').text());
+        });
+        console.log(total_item_count);
+        // $('.mobile_cart_item_total').text(total_item);
+        $(".mobile_cart_item_total").text(total_item_count);
+        var cart_total_rate = 0;
+        $("#cartOrderList")
+          .find(".total_li_price")
+          .each(function (index, el) {
+            cart_total_rate += parseFloat($(this).text());
+          });
+        var is_coupon_applied = $('.coupon_applied').val();
+        $(".cart_discount_price").text((cart_total_rate * 0.05).toFixed(2));
+        if (is_coupon_applied == "1") {
+          // $(".cart_discount").show();
+          $(".cart_total_price").text((cart_total_rate * 0.95).toFixed(2));
+        } else {
+          $(".cart_total_price").text((cart_total_rate).toFixed(2));
+        }
+        if ($("#cartOrderList").find("li").length == 0) {
+          $("#cartOrderList").append(
+            '<p class="cart_empty_text">Cart is empty.</p>'
+          );
+          $(".checkout-button-cart").prop("disabled", true);
+          $(".cartWrap")
+            .find(".checkout-button-cart")
+            .addClass("disabled-button");
+          $("#footer").find(".store-detail").addClass("disabled-button");
+          $(".cartWrap").find(".cartTotalAmount").addClass("hide_div");
+
+          $(".cartWrap")
+            .find(".input-coupon")
+            .addClass("hide_div")
+            .removeClass("show_div");
+        }
+      }
+
+      function cartIncrement(event, value, cart) {
+        var currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+        currentVal = $(currentVal).find(".orderQty");
+        currentVal = $(currentVal).text();
+        currentVal = parseInt(currentVal);
+
+        if (value == -1 && currentVal == 1) {
+          if (cart == true) {
+            var item_li = event.currentTarget.closest("li");
+            var item_price = $(item_li).attr("data-item-li-price");
+            $(item_li).remove();
+            $(".notify").addClass("notify-active");
+            $("#notifyType").addClass("failure");
+            setTimeout(function () {
+              $(".notify").removeClass("notify-active");
+              $("#notifyType").removeClass("failure");
+            }, 1000);
+            cart_item_number();
+            cartJson();
+            //console.log(item_price);
+            return true;
+          } else {
+            return true;
+          }
+        }
+        if (cart == true) {
+          var currentparentdiv = event.currentTarget.closest(".orderLabel-col");
+          var current_item_rate = $(currentparentdiv)
+            .parent("li")
+            .attr("data-item-li-price");
+          var currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+          currentVal = $(currentVal).find(".orderQty");
+          currentVal = $(currentVal).text();
+          currentVal = parseInt(currentVal);
+          if (value == 1 && currentVal >= 0) {
+            var newVal = currentVal + value;
+            currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+            currentVal = $(currentVal).find(".orderQty");
+            currentVal = $(currentVal).html(newVal);
+            var new_current_item_rate = parseFloat(
+              current_item_rate * newVal
+            ).toFixed(2);
+            $(currentparentdiv)
+              .find(".total_li_price")
+              .text(new_current_item_rate);
+            var cart_total_rate = 0;
+            $("#cartOrderList")
+              .find(".total_li_price")
+              .each(function (index, el) {
+                cart_total_rate += parseFloat($(this).text());
+              });
+            var is_coupon_applied = $('.coupon_applied').val();
+            $(".cart_discount_price").text((cart_total_rate * 0.05).toFixed(2));
+            if (is_coupon_applied == "1") {
+              // $(".cart_discount").show();
+              $(".cart_total_price").text((cart_total_rate * 0.95).toFixed(2));
+            } else {
+              $(".cart_total_price").text((cart_total_rate).toFixed(2));
+            }
+          }
+          if (value == -1 && currentVal != 0) {
+            var newVal = currentVal + value;
+            currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+            currentVal = $(currentVal).find(".orderQty");
+            currentVal = $(currentVal).html(newVal);
+            var new_current_item_rate = parseFloat(
+              current_item_rate * newVal
+            ).toFixed(2);
+            $(currentparentdiv)
+              .find(".total_li_price")
+              .text(new_current_item_rate);
+            var cart_total_rate = 0;
+            $("#cartOrderList")
+              .find(".total_li_price")
+              .each(function (index, el) {
+                cart_total_rate += parseFloat($(this).text());
+              });
+            var is_coupon_applied = $('.coupon_applied').val();
+            $(".cart_discount_price").text((cart_total_rate * 0.05).toFixed(2));
+            if (is_coupon_applied == "1") {
+              // $(".cart_discount").show();
+              $(".cart_total_price").text((cart_total_rate * 0.95).toFixed(2));
+            } else {
+              $(".cart_total_price").text((cart_total_rate).toFixed(2));
+            }
+          }
+          cartJson();
+          //console.log($(currentparentdiv).find('.total_li_price').text());
+        } else {
+          var total_price = parseFloat($(".total_price").val());
+          var currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+          currentVal = $(currentVal).find(".orderQty");
+          currentVal = $(currentVal).text();
+          currentVal = parseInt(currentVal);
+          if (value == -1 && currentVal != 0) {
+            var newVal = currentVal + value;
+            currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+            currentVal = $(currentVal).find(".orderQty");
+            currentVal = $(currentVal).html(newVal);
+
+            var sum = 0;
+            $(".calc:checked").each(function () {
+              sum += Number($(this).attr("data-main-price"));
+            });
+
+            var itemPrice = $(".chooseDealBtns").data("itemPrice");
+            var Total_price = newVal * (sum + itemPrice);
+            $(".subtotal_price").val((sum + itemPrice).toFixed(2));
+            $(".ckh_price").text(Total_price.toFixed(2));
+
+            $(".total_price").val(Total_price.toFixed(2));
+          }
+          if (value == 1 && currentVal >= 0) {
+            var newVal = currentVal + value;
+            currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+            currentVal = $(currentVal).find(".orderQty");
+            currentVal = $(currentVal).html(newVal);
+
+            var sum = 0;
+            $(".calc:checked").each(function () {
+              sum += Number($(this).attr("data-main-price"));
+            });
+
+            var itemPrice = $(".chooseDealBtns").data("itemPrice");
+            var Total_price = newVal * (sum + itemPrice);
+            $(".subtotal_price").val((sum + itemPrice).toFixed(2));
+            $(".ckh_price").text(Total_price.toFixed(2));
+
+            $(".total_price").val(Total_price.toFixed(2));
+          }
+        }
+        cart_item_number();
+      }
+
+      // collection Popup JS
+
+      $(".collectionDiv a").click(function (event) {
+        if ($("body").find(".search-form").css("display") == "block") {
+          $("body").find(".search-form").fadeOut();
+        } else {
+          event.preventDefault();
+          $(".collectionPopup").fadeIn();
+          $(".collectionPopup").css("display", "block !important");
+          $("body").css("overflow", "hidden");
+        }
+
+        if ($(window).width() > 767) {
+          $("body").css("margin-right", getScrollbarWidth() + "px");
+        }
+      });
+
+      $(document).ready(function () {
+        cart_item_number();
+        $(".collectionPopup").fadeIn();
+        if ($(window).width() < 767) {
+          //$('#main').hide();
+        }
+        $("body").css("overflow", "hidden");
+
+        if ($(window).width() > 767) {
+          $("body").css("margin-right", getScrollbarWidth() + "px");
+        }
+
+        $("#tabs li a:not(:first)").addClass("inactive");
+        $(".tab").hide();
+        $(".tab:first").show();
+
+        $("#tabs li a").click(function () {
+          var t = $(this).attr("id");
+          if ($(this).hasClass("inactive")) {
+            //this is the start of our condition
+            $("#tabs li a").addClass("inactive");
+            $(this).removeClass("inactive");
+
+            $(".tab").hide();
+            $("#" + t + "C").fadeIn("slow");
+          }
+        });
+      });
+
+      $(".effect-16").on("input", function () {
+        if ($(this).val() != "") {
+          $(this).addClass("hidelabel");
+          $(this)
+            .parent(".hide_placeholder")
+            .find(".background")
+            .css("visibility", "hidden");
+          //  $('.background').css('visibility','hidden');
+        }
+        if ($(this).val() == "") {
+          $(this).removeClass("hidelabel");
+          $(this)
+            .parent(".hide_placeholder")
+            .find(".background")
+            .css("visibility", "visible");
+        }
+      });
+
+      $(document).click(function (event) {
+        //if you click on anything except the modal itself or the "open modal" link, close the modal
+
+        if (
+          !$(event.target).closest(
+            ".catItemPopupContentInner, .navDetailList li a, #viewCart, .cartElementWrap, .search-bar, .search-box"
+          ).length
+        ) {
+          if ($(".collectionPopup:visible").length) {
+            console.log("hap");
+            if (windowWidth < 767) {
+              if ($("body").find(".search-form").css("display") == "block") {
+                // console.log('yes');
+              } else if (
+                $("body").find(".collectionPopup").css("display") == "block"
+              ) {
+              } else {
+                $(".navigation a").eq(i).focus();
+              }
+            }
+          } else {
+            $(".catItemPopup").find(".orderQty").text("1");
+            // using When & then methods.
+            $.when(
+              $("body").find(".catItemPopup").fadeOut(),
+              $("#main").show()
+            ).then(function () {
+              $(".calc").prop("checked", false);
+              $(".single").html("");
+              $(".multiple").html("");
+
+              $("body").css("overflow", "auto");
+              $("body").css("position", "unset");
+              $("body").find(".search-form").fadeOut();
+              // $(".search-bar").show();
+
+              if ($(window).width() > 767) {
+                $("body").css("margin-right", "0px");
+              }
+            });
+          }
+        }
+      });
+
+      function redirect2payment() {
+        window.location.href = "payment.html";
+      }
+
+      $(".goto-cart").click(function (event) {
+        $("body").scrollTo(".cartElementWrap");
+      });
+      $("#viewCart").click(function (event) {
+        if ($("body").find(".search-form").css("display") == "block") {
+          $("body").find(".search-form").fadeOut();
+          //$(".search-bar").show();
+        } else {
+          event.preventDefault();
+          $("body").css("overflow", "hidden");
+          $("body").find(".catItemPopup").fadeOut();
+          $("body").find(".collectionPopup").fadeOut();
+          $("#main").show();
+          $(".cancel-payment").show();
+          $(".mobileSearch").hide();
+          $(".search-bar").hide();
+          $(".priceProducts").show();
+          $(".input-coupon").show();
+          $(".categoriesmenu").hide();
+          $("#viewCart li:nth-child(2) p")
+            .text("Continue Payment")
+            .attr("onclick", "redirect2payment()");
+          $(".cartElementWrap").fadeIn();
+          var fullheight = window.innerHeight;
+          var header1 = document.getElementById("header").clientHeight;
+          var header2 =
+            document.getElementsByClassName("priceProducts")[0].clientHeight;
+          var footer =
+            document.getElementsByClassName("input1")[0].clientHeight;
+          var totals = header1 + footer + 20;
+          var final = fullheight - totals;
+          $(".cartOuterWrap").css("height", final);
+          $(".cartWrapfooter").show();
+        }
+        // $('body').css('overflow', 'hidden');
+
+        setInterval(function () {
+          var fullheight = window.innerHeight;
+          var header1 = document.getElementById("header").clientHeight;
+          var header2 =
+            document.getElementsByClassName("priceProducts")[0].clientHeight;
+          var footer =
+            document.getElementsByClassName("input1")[0].clientHeight;
+          var totals = header1 + footer + 20;
+          var final = fullheight - totals;
+          $(".cartWrap").attr(
+            "style",
+            "max-height: " + final + "px !important"
+          );
+        }, 100);
+      });
+
+      $(".catItemPopupClose").click(function (event) {
+        // using When & then methods.
+        $.when(
+          $(".catItemPopup").fadeOut(),
+          $(".collectionPopup").fadeOut()
+        ).then(function () {
+          $(".calc").prop("checked", false);
+          $(".single").html("");
+          $(".multiple").html("");
+          $("#main").show();
+          $("body").css("overflow", "auto");
+          $("body").css("position", "unset");
+
+          setTimeout(function () {
+            $(".shadow-ting").css("visibility", "visible");
+          }, 1000);
+          if ($(window).width() > 767) {
+            $("body").css("margin-right", "0px");
+          }
+        });
+      });
+      
+      $('.postcode_input').on("keyup", function (event) {
+        // if ($('.postcode_input').val().length<9) {
+          $('#tab1C .focus-border').removeClass('required-input');
+        // } else {
+        //   $('#tab1C .focus-border').addClass('required-input');
+        // }
+      });
+      function validatePostcode(code) {
+        if (code) {
+          var postcodeRegex = /[A-Z]{1,2}[0-9]{1,2} ?[0-9][A-Z]{2}/i;
+          if (postcodeRegex.test(code)) {
+            $('#tab1C .focus-border').removeClass('required-input');
+            return true;
+          } else {
+            $('#tab1C .focus-border').addClass('required-input');
+            return false;
+          }
+        } else {
+          $('#tab1C .focus-border').addClass('required-input');
+          return false;
+        }
+      }
+      $(".submit_postcode").click(function (event) {
+        var isValidPostcode = validatePostcode($('.postcode_input').val());
+        // using When & then methods.
+        if (isValidPostcode) {
+          $.when(
+            $(".catItemPopup").fadeOut(),
+            $(".collectionPopup").fadeOut()
+          ).then(function () {
+            $(".calc").prop("checked", false);
+            $(".single").html("");
+            $(".multiple").html("");
+            $("#main").show();
+            $("body").css("overflow", "auto");
+            $("body").css("position", "unset");
+            $(".close").fadeIn();
+            if ($(window).width() > 767) {
+              $("body").css("margin-right", "0px");
+            }
+          });
+
+          var checval = $("input#collection").val();
+          if (checval == 1) {
+            $(".order_round_sub_m").html(
+              '<div class="order_round_sub"><div class="order_icon"><img src="images/collection_blue.svg"></div><div class="order_icon_text_m">Collection<br> On Time</div>'
+            );
+
+            $(".order_round_sub_m").css({
+              right: "4px",
+              left: "auto",
+            });
+          } else {
+            $(".order_round_sub_m").html(
+              '<div class="order_round_sub"><div class="order_icon"><img src="images/delivery_blue.svg"></div><div class="order_icon_text_m">Delivery<br> 25-30 Mins</div></div>'
+            );
+            $(".order_round_sub_m").css({
+              left: "4px",
+              right: "auto",
+            });
+          }
+        }
+      });
+
+      $(".chkOutBtn").click(function (event) {
+        // using When & then methods.
+        $.when(
+          $(".catItemPopup").fadeOut(),
+          $(".collectionPopup").fadeOut()
+        ).then(function () {
+          $(".calc").prop("checked", false);
+          $(".single").html("");
+          $(".multiple").html("");
+          $("#main").show();
+          $("body").css("overflow", "auto");
+          $("body").css("position", "unset");
+          $(".close").fadeIn();
+          if ($(window).width() > 767) {
+            $("body").css("margin-right", "0px");
+          }
+        });
+
+        var checval = $("input#collection").val();
+        if (checval == 1) {
+          $(".order_round_sub_m").html(
+            '<div class="order_round_sub"><div class="order_icon"><img src="images/collection_blue.svg"></div><div class="order_icon_text_m">Collection<br> On Time</div>'
+          );
+
+          $(".order_round_sub_m").css({
+            right: "4px",
+            left: "auto",
+          });
+        } else {
+          $(".order_round_sub_m").html(
+            '<div class="order_round_sub"><div class="order_icon"><img src="images/delivery_blue.svg"></div><div class="order_icon_text_m">Delivery<br> 25-30 Mins</div></div>'
+          );
+          $(".order_round_sub_m").css({
+            left: "4px",
+            right: "auto",
+          });
+        }
+      });
+
+      var windowWidth = $(window).width();
+      if (windowWidth > 1024) {
+        $(window).on("load", function () {
+          // '.cartOuterWrap1',
+          // '.catNavOuter',
+          stickySection(".cartElementWrap", ".stickyElementsContainer");
+          stickySection(".catNavWrap", ".categoriesWrapper");
+        });
+        $(window).resize(function (event) {
+          setTimeout(function () {
+            stickySection(".cartElementWrap", ".stickyElementsContainer");
+            stickySection(".catNavWrap", ".categoriesWrapper");
+          }, 500);
+        });
+        $(window).scroll(function () {
+          var threshold = 1;
+          if ($(".cartOrderList").find("li").length == 1) {
+            var scrollsize = footerScroll + 365;
+          } else if ($(".cartOrderList").find("li").length == 2) {
+            var scrollsize = footerScroll + 280;
+          } else if ($(".cartOrderList").find("li").length == 3) {
+            var scrollsize = footerScroll + 240;
+          } else if ($(".cartOrderList").find("li").length == 4) {
+            var scrollsize = footerScroll + 180;
+          } else if ($(".cartOrderList").find("li").length == 5) {
+            var scrollsize = footerScroll + 120;
+          } else if ($(".cartOrderList").find("li").length == 6) {
+            var scrollsize = footerScroll + 63;
+          } else if ($(".cartOrderList").find("li").length == 7) {
+            var scrollsize = footerScroll + 50;
+          } else {
+            var scrollsize = footerScroll + 600;
+          }
+          // console.log(footerScroll, scrollsize, $(window).scrollTop());
+          if (
+            $(window).scrollTop() >= headerHeight &&
+            $(window).scrollTop() <= scrollsize + 150
+          ) {
+            $(".cartOuterWrap").css({
+              position: "fixed",
+              width: Math.round($(".cartElementWrap.sidebar").width()) + "px",
+              top: "0px",
+            });
+          } else if ($(window).scrollTop() >= scrollsize + 150) {
+            $(".cartOuterWrap").css({
+              position: "absolute",
+              width: Math.round($(".cartElementWrap.sidebar").width()) + "px",
+              bottom: "95px",
+              top: "auto",
+              transition: "all 0.7s ease",
+            });
+          } else {
+            $(".cartOuterWrap").css({
+              position: "",
+              width: "",
+              top: "",
+              transition: "all 0.7s ease",
+            });
+          }
+        });
+      }
+      if (windowWidth >= 768) {
+        $(window).on("load", function () {
+          // '.cartOuterWrap1',
+          // '.catNavOuter',
+          stickySection(".cartElementWrap", ".stickyElementsContainer");
+          stickySection(".catNavWrap", ".categoriesWrapper");
+        });
+        $(window).resize(function (event) {
+          setTimeout(function () {
+            stickySection(".cartElementWrap", ".stickyElementsContainer");
+            stickySection(".catNavWrap", ".categoriesWrapper");
+          }, 500);
+        });
+
+        var headerHeight = $(".order-banner").height() + 24;
+        var footerHeight = $("#footer").height();
+        var cartOuterWrapHeight = $(".cartOuterWrap").height();
+        var categoryWrapHeight = $(".catNavOuter").height();
+        var footerScroll =
+          $("#footer").offset().top - cartOuterWrapHeight - footerHeight;
+        var categoryScroll = $("#footer").offset().top - footerHeight + 300;
+        // console.log($('#footer').offset().top);
+        // console.log(footerHeight);
+        // console.log(cartOuterWrapHeight);
+        // console.log(footerScroll);
+        // console.log($(window).scrollTop());
+        $(window).scroll(function () {
+          var threshold = 1;
+          if ($(".cartOrderList").find("li").length == 1) {
+            var scrollsize = footerScroll + 365;
+          } else if ($(".cartOrderList").find("li").length == 2) {
+            var scrollsize = footerScroll + 280;
+          } else if ($(".cartOrderList").find("li").length == 3) {
+            var scrollsize = footerScroll + 240;
+          } else if ($(".cartOrderList").find("li").length == 4) {
+            var scrollsize = footerScroll + 180;
+          } else if ($(".cartOrderList").find("li").length == 5) {
+            var scrollsize = footerScroll + 120;
+          } else if ($(".cartOrderList").find("li").length == 6) {
+            var scrollsize = footerScroll + 63;
+          } else if ($(".cartOrderList").find("li").length == 7) {
+            var scrollsize = footerScroll + 50;
+          } else {
+            var scrollsize = footerScroll + 600;
+          }
+          // console.log(footerScroll, scrollsize, $('.cartOrderList').find('li').length);
+          if (
+            $(window).scrollTop() >= headerHeight &&
+            $(window).scrollTop() <= scrollsize
+          ) {
+            // alert('dddddddddddddddddd');
+            // $(".cartOuterWrap").css({
+            //     position: "fixed",
+            //     width: Math.round($(".cartElementWrap.sidebar").width()) + "px",
+            //     top: "0px",
+            // });
+            $(".catNavOuter").css({
+              position: "fixed",
+              width: Math.round($(".catNavWrap").width()) + "px",
+              top: "0px",
+              transition: "all 0.7s ease",
+            });
+          } else if ($(window).scrollTop() >= footerScroll) {
+            // $(".cartOuterWrap").css({
+            //     position: "absolute",
+            //     width: Math.round($(".cartElementWrap.sidebar").width()) + "px",
+            //     bottom: "95px",
+            //     top: "auto",
+            //     transition: "all 0.7s ease",
+            // });
+          } else {
+            $(".cartOuterWrap").css({
+              position: "",
+              width: "",
+              top: "",
+              transition: "all 0.7s ease",
+            });
+          }
+          if (
+            $(window).scrollTop() >= headerHeight &&
+            $(window).scrollTop() <= categoryScroll
+          ) {
+            $(".catNavOuter").css({
+              position: "fixed",
+              width: Math.round($(".catNavWrap").width()) + "px",
+              top: "0px",
+              transition: "all 0.7s ease",
+            });
+          } else if ($(window).scrollTop() >= categoryScroll) {
+            $(".catNavOuter").css({
+              position: "absolute",
+              width: Math.round($(".catNavWrap").width()) + "px",
+              bottom: "-30px",
+              top: "auto",
+              transition: "all 0.7s ease",
+            });
+          } else {
+            $(".catNavOuter").css({
+              position: "",
+              width: "",
+              top: "",
+              transition: "all 0.7s ease",
+            });
+          }
+        });
+      }
+
+      $(document).ready(function () {
+        $('a[href*="#"]:not([href="#"])').click(function (e) {
+          //$('a[href*=#]').bind('click', function(e) {
+          e.preventDefault(); // prevent hard jump, the default behavior
+
+          var target = $(this).attr("href"); // Set the target as variable
+          // perform animated scrolling by getting top-position of target-element and set it as scroll target
+          $("html, body")
+            .stop()
+            .animate(
+              {
+                scrollTop: $(target).offset().top,
+              },
+              600,
+              function () {
+                location.hash = target; //attach the hash (#jumptarget) to the pageurl
+              }
+            );
+
+          $("body").find(".cartElementWrap").fadeOut();
+
+          $("body").find(".catItemPopup").fadeOut();
+          $("body").css("overflow", "auto");
+          return false;
+        });
+      });
+
+      $(".search-bar div").click(function (e) {
+        $(".search-form").fadeIn();
+        $(".search-box").focus();
+        $(".serch-btn").addClass("text-blue");
+        // $(".search-bar").hide(500);
+      });
+      // $(".search-form").submit( function(e) {
+      //    if($('.search-box').val().length == 0){
+      //       e.preventDefault();
+      //       $(".search-bar").show();
+      //       $(".search-form").fadeOut();
+      //    }
+      //    else {
+      //       $(".serch-btn").click();
+      //    }
+      // });
+      $(".cancel-payment div").click(function (e) {
+        event.preventDefault();
+        //$('body').css('overflow', 'hidden');
+        $(".cancel-payment").hide();
+        $(".mobileSearch").show();
+        $(".search-bar").show();
+        $(".priceProducts").hide();
+        $(".input-coupon").attr("style", "display:none !important");
+        $(".categoriesmenu").show();
+        $("#viewCart li:nth-child(2) p").text("View Cart");
+        $(".cartElementWrap").fadeOut();
+        $(".cartOuterWrap").css("height", $(window).height());
+        $("body").css("overflow", "auto");
+        $("body").css("position", "unset");
+
+        if ($(window).width() > 767) {
+          $("body").css("margin-right", "0px");
+        }
+      });
+
+      $(window)
+        .scroll(function () {
+          var scrollDistance = $(window).scrollTop();
+
+          // Show/hide menu on scroll
+          //if (scrollDistance >= 850) {
+          //    $('nav').fadeIn("fast");
+          //} else {
+          //    $('nav').fadeOut("fast");
+          //}
+          var extraH = "";
+          if (
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+              navigator.userAgent
+            )
+          ) {
+            extraH = 400;
+          }
+          var leftPos = $(".catNavOuter").scrollLeft();
+          // Assign active class to nav links while scolling
+          $(".page-section").each(function (i) {
+            if ($(this).position().top <= scrollDistance + extraH) {
+              $(".navigation a.active").removeClass("active");
+              if ($("#selectedval").val() == 0) {
+                $(".navigation a").eq(i).addClass("active");
+              } else {
+                $(".navigation a")
+                  .eq(Number($("#selectedval").val()) - 1)
+                  .addClass("active");
+              }
+              var windowWidth = $(window).width();
+              if (windowWidth < 767) {
+                if ($("body").find(".search-form").css("display") == "block") {
+                  // console.log('yes');
+                } else if (
+                  $("body").find(".collectionPopup").css("display") == "block"
+                ) {
+                } else {
+                  $(".navigation a").eq(i).focus();
+                }
+              }
+              var jump = $(".navigation a").attr("href");
+              //$('#selectedval').val(0);
+
+              if (i == 3) {
+                $(".catNavOuter").scrollTo("#coodi" + i);
+              }
+            }
+          });
+        })
+        .scroll();
+
+      function initSearch(search_input_element, close_element) {
+        $(search_input_element).on("keyup", function (event) {
+          var keyword = $(this).val();
+          // if (keyword.length > 0) {
+          //   $(close_element).addClass("cross");
+          //   $(close_element)
+          //     .off("click")
+          //     .on("click", function () {
+          //       //return;
+          //       $(this).removeClass("cross").off("click");
+          //       $(search_input_element).val("");
+          //       $(search_input_element).trigger("keyup").focus();
+          //       return false;
+          //     });
+          // } else {
+          //   $(close_element).removeClass("cross");
+          // }
+          if (keyword.length < 3) keyword = "";
+          searchKeyword(keyword);
+        });
+      }
+      function searchKeyword(keyword) {
+        var _found = 0;
+        $(".foodList").each(function (i, e) {
+          var matches = 0;
+          if ($(this).hasClass("_noresults")) return;
+          $(this)
+            .find("li")
+            .each(function (i2, e2) {
+              var title = $(this).find("h4").text();
+              var description = $(this).find(".navDetaildesc p").text();
+              var re = new RegExp(keyword, "i");
+              if (re.test(title) || re.test(description)) {
+                matches++;
+                $(e2).show();
+              } else {
+                $(e2).hide();
+              }
+            });
+          if (matches > 0) {
+            $(e).show();
+            _found++;
+          } else {
+            $(e).hide();
+          }
+        });
+        if (_found == 0) {
+          $("._noresults").removeClass("_hidden");
+        } else {
+          $("._noresults").addClass("_hidden");
+        }
+      }
+
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          //  console.log($(window).scrollTop())
+          //if ($(window).scrollTop() > 5) {
+          //  $('#header').addClass('navbar-fixed');
+          // }
+          // if ($(window).scrollTop() < 6) {
+          //    $('#header').removeClass('navbar-fixed');
+          //  }
+        });
+        $(".searchIcon").on("click", function () {
+          $(".logo").addClass("hideLogo");
+          $(".searchBar").addClass("active");
+          $(this).toggle();
+          $(this).siblings().toggle();
+          if ($(window).width() > 767) {
+            setTimeout(function () {
+              $("#searchDesktop").focus();
+            }, 100);
+          } else {
+            setTimeout(function () {
+              $("#searchMobile").focus();
+            }, 100);
+          }
+        });
+
+        $(".searchClose").on("click", function () {
+          $("#searchMobile").val("");
+          $("#searchDesktop").val("");
+          searchKeyword("");
+          $(".logo").removeClass("hideLogo");
+          $(".searchBar").removeClass("active");
+          $(this).toggle();
+          $(this).siblings().toggle();
+        });
+
+        initSearch($(".search-box"), $(".search-active"));
+        initSearch($("#searchDesktop"), $("#search_submit_close"));
+        initSearch($("#searchMobile"), $("#search_submit_close"));
+
+        $(".search-box").on("keyup", function () {
+          return;
+          var keyword = $(this).val();
+          if (keyword.length > 0) {
+            $(".search-active").addClass("cross");
+            $(".search-active")
+              .off("click")
+              .on("click", function () {
+                $(this).removeClass("cross").off("click");
+                $(".search-box").val("");
+                $(".search-box").trigger("keyup").focus();
+                return false;
+              });
+          } else {
+            $(".search-active").removeClass("cross");
+          }
+          $(".navDetailList").each(function (i, e) {
+            var matches = 0;
+            $(this)
+              .find("li")
+              .each(function (i2, e2) {
+                var title = $(this).find("h4").text();
+                var description = $(this).find(".navDetaildesc p").text();
+                var re = new RegExp(keyword, "i");
+                if (re.test(title) || re.test(description)) {
+                  matches++;
+                }
+                console.log(title, description);
+              });
+            if (matches > 0) {
+              $(e).show();
+              $("h4.catNavTitle")
+                .eq(i + 1)
+                .show();
+            } else {
+              $(e).hide();
+              $("h4.catNavTitle")
+                .eq(i + 1)
+                .hide();
+            }
+          });
+        });
+      });
+
+      function getScrollbarWidth() {
+        // Creating invisible container
+        const outer = document.createElement("div");
+        //outer.style.visibility = 'hidden';
+        outer.style.overflow = "scroll"; // forcing scrollbar to appear
+        outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+        document.body.appendChild(outer);
+
+        // Creating inner element and placing it in the container
+        const inner = document.createElement("div");
+        outer.appendChild(inner);
+
+        // Calculating difference between container's full width and the child width
+        const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+
+        // Removing temporary elements from the DOM
+        outer.parentNode.removeChild(outer);
+
+        return scrollbarWidth;
+      }
+
+      function scrollToCategory(val) {
+        if ($("body").find(".search-form").css("display") == "block") {
+          $("body").find(".search-form").fadeOut();
+        } else {
+          $("#selectedval").val(val);
+          $("html, body").animate(
+            {
+              scrollTop: $("#" + val).offset().top - 120,
+            },
+            1000
+          );
+          setTimeout(function () {
+            $("#selectedval").val(0);
+          }, 1000);
+        }
+        $(".effect-16").on("input", function () {
+          if ($(this).val() != "") {
+            $(this).addClass("hidelabel");
+          }
+          if ($(this).val() == "") {
+            $(this).removeClass("hidelabel");
+          }
+        });
+      }
+
+      function submitCoupon() {
+        $(".notify").toggleClass("notify-active");
+        $("#notifyType").toggleClass("coupon-applied");
+        setTimeout(function () {
+          $(".notify").removeClass("notify-active");
+          $("#notifyType").removeClass("coupon-applied");
+        }, 1000);
+        $(".coupon_applied").val("1");
+        cart_item_number();
+        $(".cart_discount").show();
+      }
+      $('#firstlabel').keyup(function(e){
+          if(e.keyCode == 13)
+          {
+            if ($('#firstlabel').val()) {
+              submitCoupon();
+            }
+          }
+      });
+      $('.submit_coupon').click(function (event) {
+        if ($('#firstlabel').val() || $('.couponCode').val()) {
+          submitCoupon();
+        }
+      });
+
+      $(document).ready(function () {
+        $(".order_round_main").click(function (event) {
+          $(".collectionPopup").fadeIn();
+          $(".collectionPopup").css("display", "block !important");
+          $("body").css("overflow", "hidden");
+          $("body").css("margin-right", getScrollbarWidth() + "px");
+
+          if (windowWidth < 767) {
+            console.log("menu hap");
+            //$('.collectionPopup').css('height', '80%');
+            $(".close").fadeOut();
+            //$('.collectionPopup').attr('style', 'height: 80% !important');
+          } else {
+            console.log("menu myll");
+          }
+
+          /*$('.order_round_sub_m').html('<div class="order_icon_text_m">Collection<br> On Time</div>');	
+				$('.order_round_sub_m').css({
+				  '-webkit-transform' : 'translateX(120px)',
+				  '-moz-transform'    : 'translateX(120px)',
+				  '-ms-transform'     : 'translateX(120px)',
+				  '-o-transform'      : 'translateX(120px)',
+				  'transform'         : 'translateX(120px)'
+				});*/
+        });
+
+        //focus script coupon code
+        $(".coupon-code").click(function () {
+          $("#firstlabel").focus();
+          $(".couponCode").focus();
+        });
+        //focus script coupon code
+        $(".allergic").click(function () {
+          $("#secondlabel").focus();
+          $(".allergic-note").focus();
+        });
+      });
+    </script>
+  </body>
+</html>

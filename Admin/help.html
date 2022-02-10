@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<title>Uber Eats</title>
+		<link media="all" rel="stylesheet" href="css/style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')</script>
+		<script src="js/select2.min.js" defer></script>
+		<script src="js/jquery.main.js" defer></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header id="header">
+				<div class="header-holder"><strong class="logo"><a href="#"><img src="images/logo.png" alt="Uber Eats Logo" width="177" height="45"></a></strong>
+					<nav id="nav"><a class="nav-opener" href="#"><span>Open</span></a>
+						<div class="nav-drop">
+							<ul class="primary-menu">
+								<li class="menu-item"><a href="index.html"><i class="icon-dashboard"></i><i class="icon-dashboard-active"></i>Dashboard</a></li>
+								<li class="menu-item"><a href="orders.html"><i class="icon-orders"></i><i class="icon-orders-active"></i>Orders</a></li>
+								<li class="menu-item"><a href="payments.html"><i class="icon-payment"></i><i class="icon-payment-active"></i>Payments<i class="notification">03</i></a></li>
+								<li class="menu-item"><a href="products.html"><i class="icon-products"></i><i class="icon-products-active"></i>Products</a></li>
+								<li class="menu-item"><a href="categories.html"><i class="icon-category"></i><i class="icon-category-active"></i>Categories</a></li>
+								<li class="menu-item"><a href="#"><i class="icon-dashboard"></i><i class="icon-dashboard-active"></i>Settings</a>
+									<ul style="margin-top: 20px;">
+									   <li class="menu-item"><a href="businessinfo.html"><i class="icon-help"></i><i class="icon-help-active"></i>Bussiness Info</a></li>
+									   <li class="menu-item"><a href="holiday-hours.html"><i class="icon-calendar"></i><i class="icon-calendar-active"></i>Holiday Hours</a></li>
+									   <li class="menu-item"><a href="pickup-times.html"><i class="icon-times"></i><i class="icon-times-active"></i>Pickup Times</a></li>      
+									   <li class="menu-item" style="margin-bottom: 0;"><a href="opening-hours.html"><i class="icon-calendar"></i><i class="icon-calendar-active"></i>Opening Hours</a></li>
+									</ul>
+								 </li>
+								<li class="menu-item"><a href="user.html"><i class="icon-user"></i><i class="icon-user-active"></i>Users</a></li>
+								<li class="menu-item active"><a class="active" href="help.html"><i class="icon-info_circle"></i><i class="icon-help-active"></i>Help</a></li>
+								<li class="menu-item active"><a class="active" href="#"><i class="icon-logout"></i><i class="icon-logout-active"></i>Logout</a></li>
+							 </ul>
+						</div>
+					</nav>
+	               <div class="mobile_bel_icon mobile_only notification_drop">
+	                  <a href="#"><i class="icon-notification"></i><span>4</span></a>
+	                  <div class="notify_menu">
+	                     <a href="#">Notification <span>1</span></a>
+	                     <a href="#">Notification <span>2</span></a>
+	                     <a href="#">Notification <span>3</span></a>
+	                     <a href="#">Notification <span>4</span></a>
+	                  </div>
+	               </div>
+				</div>
+			</header>
+			<main id="main">
+				<div class="container">
+					<div class="title-wrapper">
+						<h1>Help</h1>
+							
+	                  <ul class="top-icons desktopOnly">
+	                     <li class="notification_drop">
+	                        <a href="#"><i class="icon-notification"></i><span>4</span></a>
+	                        <div class="notify_menu">
+	                           <a href="#">Notification <span>1</span></a>
+	                           <a href="#">Notification <span>2</span></a>
+	                           <a href="#">Notification <span>3</span></a>
+	                           <a href="#">Notification <span>4</span></a>
+	                        </div>
+	                     </li>
+	                  </ul>
+					</div>
+					<div class="card dark-bg help-wrap">
+						<div class="df-row">
+							<div class="col-xs-12 col-md-7">
+								<div class="sub-title">Need a help?</div>
+								<h2>Browse the help centre.</h2>
+								<p>Find quick solutions to common problems, along with guides, how-tos and information on working with Uber Eats.</p>
+							</div>
+							<div class="col-xs-12 col-md-5"><a class="btn btn-default pull-right-desktop" href="#">Go To Help Centre</a></div>
+						</div>
+					</div>
+					<div class="card-title">Get In Touch
+						<div class="custome_toltip">
+							<a href="#"><i class="icon-info_circle"></i></a>
+							<span class="toltip_text">Tooltip text</span>
+						</div>
+					</div>
+					<div class="card">
+						<p>If you're having trouble, don't worry. Let us know and we'll get back to you as soon as we can, usually within 2 business days.</p>
+						<form action="#">
+							<div class="df-row flex-start">
+								<div class="col-xs-12 col-sm-6">
+									<label>Select A Topic</label>
+									<div class="select-wrap">
+										<select name="topic1" required>
+											<option value="1">Select1</option>
+											<option value="2">Select 2</option>
+											<option value="3">Select 3</option>
+										</select>
+									</div>
+									<label>What Can We Help You With?</label>
+									<div class="select-wrap">
+										<select required>
+											<option>Select</option>
+											<option>Select 1</option>
+											<option>Select 2</option>
+										</select>
+									</div>
+									<div class="df-row flex-start upload-wrap">
+										<div class="col-xs-12 col-sm-7 col-md-8 col-lg-6 col-xl-4">
+											<input id="upload-btn" type="file" hidden>
+											<label class="btn btn-default btn-big" for="upload-btn"><i class="icon-upload"></i>Upload File</label>
+										</div>
+										<div class="col-xs-12 col-lg-8">
+											<p class="help-form-text-gray">Make sure menu photography is a JPEG file. JPEG, CSV, PDF, PNG, EXCEL or Word files types supported for all other topics.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 align-stretch">
+									<label for="comments">Explain In Few Sentances</label>
+									<textarea id="comments" name="comments" title="Comments" rows="2" required></textarea>
+									<p class="help-form-text">Unless strictly necessary for your request, please avoid submitting personal data in this form. Personal data included this submission will be processed in compliance of our <a href="#">PRIVACY POLICY</a>.</p>
+								</div>
+								<div class="col-xs-12">
+									<input class="btn btn-primary pull-right" id="submit" type="submit" value="Submit">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

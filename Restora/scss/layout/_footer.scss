@@ -1,0 +1,141 @@
+#footer {
+	background-color: $base-text-color;
+	color: $white;
+	text-align: center;
+	padding-top: 30px;
+
+	@include media ('>=tablet') {
+		padding-top: 56px;
+	}
+
+	.logo {
+		margin: 0 auto 16px;
+	}
+
+	.heading {
+		display: block;
+		font-weight: 700;
+		font-size: 24px;
+		text-transform: uppercase;
+		letter-spacing: 4.5px;
+		margin-bottom: 10px;
+
+		@include media ('>=tablet') {
+			margin-bottom: 22px;
+		}
+	}
+
+	.footer-text {
+		padding-bottom: 10px;
+
+		@include media ('>=tablet') {
+			padding-bottom: 26px;
+		}
+	}
+}
+
+.contact-block {
+	margin-bottom: 25px;
+
+	@include media ('>=tablet') {
+		margin-bottom: 44px;
+	}
+
+	[class*="icon-"] {
+		color: $orange;
+		display: block;
+		font-size: 65px;
+
+		@include media ('>=tablet') {
+			margin-bottom: 4px;
+		}
+	}
+
+	.title {
+		display: block;
+		text-transform: uppercase;
+		position: relative;
+		font-size: 20px;
+		font-weight: 700;
+		padding-bottom: 10px;
+		margin-bottom: 15px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 74px;
+			height: 4px;
+			background: $orange;
+		}
+	}
+
+	.tel,
+	.email {
+		color: $white;
+
+		&:hover {
+			color: $orange;
+		}
+	}
+}
+
+.social-holder {
+	margin-bottom: 30px;
+
+	.title {
+		text-transform: uppercase;
+		display: block;
+		font-weight: 700;
+		font-size: 16px;
+		margin-bottom: 7px;
+	}
+}
+
+.social-media {
+	@extend %listreset;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		color: $white;
+
+		&:hover {
+			color: $orange;
+
+			[class*="icon-"] {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+
+	li {
+		margin: 0 5px 10px;
+	}
+
+	[class*="icon-"] {
+		@include size(40px);
+		@include animate(border-color);
+
+		border-bottom: 2px solid $orange;
+		display: block;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.copyright {
+	background-color: #121212;
+	padding: 18px 0 5px;
+}

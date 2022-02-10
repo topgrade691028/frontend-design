@@ -1,0 +1,245 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="stylesheet" href="./tailwind.css" />
+  <title>Let's Build: With Tailwind CSS - Responsive Navbar</title>
+</head>
+
+<body class="antialiased">
+  <header class="w-screen fixed z-50 bg-white ">
+    <div class="flex justify-around p-4 shadow-lg h-20 items-center">
+      <img src="./images/logo.svg" alt="logo" class="w-36 h-8" />
+      <div class="hidden sm:flex divide-x-2 divide-gray-300 p-2 rounded-full bg-gray-200 gap-4">
+        <input type="text" class="px-2 py-1 bg-gray-200 outline-none w-64" placeholder="Find accounts" />
+        <button>
+          <img src="./images/ic_search.svg" alt="serch" class="mx-2 w-5" />
+        </button>
+      </div>
+      <button class="px-8 xl:px-16 bg-red-500 rounded-md text-white font-bold hover:bg-red-700 py-2">Register</button>
+    </div>
+  </header>
+
+  <main class="flex lg:px-60 md:px-6 bg-white lg:py-0">
+    <div class="hidden sm:flex sm:w-4/12 divide-y-2 mt-15 justify-center flex-col gap-10 overflow-y-auto">
+      <div class="min-h-screen divide-y-2 flex pt-0 md:pt-32 lg:pt-20 xl:pt-0">
+        <div class="flex items-center flex-col w-full pt-5">
+          <div class="w-full  border-b">
+            <div class="flex flex-col gap-2 xl:gap-2 pb-10">
+              <div class="flex gap-2 items-center cursor-pointer my-2">
+                <img src="images/side_home.svg" alt="side icon" class="w-5" />
+                <span class="text-sm hover:text-red-500 text-black font-bold">Home</span>
+              </div>
+              <div class="flex gap-2 items-center cursor-pointer my-2">
+                <img src="images/side_explore.svg" alt="side icon" class="w-5" />
+                <span class="text-sm hover:text-red-500 text-black font-bold">Explore</span>
+              </div>
+              <div class="flex gap-2 items-center cursor-pointe my-2">
+                <img src="images/following.png" alt="side icon" class="w-5" />
+                <span class="text-sm hover:text-red-500 text-black font-bold">Followers</span>
+              </div>
+              <div class="flex gap-2 items-center cursor-pointer my-2">
+                <img src="images/following.png" alt="side icon" class="w-5" />
+                <span class="text-sm hover:text-red-500 text-black font-bold">Following</span>
+              </div>
+              <div class="flex gap-2 items-center cursor-pointer my-2">
+                <img src="images/friends.png" alt="side icon" class="w-5" />
+                <span class="text-sm hover:text-red-500 text-black font-bold">Friends</span>
+              </div>
+              <div class="flex gap-2 items-center cursor-pointer my-2">
+                <img src="images/side_star.svg" alt="side icon" class="w-5" />
+                <span class="text-sm hover:text-red-500 text-black font-bold">Favorite</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 flex flex-col gap-5 w-full">
+            <span class="text-gray-300 text-sm">Suggest People</span>
+            <div class="flex flex-col gap-2 xl:gap-2">
+              <div class="flex gap-4 items-center cursor-pointer">
+                <img src="images/man1.png" alt="avatar" class="w-10 h-10" />
+                <div class="flex flex-col w-full">
+                  <span class="text-black text-sm">
+                    willsmith
+                  </span>
+                  <div class="flex gap-1 items-center">
+                    <span class="text-gray-500 text-sm">willsmith</span>
+                    <img src="images/flag_ca.png" alt="flag" class="rounded-sm w-5" />
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-4 items-center cursor-pointer">
+                <img src="images/man2.png" alt="avatar" class="w-10 h-10" />
+                <div class="flex flex-col w-full">
+                  <span class="text-black text-sm">
+                    edshreean
+                  </span>
+                  <div class="flex gap-1 items-center">
+                    <span class="text-gray-500 text-sm">Ed Sheeran</span>
+                    <img src="images/flag_us.png" alt="flag" class="rounded-sm w-5" />
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-4 items-center cursor-pointer">
+                <img src="images/man3.png" alt="avatar" class="w-10 h-10" />
+                <div class="flex flex-col w-full">
+                  <span class="text-black text-sm">
+                    billieeilish
+                  </span>
+                  <div class="flex gap-1 items-center">
+                    <span class="text-gray-500 text-sm">Billie Eilish</span>
+                    <img src="images/flag_eu.png" alt="flag" class="rounded-sm w-5" />
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-4 items-center cursor-pointer">
+                <img src="images/man4.png" alt="avatar" class="w-10 h-10" />
+                <div class="flex flex-col w-full">
+                  <span class="text-black text-sm">
+                    manuelneuer
+                  </span>
+                  <div class="flex gap-1 items-center">
+                    <span class="text-gray-500 text-sm">Manuel Neuer</span>
+                    <img src="images/flag_us.png" alt="flag" class="rounded-sm w-5" />
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-4 items-center cursor-pointer">
+                <img src="images/man5.png" alt="avatar" class="w-10 h-10" />
+                <div class="flex flex-col w-full">
+                  <span class="text-black text-sm">
+                    toni.kr8s
+                  </span>
+                  <div class="flex gap-1 items-center">
+                    <span class="text-gray-500 text-sm">Toni Kroos</span>
+                    <img src="images/flag_uk.png" alt="flag" class="rounded-sm w-5" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="text-red-500 cursor-pointer hover:text-red-700">See all</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="w-full sm:w-8/12 min-h-screen">
+      <div class="h-max  md:mx-auto md:py-5 overflow-y-auto mt-20 md:px-10" style="max-width: 900px;">
+
+        <div class="flex flex-col pb-8 ">
+          <div class="hidden sm:flex items-center justify-between my-4 ">
+            <div class="flex items-center">
+              <div class="w-14">
+                <img class="w-12 h-12 rounded-full" src="./images/man5.png">
+              </div>
+              <div class="flex-1 pl-2">
+                <div class="text-black flex items-center  font-semibold">
+                  <p class="text-sm text-black">manuelneuer</p>
+                  <img class="w-5 h-auto ml-1" src="./images/flag_us.png">
+                </div>
+                <div class="text-gray text-sm">
+                  Hey, I’m looking for new people nearby and you so?
+                </div>
+              </div>
+            </div>
+            <!-- <button
+              class="px-6 py-1 border border-red-300 rounded text-red-300 cursor-pointer hover:bg-red-300 hover:text-white">Follow</button> -->
+
+            <button class="px-6 bg-red-500 rounded-md text-white font-bold hover:bg-red-700 py-1">Follow</button>
+          </div>
+          <div class="flex items-center place-content-between border-b pb-10">
+            <div class="flex flex-row md:pl-14 w-full">
+              <img src="./images/image.png" class="w-full md:w-1/2" />
+              <div class="hidden sm:flex  flex-col justify-between h-auto ml-5 items-center">
+                <div class="flex flex-col w-auto">
+                  <button class="flex items-center justify-center my-2 bg-gray-200 rounded px-2 py-3">
+                    <img src="./images/button_up.png" class="h-4" />
+                  </button>
+                  <button class="flex items-center justify-center my-2 bg-gray-200 rounded px-2 py-3">
+                    <img src="./images/button_down.png" class="h-4" />
+                  </button>
+                </div>
+                <div class="flex flex-col w-auto">
+                  <div class="flex flex-col w-auto items-center">
+                    <button class="flex items-center justify-center my-1 rounded-full bg-gray-200 px-3 py-3">
+                      <img src="./images/heart.png" class="w-4" />
+                    </button>
+                    <span class="text-gray text-sm">3.6M</span>
+                  </div>
+                  <div class="flex flex-col w-auto items-center">
+                    <button class="flex items-center justify-center my-1 rounded-full bg-gray-200 px-3 py-3">
+                      <img src="./images/comment.png" class="w-4" />
+                    </button>
+                    <span class="text-gray text-sm">3.6M</span>
+                  </div>
+                  <div class="flex flex-col w-auto items-center">
+                    <button class="flex items-center justify-center my-1 rounded-full bg-gray-200 px-3 py-3">
+                      <img src="./images/star.png" class="w-4" />
+                    </button>
+                    <span class="text-gray text-sm">3.6M</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden sm:flex  items-center justify-between my-4">
+            <div class="flex items-center">
+              <div class="w-14">
+                <img class="w-12 h-12 rounded-full" src="./images/man3.png">
+              </div>
+              <div class="flex-1 pl-2">
+                <div class="text-black flex items-center  font-semibold">
+                  <p class="text-sm text-black">manuelneuer</p>
+                  <img class="w-5 h-auto ml-1" src="./images/flag_ca.png">
+                </div>
+                <div class="text-gray text-sm">
+                  Hey, I’m looking for new people nearby and you so?
+                </div>
+              </div>
+            </div>
+            <!-- <button
+              class="px-6 py-1 border border-red-300 rounded text-red-300 cursor-pointer hover:bg-red-300 hover:text-white">Follow</button> -->
+            <button class="px-6 bg-red-500 rounded-md text-white font-bold hover:bg-red-700 py-1">Follow</button>
+          </div>
+          <div class="flex flex-col sm:hidden fixed w-screen bottom-20 overflow-x-auto pl-5">
+            <p class="text-white text-1xl">@femaleuser</p>
+            <p class="text-white text-sm w-2/3">Hey, I’m looking for new people
+              nearby and you so?</p>
+            <div class="flex items-center mt-3">
+              <img class="w-6 h-4" src="./images/flag.png">
+              <p class="text-sm text-white ml-1">Mississippi, USA</p>
+            </div>
+          </div>
+          <div class="flex flex-col sm:hidden fixed bottom-40 right-0 overflow-x-auto pr-5 gap-2">
+            <div class="flex flex-col w-auto items-center">
+              <img src="./images/heart_gray.png" class="w-7" />
+              <span class="text-gray-400 text-sm">3.6M</span>
+            </div>
+            <div class="flex flex-col w-auto items-center">
+              <img src="./images/comment_gray.png" class="w-7" />
+              <span class="text-gray-400 text-sm">112K</span>
+            </div>
+            <div class="flex flex-col w-auto items-center">
+              <img src="./images/star_gray.png" class="w-7" />
+              <span class="text-gray-400 text-sm">2.1M</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div
+        class="flex sm:hidden fixed w-screen bottom-0 h-16 bg-white overflow-x-auto gap-10 justify-center items-center">
+        <img src="images/home_selected.png" alt="bottom nav" />
+        <img src="images/explore.png" alt="bottom nav" />
+        <img src="images/ic_search.svg" alt="bottom nav" />
+        <img src="images/following.png" alt="bottom nav" />
+      </div>
+    </div>
+
+  </main>
+
+</body>
+
+</html>

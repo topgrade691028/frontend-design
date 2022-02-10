@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <title>Restora</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico%7cRaleway:400,500,700%7cRoboto:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link media="all" rel="stylesheet" href="css/main.css?version=3.2" />
+    <link media="all" rel="stylesheet" href="css/extra.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.main.js" defer></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div class="notify"><span id="notifyType" class=""></span></div>
+      <header id="header" class="navbar-fixed">
+        <div class="container flex-container main-menu">
+          <div class="top-menu">
+            <nav class="menu-holder home-nav not-home">
+              <a href="#" class="nav-opener"><span></span></a>
+            </nav>
+            <a href="#" class="logo">
+              <span class="img-holder">
+                <img src="images/logo.png" alt="Restora" />
+              </span>
+              <span class="text-holder">
+                <span class="brand">Restora</span>
+                <span class="slogan">Speak with the taste</span>
+              </span>
+            </a>
+            <form class="search-form">
+              <button type="submit" class="serch-btn" name="submit">
+                <div class="search-active"></div>
+              </button>
+              <input
+                type="text"
+                class="search-box"
+                placeholder="Type Something.."
+              />
+            </form>
+
+            <div class="btn-order">
+              <a
+                href="ordernow.html"
+                class="btn btn-extra-small btn-primary"
+                style="border-color: #000"
+                >order now</a
+              >
+            </div>
+            <!-- <a class="search-bar">
+                        
+                    </a> -->
+            <a class="cancel-payment" style="display: none">
+              <div class="close"></div>
+            </a>
+          </div>
+          <nav class="menu-holder">
+            <ul class="nav">
+              <li><a href="index.html">home</a></li>
+              <li><a href="menu.html">menu</a></li>
+              <li><a href="about.html">about</a></li>
+              <li class="active"><a href="contact.html">contact</a></li>
+              <li
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <a class="search-bar" href="my-account.html">
+                  <div class="login-user" style="margin-top: 0"></div>
+                </a>
+                <a class="desktop-hidden" href="my-account.html"> Account </a>
+              </li>
+            </ul>
+            <div class="btn-holder">
+              <a href="ordernow.html" class="btn btn-small btn-primary"
+                >order now</a
+              >
+            </div>
+            <div class="btn-holder mobile-hidden">
+              <a href="my-account.html">
+                <p class="user"></p>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main id="main">
+        <section
+          class="hero-section bg-cover order-banner"
+          style="background-color: #000"
+        >
+          <div class="align-wrap subHeader">
+            <div class="container">
+              <!--<h1>Order Now</h1>-->
+            </div>
+          </div>
+        </section>
+        <div class="innerPageContent">
+          <!--TOP-->
+          <div class="container padd-70">
+            <form id="contact_form" class="col-md-8 contact-page-head-border formFields">
+              <div class="contact-page-head">
+                <h2>How can we help you</h2>
+                <p>
+                  Please give as much detail as possible so we can route your
+                  question properly.
+                </p>
+              </div>
+              <div class="row">
+                <div class="col-md-11" style="padding: 0">
+                  <div class="col-sm-6 col-md-6 black">
+                    <div class="col-input input-effect">
+                      <input class="effect-16" type="text" id="firstname" required>
+                      <label>First name</label>
+                      <span class="focus-border"></span>
+                    </div>
+                  </div>
+                  <!--Last name-->
+                  <div class="col-sm-6 col-md-6 black">
+                    <div class="col-input input-effect">
+                      <input class="effect-16" type="text" id="lastname" required>
+                      <label>Last name</label>
+                      <span class="focus-border"></span>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <!--Phone Number-->
+                  <div class="col-sm-6 col-md-6 black">
+                    
+                    <div class="col-input input-effect">
+                      <input class="effect-16" type="text" id="phoneNumber" required>
+                      <label>Phone Number</label>
+                      <span class="focus-border"></span>
+                    </div>
+                    </span>
+                  </div>
+                  <!--Email Address-->
+                  <div class="col-sm-6 col-md-6 black">
+                    <div class="col-input input-effect">
+                      <input class="effect-16" type="email" id="emailAddress" required>
+                      <label>Email Address</label>
+                      <span class="focus-border"></span>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <!--Message-->
+                  <div class="col-md-12 message">
+                    <div class="col-input input-effect">
+                      <textarea class="effect-16 textarea" type="text" id="formContent"></textarea>
+                      <label>Message</label>
+                      <span class="focus-border"></span>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-md-12 text-right">
+                    <input class="menu-all-btn-wht btn-bg submit-contact-form" type="submit" value="SUBMIT">
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="col-md-1"></div>
+              </div>
+            </form>
+            <div class="col-md-4">
+              <div class="row margin-top">
+                <div class="col-md-offset-2 col-md-10">
+                  <div class="contact-page-head">
+                    <h2>Contact Information</h2>
+                    <div class="contact-head-u btn-bg"></div>
+                  </div>
+                  <div class="contact-det">
+                    <div class="contact-icon">
+                      <i class="flaticon-placeholder"></i>
+                    </div>
+                    <span
+                      >ADDRESS <br />
+                      <p>1205 Mission St, San Francisco, CA 94110, USA</p>
+                    </span>
+                  </div>
+                  <div class="contact-det">
+                    <div class="contact-icon">
+                      <i class="flaticon-phone-call"></i>
+                    </div>
+                    <span
+                      >PHONE <br />
+                      <p style="margin-bottom: 8px"><b>+01 987654321</b></p>
+                      <p><b>+01 987654321</b></p>
+                    </span>
+                  </div>
+                  <div class="contact-det">
+                    <div class="contact-icon">
+                      <i class="flaticon-envelope"></i>
+                    </div>
+                    <span
+                      >EMAIL <br />
+                      <p>info@restora.com</p>
+                    </span>
+                  </div>
+                  <div class="contact-det">
+                    <div class="contact-icon">
+                      <i class="flaticon2-clock"></i>
+                    </div>
+                    <span
+                      >OPENING HOURS <br />
+                      <p>Mon-Sat :- 8AM - 2PM</p>
+                      <p>
+                        Sunday :- <em class="content-subhead">Closed</em>
+                      </p></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+          <!--MAP-->
+          <div class="container-fluid">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12616.465358943564!2d-122.43643916063759!3d37.76387019994221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x601f7a97f0ce6c6b!2sTartine+Bakery!5e0!3m2!1sen!2sin!4v1490246959309"
+              width="100%"
+              height="450"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </main>
+      <footer id="footer">
+        <div class="mobile-hidden">
+          <div class="container">
+            <strong class="logo">
+              <span class="img-holder">
+                <img src="images/logo.png" alt="Restora" />
+              </span>
+              <span class="text-holder">
+                <span class="brand">Restora</span>
+                <span class="slogan">Speak with the taste</span>
+              </span>
+            </strong>
+            <div class="footer-text">
+              <p>Restora!! Now That Your Tastes <br />Have Grown Up!</p>
+            </div>
+            <strong class="heading">contact information</strong>
+            <div class="row">
+              <div class="contact-block col-md-33">
+                <div class="phone"></div>
+                <strong class="title">phone</strong>
+                <a class="tel" href="tel:+01987654321"
+                  >+01 987654321(Toll free)</a
+                >
+              </div>
+              <div class="contact-block col-md-33">
+                <div class="location"></div>
+                <strong class="title">address</strong>
+                <address class="address">
+                  B-9223 Your Address Here,City,<br />Country.987097.
+                </address>
+              </div>
+              <div class="contact-block col-md-33">
+                <div class="envelope"></div>
+                <strong class="title">email</strong>
+                <a
+                  class="email"
+                  href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#115;&#116;&#111;&#114;&#097;&#046;&#099;&#111;&#109;"
+                  >&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#115;&#116;&#111;&#114;&#097;&#046;&#099;&#111;&#109;</a
+                >
+              </div>
+            </div>
+            <div class="social-holder">
+              <strong class="title">share the taste</strong>
+              <ul class="social-media">
+                <li>
+                  <a href="#">
+                    <p class="facebook"></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p class="instagram"></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="input-coupon" style="display: none !important; width: 100%">
+          <div
+            class="input1 row"
+            style="
+              margin: 0;
+              width: 100%;
+              background: white;
+              padding-top: 15px;
+              padding-left: 30px;
+              padding-right: 30px;
+            "
+          >
+            <div
+              class="hide_placeholder"
+              style="position: relative; width: 80%; display: block"
+            >
+              <div class="background coupon-code">CAOK65517</div>
+              <input
+                placeholder=""
+                class="effect-16 couponCode firstlabel"
+                style="color: black"
+              />
+              <label style="top: 1px; text-align: left !important"
+                >Coupon Code</label
+              >
+              <span class="focus-border" style="top: 27px"></span>
+            </div>
+            <div style="width: 20%; display: flex; text-align: center">
+              <a
+                style="
+                  width: 23px;
+                  height: 23px;
+                  background: #00adef;
+                  border-radius: 30px;
+                  text-align: center;
+                  margin-left: 20px;
+                  color: white;
+                "
+              >
+                <p style="margin: -3px">></p>
+              </a>
+            </div>
+          </div>
+          <div
+            class="input2"
+            style="
+              position: relative;
+              display: block;
+              background: white;
+              margin-top: 20px;
+              width: 100%;
+              padding-top: 20px;
+              padding-left: 30px;
+              padding-right: 30px;
+            "
+          >
+            <div
+              class="hide_placeholder"
+              style="position: relative; width: 100%; display: block"
+            >
+              <div class="background allergic">e.g. allergic</div>
+              <input
+                placeholder=""
+                class="effect-16 allergic-note"
+                style="color: black"
+                id="secondlabel"
+              />
+              <label style="top: 1px; text-align: left !important">Notes</label>
+              <span class="focus-border" style="top: 27px"></span>
+            </div>
+          </div>
+        </div> -->
+        <div id="notification-form"></div>
+        <div class="text-restora">
+          <p style="text-align: center">@Restora - 2019</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="js/card.js"></script>
+    <script>
+      $("#notification-form").hide();
+      $("#contact_form").submit(function(e) {
+        e.preventDefault();
+        $("#notification-form")
+          .append("<p>Email sent successfully!</p>")
+          .show()
+          .fadeTo(2000, 1, function () {
+            $("#notification-form, #notification-form p")
+              .hide()
+              .fadeTo(1000, 0);
+          });
+      });
+      $(".effect-16").on("input", function () {
+        if ($(this).val() != "") {
+          $(this).addClass("hidelabel");
+          $(this)
+            .parent(".hide_placeholder")
+            .find(".background")
+            .css("visibility", "hidden");
+          //  $('.background').css('visibility','hidden');
+        }
+        if ($(this).val() == "") {
+          $(this).removeClass("hidelabel");
+          $(this)
+            .parent(".hide_placeholder")
+            .find(".background")
+            .css("visibility", "visible");
+        }
+      });
+    </script>
+    <!-- <script>
+      $(document).ready(function () {
+        cartPtint();
+        if ($(window).width() < 767) {
+          var bodyWidth = window.innerWidth - 30;
+          var myDiv = $(".platterBtn");
+          myDiv.animate({
+            scrollLeft: bodyWidth / 2 + "px",
+          });
+        }
+        $("#tabs a#tab1").click(function () {
+          $("input#delivery").val("1");
+          $("input#collection").val("0");
+          console.log($("input#delivery").val());
+          console.log($("input#collection").val());
+        });
+        $("#tabs a#tab2").click(function () {
+          $("input#delivery").val("0");
+          $("input#collection").val("1");
+          console.log($("input#delivery").val());
+          console.log($("input#collection").val());
+        });
+      });
+
+      var doubleTouchStartTimestamp = 0;
+      $(document).bind("touchstart", function (event) {
+        var now = +new Date();
+        if (doubleTouchStartTimestamp + 500 > now) {
+          event.preventDefault();
+        }
+        doubleTouchStartTimestamp = now;
+      });
+
+      $(".navDetailList li a").click(function (event) {
+        if ($("body").find(".search-form").css("display") == "block") {
+          $("body").find(".search-form").fadeOut();
+          // $('.catItemPopup').fadeIn();
+        } else {
+          event.preventDefault();
+          if ($(window).width() < 767) {
+            var bodyWidth = window.innerWidth - 30;
+
+            $(".catItemPopup .chooseDealBtns li").attr(
+              "style",
+              "min-width: " + (bodyWidth / 3 - 30) + "px !important"
+            );
+          }
+
+          $(".catItemPopup").fadeIn();
+
+          var item_id = $(this).find("#item_id").val();
+          var title = $(this).find("h4").html();
+          var description = $(this).find("p").html();
+          var price = $(this).find(".price").data("price");
+
+          $(".total_price").val(price);
+          $(".subtotal_price").val(price);
+          $(".item_price").val(price);
+
+          var response = {
+            product_id: "100016",
+            have_options: "1",
+            option: [
+              {
+                option_id: "13",
+                restaurant_id: "112",
+                option_title: "Size",
+                options_position: "1",
+                select_type: "single",
+                sub_options: [
+                  {
+                    sub_option_id: "17",
+                    option_id: "13",
+                    sub_option_name: "Small",
+                    sub_option_price: "5.99",
+                    sub_option_position: "1",
+                  },
+                  {
+                    sub_option_id: "18",
+                    option_id: "13",
+                    restaurant_id: "112",
+                    sub_option_name: "Large",
+                    sub_option_price: "9.99",
+                    sub_option_position: "2",
+                  },
+                ],
+              },
+              {
+                option_id: "13",
+                restaurant_id: "112",
+                option_title: "Sauces",
+                options_position: "1",
+                select_type: "single",
+                sub_options: [
+                  {
+                    sub_option_id: "17",
+                    option_id: "13",
+                    sub_option_name: "Small+",
+                    sub_option_price: "5.99",
+                    sub_option_position: "1",
+                  },
+                  {
+                    sub_option_id: "18",
+                    option_id: "13",
+                    restaurant_id: "112",
+                    sub_option_name: "Large+",
+                    sub_option_price: "9.99",
+                    sub_option_position: "2",
+                  },
+                  {
+                    sub_option_id: "19",
+                    option_id: "13",
+                    restaurant_id: "112",
+                    sub_option_name: "Large++",
+                    sub_option_price: "19.99",
+                    sub_option_position: "3",
+                  },
+                  {
+                    sub_option_id: "20",
+                    option_id: "13",
+                    restaurant_id: "112",
+                    sub_option_name: "Large+++",
+                    sub_option_price: "29.99",
+                    sub_option_position: "4",
+                  },
+                ],
+              },
+              {
+                option_id: "14",
+                option_title: "Toppings",
+                options_position: "2",
+                select_type: "multiple",
+                sub_options: [
+                  {
+                    sub_option_id: "17",
+                    option_id: "13",
+                    restaurant_id: "112",
+                    sub_option_name: "Peperoni",
+                    sub_option_price: "2.99",
+                    sub_option_position: "1",
+                  },
+                  {
+                    sub_option_id: "18",
+                    option_id: "13",
+                    restaurant_id: "112",
+                    sub_option_name: "Corns",
+                    sub_option_price: "1.99",
+                    sub_option_position: "2",
+                  },
+                ],
+              },
+            ],
+          };
+
+          var ret = 0;
+          $(response).each(function (index, data) {
+            if (data.product_id == item_id) {
+              if (data.have_options == 1) {
+                var options = data.option;
+                $(options).each(function (index, data) {
+                  if (data.select_type == "single") {
+                    var sub_options_single = data.sub_options;
+
+                    var single_list = "";
+
+                    var option_name = data.option_title;
+
+                    $(sub_options_single).each(function (index, data) {
+                      var sub_option_id = data.sub_option_id;
+                      var option_id = data.option_id;
+                      var sub_option_name = data.sub_option_name;
+                      var sub_option_price = data.sub_option_price;
+                      var sub_option_position = data.sub_option_position;
+
+                      single_list +=
+                        '<li> <input class="calc" hidden="hidden" type="radio" id="' +
+                        option_name +
+                        "_" +
+                        index +
+                        '" name="' +
+                        option_name +
+                        '" value="' +
+                        sub_option_price +
+                        '"> <label for="' +
+                        option_name +
+                        "_" +
+                        index +
+                        '"> <div>' +
+                        sub_option_name +
+                        "</div> <div>+ £ " +
+                        sub_option_price +
+                        "</div> </label> </li>";
+                    });
+
+                    var single_data_list =
+                      '<small>Choose <b class="option_title">' +
+                      data.option_title +
+                      '</b></small><ul class="chooseDealBtns sizeBtn flex-container size_list"> ' +
+                      single_list +
+                      "</ul>";
+
+                    $(".single").append(single_data_list);
+                  }
+
+                  if (data.select_type == "multiple") {
+                    var sub_options_multiple = data.sub_options;
+
+                    var multiple_list = "";
+                    var option_name = data.option_title;
+                    $(sub_options_multiple).each(function (index, data) {
+                      var sub_option_id = data.sub_option_id;
+                      var option_id = data.option_id;
+                      var sub_option_name = data.sub_option_name;
+                      var sub_option_price = data.sub_option_price;
+                      var sub_option_position = data.sub_option_position;
+
+                      multiple_list +=
+                        '<li class="toppings"> <input class="calc" data-start="0" data-limit = "2" hidden="hidden" type="checkbox" id="' +
+                        option_name +
+                        "_" +
+                        index +
+                        '" name="' +
+                        option_name +
+                        '" value="' +
+                        sub_option_price +
+                        '"> <label for="' +
+                        option_name +
+                        "_" +
+                        index +
+                        '" data-extraPrice="' +
+                        sub_option_price +
+                        '"> <div>' +
+                        sub_option_name +
+                        "</div> <div>+ £ " +
+                        sub_option_price +
+                        '</div> <span class="quant_text" style="display:none">0</span></label> </li>';
+                    });
+
+                    var multiple_data_list =
+                      '<small>Choose <b class="option_title">' +
+                      data.option_title +
+                      '</b></small><ul class="chooseDealBtns sizeBtn flex-container size_list"> ' +
+                      multiple_list +
+                      "</ul>";
+
+                    $(".multiple").append(multiple_data_list);
+                  }
+                });
+
+                ret++;
+              }
+            }
+          });
+
+          $(".chooseDealBtns").data("itemPrice", price);
+
+          $(".ckh_price").html(price);
+          $(".item_id").val(item_id);
+
+          $("#item_title").html(title);
+          $("#item_description").html(description);
+          if ($(".single").contents().length == 0) {
+            $(".shadow-ting").css("visibility", "hidden");
+          }
+            // calculate scrollbar of item middle
+          setInterval(function () {
+            var pop_fullheight = window.innerHeight;
+            var pop_header1 =
+              document.getElementsByClassName("popup-header-texts")[0]
+                .clientHeight;
+            var pop_footer =
+              document.getElementsByClassName("popup-footer")[0].clientHeight;
+            var pop_totals = pop_header1 + pop_footer + 20;
+            var final = pop_fullheight - pop_totals;
+
+            $(".popup-scroll").attr(
+              "style",
+              "max-height: " + final + "px !important"
+            );
+          }, 100);
+          //   calculate scrollbar of item middle
+
+          $("body").css("overflow", "hidden");
+        }
+
+        if ($(window).width() > 767) {
+          $("body").css("margin-right", getScrollbarWidth() + "px");
+        }
+      });
+
+      var counter = 0;
+      $(".calc").each(function () {
+        if ($(this).attr("type") == "checkbox") {
+          $(this)
+            .next("label")
+            .append('<span class="quant_text" style="display:none">0</span>');
+        }
+      });
+      $(document).on("click", ".calc", function () {
+        var popParent = $(this).parents(".itemPopup");
+        var qty = popParent.find(".orderQty").html();
+        //console.log(qty);
+
+        var sum = 0;
+        var itemPrice = $(".chooseDealBtns").data("itemPrice");
+        if ($(this).attr("type") == "checkbox") {
+          var click_start = $(this).attr("data-start");
+          click_start++;
+          $(this).attr("data-click", click_start);
+          $(this).attr("data-start", click_start);
+          var click_quant = $(this).attr("data-click");
+          var limit_quant = $(this).attr("data-limit");
+          if (click_quant <= limit_quant) {
+            $(this).prop("checked", true);
+            $(this)
+              .next("label")
+              .children(".quant_text")
+              .html(click_quant)
+              .css("display", "inline-block");
+            var click_qty = parseFloat(click_quant * $(this).val());
+            $(this).attr("data-main-price", click_qty);
+            total_sum_checkbox();
+          } else {
+            $(this).prop("checked", false);
+            $(this)
+              .next("label")
+              .children(".quant_text")
+              .css("display", "none");
+            $(this).attr("data-click", 0);
+            $(this).attr("data-start", 0);
+            $(this).attr("data-main-price", 0);
+            total_sum_checkbox();
+          }
+        } else if ($(this).attr("type") == "radio") {
+          var click_qty = parseFloat($(this).val());
+          $(this).attr("data-main-price", click_qty);
+          total_sum_checkbox();
+        }
+
+        function total_sum_checkbox(value) {
+          $(".calc:checked").each(function () {
+            sum += Number($(this).attr("data-main-price"));
+          });
+        }
+
+        var Total_price = qty * (sum + itemPrice);
+        $(".subtotal_price").val((sum + itemPrice).toFixed(2));
+        $(".ckh_price").text(Total_price.toFixed(2));
+
+        $(".total_price").val(Total_price.toFixed(2));
+      });
+      if ($("#cartOrderList").find("li").length == 0) {
+        $("#cartOrderList").append(
+          '<p class="cart_empty_text">Cart is empty.</p>'
+        );
+        $(".cartWrap")
+          .find(".input-coupon")
+          .addClass("hide_div")
+          .removeClass("show_div");
+      }
+      $(".addToCart").click(function () {
+        $(".cartWrap")
+          .find(".input-coupon")
+          .removeClass("hide_div")
+          .addClass("show_div");
+        var title = $("#item_title").html();
+        var subtotal = $(".subtotal_price").val();
+        var total = $(".total_price").val();
+        var item_id = $(".item_id").val();
+        var click_quant = 0;
+        var pop_item_quant = $(".catItemPopupInner").find(".orderQty").text();
+        //var single_array = new Array();
+        //var multiple_array = new Array();
+
+        var topping_name = new Array();
+        var whole_text_size = "";
+        var option_title = "";
+
+        var obj = {}; // Define object
+
+        $(".calc:checked").each(function () {
+          var option_fieldset = $(this).closest("fieldset");
+          option_title = option_fieldset.find(".option_title").html();
+
+          var name = $(this).attr("name");
+
+          if ($(this).attr("type") == "checkbox") {
+            click_quant = $(this).attr("data-click");
+            var whole_text =
+              " " +
+              $(this).next("label").children("div:first-child").html() +
+              " (x" +
+              click_quant +
+              ")";
+            if (obj[name]) {
+              obj[name].push(whole_text);
+            } else {
+              obj[name] = [whole_text];
+            }
+          } else if ($(this).attr("type") == "radio") {
+            whole_text_size = $(this)
+              .next("label")
+              .children("div:first-child")
+              .html();
+
+            if (obj[name]) {
+              obj[name].push(whole_text_size);
+            } else {
+              obj[name] = [whole_text_size];
+            }
+          }
+        });
+
+        var item_len = Object.keys(obj).length;
+        var total_item_list = "";
+        for (let [key, value] of Object.entries(obj)) {
+          total_item_list += key + ": " + value + " ";
+        }
+
+        var item_html =
+          '<li data-item-li-price="' +
+          subtotal +
+          '"><div class="orderLabel-col"><span class="orderLabel">' +
+          title +
+          '</span><div class="orderAddRemoveBtns flex-container"><div class="orderRemoveBtn"><div class="cart-icon" onclick="cartIncrement(event, -1, true)"><img src="images/minus.svg"></div></div><span class="orderQty">' +
+          pop_item_quant +
+          '</span> <div class="orderAddBtn"><div class="cart-icon" onclick="cartIncrement(event, 1, true)"><img src="images/add-button.svg"></div> </div></div><span class="orderPrice">£ <span class="total_li_price">' +
+          total +
+          '</span></span></div><div class="orderinfo">' +
+          total_item_list +
+          '</div><input type="hidden" name="item_id" val="' +
+          item_id +
+          '"> </li>';
+        $("#cartOrderList").find(".cart_empty_text").remove();
+        $("#cartOrderList").append(item_html);
+        /*var cart_total_rate = 0;
+                                      $('#cartOrderList').find('.total_li_price').each(function(index, el) {
+                                         cart_total_rate += parseFloat($(this).text());
+                                      });
+                                      $('.cart_total_price').text(cart_total_rate.toFixed(2));*/
+
+        cartJson();
+
+        // using When & then methods.
+        $.when($(".catItemPopup").fadeOut()).then(function () {
+          $(".calc").prop("checked", false);
+          $(".single").html("");
+          $(".multiple").html("");
+
+          $("body").css("overflow", "auto");
+          $("body").css("position", "unset");
+          if ($(window).width() > 767) {
+            $("body").css("margin-right", "0px");
+          }
+        });
+        $(".notify").toggleClass("notify-active");
+        $("#notifyType").toggleClass("success");
+        setTimeout(function () {
+          $(".notify").removeClass("notify-active");
+          $("#notifyType").removeClass("success");
+        }, 1000);
+
+        cart_item_number();
+        $(".shadow-ting").css("visibility", "visible");
+        $(".catItemPopup").find(".orderQty").text("1");
+      });
+
+      //cart Json
+
+      function cartJson() {
+        jsonObj = [];
+        var cart_empty = 1;
+
+        if ($("#cartOrderList li").length >= 1) {
+          cart_empty = 0;
+          $("#cartOrderList")
+            .find("li")
+            .each(function (index, el) {
+              var item_title = $(this).find(".orderLabel").html();
+              var item_price = $(this).find(".total_li_price").html();
+              var item_single_price = $(this).attr("data-item-li-price");
+              var item_qty = $(this).find(".orderQty").html();
+
+              var options = $(this).find(".orderinfo").html();
+              var has_options = 0;
+              if (options != "") {
+                has_options = 1;
+              }
+
+              item = {};
+              item["item_title"] = item_title;
+              item["qty"] = item_qty;
+              item["single_price"] = item_single_price;
+              item["total_price"] = item_price;
+
+              item["has_options"] = has_options;
+              item["options"] = options;
+
+              jsonObj.push(item);
+            });
+        }
+
+        var cart_id = "100016";
+        var cart_session = {
+          cart_id: cart_id,
+          is_empty: cart_empty,
+
+          cart_content: jsonObj,
+        };
+
+        console.log(cart_session);
+      }
+
+      function cartPtint() {
+        var cart_id = "100016";
+        var cart_data = {
+          cart_id: cart_id,
+          is_empty: "0",
+
+          cart_content: [
+            {
+              item_title: "Sushi 1",
+              qty: "3",
+              single_price: "20.43",
+              total_price: "61.29",
+              has_options: "1",
+              options: "Size: Small Sauces: Large+ ",
+            },
+            {
+              item_title: "Sushi 1",
+              qty: "2",
+              single_price: "24.40",
+              total_price: "48.80",
+              has_options: "1",
+              options: "Size: Large Toppings:  Peperoni (x2), Corns (x2) ",
+            },
+            {
+              item_title: "Hot Food 1",
+              qty: "3",
+              single_price: "4.45",
+              total_price: "13.35",
+              has_options: "0",
+              options: " ",
+            },
+          ],
+        };
+
+        $(cart_data).each(function (index, data) {
+          var cart_content = data.cart_content;
+          $(cart_content).each(function (index, data) {
+            var item_title = data.item_title;
+            var qty = data.qty;
+            var single_price = data.single_price;
+            var total_price = data.total_price;
+            var has_options = data.has_options;
+            var options = data.options;
+
+            var item_html =
+              '<li data-item-li-price="' +
+              single_price +
+              '"><div class="orderLabel-col"><span class="orderLabel">' +
+              item_title +
+              '</span><div class="orderAddRemoveBtns flex-container"><div class="orderRemoveBtn"><div class="cart-icon" onclick="cartIncrement(event, -1, true)"><img src="images/minus.svg"></div></div><span class="orderQty">' +
+              qty +
+              '</span> <div class="orderAddBtn"><div class="cart-icon" onclick="cartIncrement(event, 1, true)"><img src="images/add-button.svg"></div> </div></div><span class="orderPrice">£ <span class="total_li_price">' +
+              total_price +
+              '</span></span></div><div class="orderinfo">' +
+              options +
+              '</div><input type="hidden" name="item_id" val="' +
+              cart_id +
+              '"> </li>';
+
+            $("#cartOrderList").find(".cart_empty_text").remove();
+            $(".cartWrap")
+              .find(".input-coupon")
+              .removeClass("hide_div")
+              .addClass("show_div");
+            $("#cartOrderList").append(item_html);
+            cart_item_number();
+          });
+        });
+      }
+
+      function cart_item_number() {
+        var total_item = $("#cartOrderList li").length;
+        var total_item_count = 0;
+        $("#cartOrderList li").each(function () {
+          total_item_count += parseInt($(this).find(".orderQty").text(), 10);
+          // console.log($(this).find('.orderQty').text());
+        });
+        // $('.mobile_cart_item_total').text(total_item);
+        $(".mobile_cart_item_total").text(total_item_count);
+        var cart_total_rate = 0;
+        $("#cartOrderList")
+          .find(".total_li_price")
+          .each(function (index, el) {
+            cart_total_rate += parseFloat($(this).text());
+          });
+        $(".cart_total_price").text(cart_total_rate.toFixed(2));
+        if ($("#cartOrderList").find("li").length == 0) {
+          $("#cartOrderList").append(
+            '<p class="cart_empty_text">Cart is empty.</p>'
+          );
+          $(".cartWrap")
+            .find(".input-coupon")
+            .addClass("hide_div")
+            .removeClass("show_div");
+        }
+      }
+
+      function cartIncrement(event, value, cart) {
+        var currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+        currentVal = $(currentVal).find(".orderQty");
+        currentVal = $(currentVal).text();
+        currentVal = parseInt(currentVal);
+
+        if (value == -1 && currentVal == 1) {
+          if (cart == true) {
+            var item_li = event.currentTarget.closest("li");
+            var item_price = $(item_li).attr("data-item-li-price");
+            $(item_li).remove();
+            $(".notify").addClass("notify-active");
+            $("#notifyType").addClass("failure");
+            setTimeout(function () {
+              $(".notify").removeClass("notify-active");
+              $("#notifyType").removeClass("failure");
+            }, 1000);
+            cart_item_number();
+            cartJson();
+            //console.log(item_price);
+            return true;
+          } else {
+            return true;
+          }
+        }
+        if (cart == true) {
+          var currentparentdiv = event.currentTarget.closest(".orderLabel-col");
+          var current_item_rate = $(currentparentdiv)
+            .parent("li")
+            .attr("data-item-li-price");
+          var currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+          currentVal = $(currentVal).find(".orderQty");
+          currentVal = $(currentVal).text();
+          currentVal = parseInt(currentVal);
+          if (value == 1 && currentVal >= 0) {
+            var newVal = currentVal + value;
+            currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+            currentVal = $(currentVal).find(".orderQty");
+            currentVal = $(currentVal).html(newVal);
+            var new_current_item_rate = parseFloat(
+              current_item_rate * newVal
+            ).toFixed(2);
+            $(currentparentdiv)
+              .find(".total_li_price")
+              .text(new_current_item_rate);
+            var cart_total_rate = 0;
+            $("#cartOrderList")
+              .find(".total_li_price")
+              .each(function (index, el) {
+                cart_total_rate += parseFloat($(this).text());
+              });
+            $(".cart_total_price").text(cart_total_rate.toFixed(2));
+          }
+          if (value == -1 && currentVal != 0) {
+            var newVal = currentVal + value;
+            currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+            currentVal = $(currentVal).find(".orderQty");
+            currentVal = $(currentVal).html(newVal);
+            var new_current_item_rate = parseFloat(
+              current_item_rate * newVal
+            ).toFixed(2);
+            $(currentparentdiv)
+              .find(".total_li_price")
+              .text(new_current_item_rate);
+            var cart_total_rate = 0;
+            $("#cartOrderList")
+              .find(".total_li_price")
+              .each(function (index, el) {
+                cart_total_rate += parseFloat($(this).text());
+              });
+            $(".cart_total_price").text(cart_total_rate.toFixed(2));
+          }
+          cartJson();
+          //console.log($(currentparentdiv).find('.total_li_price').text());
+        } else {
+          var total_price = parseFloat($(".total_price").val());
+          var currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+          currentVal = $(currentVal).find(".orderQty");
+          currentVal = $(currentVal).text();
+          currentVal = parseInt(currentVal);
+          if (value == -1 && currentVal != 0) {
+            var newVal = currentVal + value;
+            currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+            currentVal = $(currentVal).find(".orderQty");
+            currentVal = $(currentVal).html(newVal);
+
+            var sum = 0;
+            $(".calc:checked").each(function () {
+              sum += Number($(this).attr("data-main-price"));
+            });
+
+            var itemPrice = $(".chooseDealBtns").data("itemPrice");
+            var Total_price = newVal * (sum + itemPrice);
+            $(".subtotal_price").val((sum + itemPrice).toFixed(2));
+            $(".ckh_price").text(Total_price.toFixed(2));
+
+            $(".total_price").val(Total_price.toFixed(2));
+          }
+          if (value == 1 && currentVal >= 0) {
+            var newVal = currentVal + value;
+            currentVal = event.currentTarget.closest(".orderAddRemoveBtns");
+            currentVal = $(currentVal).find(".orderQty");
+            currentVal = $(currentVal).html(newVal);
+
+            var sum = 0;
+            $(".calc:checked").each(function () {
+              sum += Number($(this).attr("data-main-price"));
+            });
+
+            var itemPrice = $(".chooseDealBtns").data("itemPrice");
+            var Total_price = newVal * (sum + itemPrice);
+            $(".subtotal_price").val((sum + itemPrice).toFixed(2));
+            $(".ckh_price").text(Total_price.toFixed(2));
+
+            $(".total_price").val(Total_price.toFixed(2));
+          }
+        }
+        cart_item_number();
+      }
+
+      // collection Popup JS
+
+      $(".collectionDiv a").click(function (event) {
+        if ($("body").find(".search-form").css("display") == "block") {
+          $("body").find(".search-form").fadeOut();
+        } else {
+          event.preventDefault();
+          $(".collectionPopup").fadeIn();
+          $(".collectionPopup").css("display", "block !important");
+          $("body").css("overflow", "hidden");
+        }
+
+        if ($(window).width() > 767) {
+          $("body").css("margin-right", getScrollbarWidth() + "px");
+        }
+      });
+
+      $(document).ready(function () {
+        cart_item_number();
+        $(".collectionPopup").fadeIn();
+        if ($(window).width() < 767) {
+          //$('#main').hide();
+        }
+        $("body").css("overflow", "hidden");
+
+        if ($(window).width() > 767) {
+          $("body").css("margin-right", getScrollbarWidth() + "px");
+        }
+
+        $("#tabs li a:not(:first)").addClass("inactive");
+        $(".tab").hide();
+        $(".tab:first").show();
+
+        $("#tabs li a").click(function () {
+          var t = $(this).attr("id");
+          if ($(this).hasClass("inactive")) {
+            //this is the start of our condition
+            $("#tabs li a").addClass("inactive");
+            $(this).removeClass("inactive");
+
+            $(".tab").hide();
+            $("#" + t + "C").fadeIn("slow");
+          }
+        });
+      });
+
+      $(".effect-16").on("input", function () {
+        if ($(this).val() != "") {
+          $(this).addClass("hidelabel");
+          $(this)
+            .parent(".hide_placeholder")
+            .find(".background")
+            .css("visibility", "hidden");
+          //  $('.background').css('visibility','hidden');
+        }
+        if ($(this).val() == "") {
+          $(this).removeClass("hidelabel");
+          $(this)
+            .parent(".hide_placeholder")
+            .find(".background")
+            .css("visibility", "visible");
+        }
+      });
+
+      $(document).click(function (event) {
+        //if you click on anything except the modal itself or the "open modal" link, close the modal
+
+        if (
+          !$(event.target).closest(
+            ".catItemPopupContentInner, .navDetailList li a, #viewCart, .cartElementWrap, .search-bar, .search-box"
+          ).length
+        ) {
+
+          if ($(".collectionPopup:visible").length) {
+            console.log("hap");
+            if (windowWidth < 767) {
+              if ($("body").find(".search-form").css("display") == "block") {
+                // console.log('yes');
+              } else if (
+                $("body").find(".collectionPopup").css("display") == "block"
+              ) {
+              } else {
+                $(".navigation a").eq(i).focus();
+              }
+            }
+          } else {
+            $(".catItemPopup").find(".orderQty").text("1");
+            // using When & then methods.
+            $.when(
+              $("body").find(".catItemPopup").fadeOut(),
+              $("#main").show()
+            ).then(function () {
+              $(".calc").prop("checked", false);
+              $(".single").html("");
+              $(".multiple").html("");
+
+              $("body").css("overflow", "auto");
+              $("body").css("position", "unset");
+              $("body").find(".search-form").fadeOut();
+              // $(".search-bar").show();
+
+              if ($(window).width() > 767) {
+                $("body").css("margin-right", "0px");
+              }
+            });
+          }
+        }
+      });
+
+      $("#viewCart").click(function (event) {
+        if ($("body").find(".search-form").css("display") == "block") {
+          $("body").find(".search-form").fadeOut();
+          //$(".search-bar").show();
+        } else {
+          event.preventDefault();
+          $("body").css("overflow", "hidden");
+          $("body").find(".catItemPopup").fadeOut();
+          $("body").find(".collectionPopup").fadeOut();
+          $("#main").show();
+          $(".cancel-payment").show();
+          $(".search-bar").hide();
+          $(".priceProducts").show();
+          $(".input-coupon").show();
+          $(".categoriesmenu").hide();
+          $("#viewCart li:nth-child(2) p").text("Continue Payment");
+          $(".cartElementWrap").fadeIn();
+          $(".cartOuterWrap").css("height", $(window).height());
+          $(".cartWrapfooter").show();
+        }
+        // $('body').css('overflow', 'hidden');
+
+        setInterval(function () {
+          var fullheight = window.innerHeight;
+          var header1 = document.getElementById("header").clientHeight;
+          var header2 =
+            document.getElementsByClassName("priceProducts")[0].clientHeight;
+          var footer =
+            document.getElementsByClassName("input1")[0].clientHeight;
+          var totals = header1 + header2 + footer + 20;
+          var final = fullheight - totals;
+          $(".cartWrap").attr(
+            "style",
+            "max-height: " + final + "px !important"
+          );
+        }, 100);
+      });
+
+      $(".catItemPopupClose").click(function (event) {
+        // using When & then methods.
+        $.when(
+          $(".catItemPopup").fadeOut(),
+          $(".collectionPopup").fadeOut()
+        ).then(function () {
+          $(".calc").prop("checked", false);
+          $(".single").html("");
+          $(".multiple").html("");
+          $("#main").show();
+          $("body").css("overflow", "auto");
+          $("body").css("position", "unset");
+          $(".shadow-ting").css("visibility", "visible");
+          if ($(window).width() > 767) {
+            $("body").css("margin-right", "0px");
+          }
+        });
+      });
+
+      $(".chkOutBtn").click(function (event) {
+        // using When & then methods.
+        $.when(
+          $(".catItemPopup").fadeOut(),
+          $(".collectionPopup").fadeOut()
+        ).then(function () {
+          $(".calc").prop("checked", false);
+          $(".single").html("");
+          $(".multiple").html("");
+          $("#main").show();
+          $("body").css("overflow", "auto");
+          $("body").css("position", "unset");
+          $(".close").fadeIn();
+          if ($(window).width() > 767) {
+            $("body").css("margin-right", "0px");
+          }
+        });
+
+        var checval = $("input#collection").val();
+        if (checval == 1) {
+          $(".order_round_sub_m").html(
+            '<div class="order_round_sub"><div class="order_icon"><img src="images/collection_blue.svg"></div><div class="order_icon_text_m">Collection<br> On Time</div>'
+          );
+
+          $(".order_round_sub_m").css({
+            right: "4px",
+            left: "auto",
+          });
+        } else {
+          $(".order_round_sub_m").html(
+            '<div class="order_round_sub"><div class="order_icon"><img src="images/delivery_blue.svg"></div><div class="order_icon_text_m">Delivery<br> 25-30 Mins</div></div>'
+          );
+          $(".order_round_sub_m").css({
+            left: "4px",
+            right: "auto",
+          });
+        }
+      });
+
+      var windowWidth = $(window).width();
+      if (windowWidth > 760) {
+        $(window).on("load", function () {
+          stickySection(
+            ".cartOuterWrap",
+            ".cartElementWrap",
+            ".stickyElementsContainer"
+          );
+          stickySection(".catNavOuter", ".catNavWrap", ".categoriesWrapper");
+        });
+        $(window).resize(function (event) {
+          setTimeout(function () {
+            stickySection(
+              ".cartOuterWrap",
+              ".cartElementWrap",
+              ".stickyElementsContainer"
+            );
+            stickySection(".catNavOuter", ".catNavWrap", ".categoriesWrapper");
+          }, 300);
+        });
+      }
+
+      $(document).ready(function () {
+        $('a[href*="#"]:not([href="#"])').click(function (e) {
+          //$('a[href*=#]').bind('click', function(e) {
+          e.preventDefault(); // prevent hard jump, the default behavior
+
+          var target = $(this).attr("href"); // Set the target as variable
+          // perform animated scrolling by getting top-position of target-element and set it as scroll target
+          $("html, body")
+            .stop()
+            .animate(
+              {
+                scrollTop: $(target).offset().top,
+              },
+              600,
+              function () {
+                location.hash = target; //attach the hash (#jumptarget) to the pageurl
+              }
+            );
+
+          $("body").find(".cartElementWrap").fadeOut();
+
+          $("body").find(".catItemPopup").fadeOut();
+          $("body").css("overflow", "auto");
+          return false;
+        });
+      });
+
+      $(".search-bar div").click(function (e) {
+        $(".search-form").fadeIn();
+        $(".search-box").focus();
+        $(".serch-btn").addClass("text-blue");
+        // $(".search-bar").hide(500);
+      });
+      // $(".search-form").submit( function(e) {
+      //    if($('.search-box').val().length == 0){
+      //       e.preventDefault();
+      //       $(".search-bar").show();
+      //       $(".search-form").fadeOut();
+      //    }
+      //    else {
+      //       $(".serch-btn").click();
+      //    }
+      // });
+      $(".cancel-payment div").click(function (e) {
+        event.preventDefault();
+        //$('body').css('overflow', 'hidden');
+        $(".cancel-payment").hide();
+        $(".search-bar").show();
+        $(".priceProducts").hide();
+        $(".input-coupon").attr("style", "display:none !important");
+        $(".categoriesmenu").show();
+        $("#viewCart li:nth-child(2) p").text("View Cart");
+        $(".cartElementWrap").fadeOut();
+        $(".cartOuterWrap").css("height", $(window).height());
+        $("body").css("overflow", "auto");
+        $("body").css("position", "unset");
+
+        if ($(window).width() > 767) {
+          $("body").css("margin-right", "0px");
+        }
+      });
+
+      $(window)
+        .scroll(function () {
+          var scrollDistance = $(window).scrollTop();
+
+          // Show/hide menu on scroll
+          //if (scrollDistance >= 850) {
+          //    $('nav').fadeIn("fast");
+          //} else {
+          //    $('nav').fadeOut("fast");
+          //}
+          var extraH = "";
+          if (
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+              navigator.userAgent
+            )
+          ) {
+            extraH = 400;
+          }
+          var leftPos = $(".catNavOuter").scrollLeft();
+          // Assign active class to nav links while scolling
+          $(".page-section").each(function (i) {
+            if ($(this).position().top <= scrollDistance + extraH) {
+              $(".navigation a.active").removeClass("active");
+              if ($("#selectedval").val() == 0) {
+                $(".navigation a").eq(i).addClass("active");
+              } else {
+                $(".navigation a")
+                  .eq(Number($("#selectedval").val()) - 1)
+                  .addClass("active");
+              }
+              var windowWidth = $(window).width();
+              if (windowWidth < 767) {
+                if ($("body").find(".search-form").css("display") == "block") {
+                  // console.log('yes');
+                } else if (
+                  $("body").find(".collectionPopup").css("display") == "block"
+                ) {
+                } else {
+                  $(".navigation a").eq(i).focus();
+                }
+              }
+              var jump = $(".navigation a").attr("href");
+              //$('#selectedval').val(0);
+
+              if (i == 3) {
+                $(".catNavOuter").scrollTo("#coodi" + i);
+              }
+            }
+          });
+        })
+        .scroll();
+
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          //  console.log($(window).scrollTop())
+          //if ($(window).scrollTop() > 5) {
+          //  $('#header').addClass('navbar-fixed');
+          // }
+          // if ($(window).scrollTop() < 6) {
+          //    $('#header').removeClass('navbar-fixed');
+          //  }
+        });
+      });
+
+      function getScrollbarWidth() {
+        // Creating invisible container
+        const outer = document.createElement("div");
+        //outer.style.visibility = 'hidden';
+        outer.style.overflow = "scroll"; // forcing scrollbar to appear
+        outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+        document.body.appendChild(outer);
+
+        // Creating inner element and placing it in the container
+        const inner = document.createElement("div");
+        outer.appendChild(inner);
+
+        // Calculating difference between container's full width and the child width
+        const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+
+        // Removing temporary elements from the DOM
+        outer.parentNode.removeChild(outer);
+
+        return scrollbarWidth;
+      }
+
+      function scrollToCategory(val) {
+        if ($("body").find(".search-form").css("display") == "block") {
+          $("body").find(".search-form").fadeOut();
+        } else {
+          $("#selectedval").val(val);
+          $("html, body").animate(
+            {
+              scrollTop: $("#" + val).offset().top - 120,
+            },
+            1000
+          );
+          setTimeout(function () {
+            $("#selectedval").val(0);
+          }, 1000);
+        }
+        $(".effect-16").on("input", function () {
+          if ($(this).val() != "") {
+            $(this).addClass("hidelabel");
+          }
+          if ($(this).val() == "") {
+            $(this).removeClass("hidelabel");
+          }
+        });
+      }
+
+      $(document).ready(function () {
+        
+$('.input__field--nariko').on('input', function () {
+	if ($(this).val() != '') {
+		$(this).next('label:first-child').addClass('contact-hidelabel');
+	}
+	if ($(this).val() == '') {
+		$(this).next('label:first-child').removeClass('contact-hidelabel');
+	}
+});
+
+        $(".order_round_main").click(function (event) {
+          $(".collectionPopup").fadeIn();
+          $(".collectionPopup").css("display", "block !important");
+          $("body").css("overflow", "hidden");
+          $("body").css("margin-right", getScrollbarWidth() + "px");
+
+          if (windowWidth < 767) {
+            console.log("menu hap");
+            $(".collectionPopup").css("height", "80%");
+            $(".close").fadeOut();
+            //$('.collectionPopup').attr('style', 'height: 80% !important');
+          } else {
+            console.log("menu myll");
+          }
+        });
+      });
+    </script> -->
+  </body>
+</html>

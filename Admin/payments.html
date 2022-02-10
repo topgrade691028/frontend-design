@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Uber Eats</title>
+    <link media="all" rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/flatpickr.min.css" />
+	<script src="js/flatpickr.min.js"></script>
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      defer
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>');
+    </script>
+    <script src="js/select2.min.js" defer></script>
+    <script src="js/jquery.main.js" defer></script>
+    <script src="js/payments.js" defer></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="notify"><span id="notifyType" class=""></span></div>
+      <header id="header">
+        <div class="header-holder">
+          <strong class="logo"
+            ><a href="#"
+              ><img
+                src="images/logo.png"
+                alt="Uber Eats Logo"
+                width="177"
+                height="45" /></a
+          ></strong>
+          <nav id="nav">
+            <a class="nav-opener" href="#"><span>Open</span></a>
+            <div class="nav-drop">
+              <ul class="primary-menu">
+                <li class="menu-item">
+                  <a href="index.html"
+                    ><i class="icon-dashboard"></i
+                    ><i class="icon-dashboard-active"></i>Dashboard</a
+                  >
+                </li>
+                <li class="menu-item">
+                  <a href="orders.html"
+                    ><i class="icon-orders"></i
+                    ><i class="icon-orders-active"></i>Orders</a
+                  >
+                </li>
+                <li class="menu-item active">
+                  <a class="active" href="payments.html"
+                    ><i class="icon-payment"></i
+                    ><i class="icon-payment-active"></i>Payments<i
+                      class="notification"
+                      >03</i
+                    ></a
+                  >
+                </li>
+                <li class="menu-item">
+                  <a href="products.html"
+                    ><i class="icon-products"></i
+                    ><i class="icon-products-active"></i>Products</a
+                  >
+                </li>
+                <li class="menu-item">
+                  <a href="categories.html"
+                    ><i class="icon-category"></i
+                    ><i class="icon-category-active"></i>Categories</a
+                  >
+                </li>
+                <li class="menu-item">
+                  <a href="#"
+                    ><i class="icon-dashboard"></i
+                    ><i class="icon-dashboard-active"></i>Settings</a
+                  >
+                  <ul style="margin-top: 20px">
+                    <li class="menu-item">
+                      <a href="businessinfo.html"
+                        ><i class="icon-help"></i
+                        ><i class="icon-help-active"></i>Bussiness Info</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="holiday-hours.html"
+                        ><i class="icon-calendar"></i
+                        ><i class="icon-calendar-active"></i>Holiday Hours</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="pickup-times.html"
+                        ><i class="icon-times"></i
+                        ><i class="icon-times-active"></i>Pickup Times</a
+                      >
+                    </li>
+                    <li class="menu-item" style="margin-bottom: 0">
+                      <a href="opening-hours.html"
+                        ><i class="icon-calendar"></i
+                        ><i class="icon-calendar-active"></i>Opening Hours</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="user.html"
+                    ><i class="icon-user"></i
+                    ><i class="icon-user-active"></i>Users</a
+                  >
+                </li>
+                <li class="menu-item">
+                  <a href="help.html"
+                    ><i class="icon-info_circle"></i
+                    ><i class="icon-help-active"></i>Help</a
+                  >
+                </li>
+                <li class="menu-item active">
+                  <a class="active" href="#"
+                    ><i class="icon-logout"></i
+                    ><i class="icon-logout-active"></i>Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="mobile_bel_icon mobile_only notification_drop">
+            <a href="#"><i class="icon-notification"></i><span>4</span></a>
+            <div class="notify_menu">
+              <a href="#">Notification <span>1</span></a>
+              <a href="#">Notification <span>2</span></a>
+              <a href="#">Notification <span>3</span></a>
+              <a href="#">Notification <span>4</span></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main id="main">
+        <div class="container">
+          <div class="title-wrapper">
+            <h1>Payments</h1>
+
+            <ul class="top-icons desktopOnly">
+              <li class="notification_drop">
+                <a href="#"><i class="icon-notification"></i><span>4</span></a>
+                <div class="notify_menu">
+                  <a href="#">Notification <span>1</span></a>
+                  <a href="#">Notification <span>2</span></a>
+                  <a href="#">Notification <span>3</span></a>
+                  <a href="#">Notification <span>4</span></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-row fade-tabset">
+            <ul class="tabset">
+              <li class="active"><a href="#tab-1">Earnings</a></li>
+              <li><a href="#tab-2">Invoices</a></li>
+              <li><a href="#tab-3">Invoice Settings</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab active" id="tab-1">
+                <div class="card-title">
+                  pay period
+                  <div class="custome_toltip">
+                    <a href="#"><i class="icon-info_circle"></i></a>
+                    <span class="toltip_text">Tooltip text</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <form action="#">
+                    <div class="df-row">
+                      <div class="col-xs-12 col-sm-5 col-md-4 col-xl-3">
+							<div class="select-date orders-date" style="width: 100%">
+								<input
+								class="flatpickr-range flatpickr-input"
+								type="text"
+								placeholder="Select Date.."
+								readonly="readonly"
+								/>
+							</div>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- <div class="card-bg-text">You Have No Past Payments</div> -->
+                  <table class="order-table w-100">
+                    <thead>
+                      <tr>
+                        <th>Order Name</th>
+                        <th>Roles</th>
+                        <th>Status</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Order Name">1234</td>
+                        <td data-label="Roles">10 Nov 21:34</td>
+                        <td data-label="Status">
+                          <span class="inactive">Delivered</span>
+                        </td>
+                        <td data-label="Subtotal">$12.40</td>
+                        <td>
+                          <a href="#" class="text-black"
+                            ><i class="icon-more"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Order Name">1234</td>
+                        <td data-label="Roles">10 Nov 21:34</td>
+                        <td data-label="Status">
+                          <span class="inactive">Delivered</span>
+                        </td>
+                        <td data-label="Subtotal">$12.40</td>
+                        <td>
+                          <a href="#" class="text-black"
+                            ><i class="icon-more"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Order Name">1234</td>
+                        <td data-label="Roles">10 Nov 21:34</td>
+                        <td data-label="Status">Pending</td>
+                        <td data-label="Subtotal">$12.40</td>
+                        <td>
+                          <a href="#" class="text-black"
+                            ><i class="icon-more"></i
+                          ></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-title">
+                  bank account details
+                  <div class="custome_toltip">
+                    <a href="#"><i class="icon-info_circle"></i></a>
+                    <span class="toltip_text">Tooltip text</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <form class="earnings" action="#">
+                    <div class="df-row flex-start">
+                      <div class="col-xs-12 col-sm-6 col-md-4 align-end">
+                        <label for="name"
+                          >Account Holder's Name As Per Bank Statement</label
+                        >
+                        <input
+                          id="name"
+                          type="text"
+                          placeholder="Enter name here"
+                          name="name"
+                          title="Name"
+                        />
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4 align-end">
+                        <label for="bank-name">Bank Name</label>
+                        <input
+                          id="bank-name"
+                          type="text"
+                          placeholder="Enter Bank Name"
+                          name="bank-name"
+                          title="Bank Name"
+                        />
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4 align-end">
+                        <label for="other">Other</label>
+                        <input
+                          id="other"
+                          type="text"
+                          placeholder="Enter Other"
+                          name="other"
+                          title="Enter Other"
+                        />
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+                        <label for="address">Full Address</label>
+                        <textarea
+                          id="address"
+                          placeholder="Enter address here"
+                          name="address"
+                          title="Address"
+                          rows="2"
+                        ></textarea>
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4 bordered-field">
+                        <label for="account-number">Account Number</label>
+                        <input
+                          id="account-number"
+                          type="password"
+                          placeholder="••••••••"
+                          name="account-number"
+                          maxlength="8"
+                          title="Account Number"
+                        />
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4 bordered-field">
+                        <label for="sort-code">Sort Code</label>
+                        <input
+                          id="sort-code"
+                          type="text"
+                          placeholder="Enter Sort Code"
+                          name="sort-code"
+                          title="Sort Code"
+                        />
+                      </div>
+                      <div class="col-xs-12 col-lg-6">
+                        <div class="df-row">
+                          <div class="col-xs-12 col-sm-6">
+                            <label for="city">City</label>
+                            <input
+                              id="city"
+                              type="text"
+                              placeholder="Enter City Name"
+                              name="city"
+                              title="City"
+                            />
+                          </div>
+                          <div class="col-xs-12 col-sm-6">
+                            <label for="postal-code">Postal Code</label>
+                            <input
+                              id="postal-code"
+                              type="text"
+                              placeholder="Enter Code"
+                              name="postal-code"
+                              title="City"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-lg-6">
+                        <div class="btn-wrap pull-right-desktop">
+                          <a class="btn btn-warning" href="#"
+                            ><i class="icon-checkbox_white"></i>Weekly Payout</a
+                          ><a class="btn btn-default" href="#">Cancel</a
+                          ><a class="btn btn-primary btn-submit">Save Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="tab" id="tab-2">
+                <div class="card-title">
+                  pay period
+                  <div class="custome_toltip">
+                    <a href="#"><i class="icon-info_circle"></i></a>
+                    <span class="toltip_text">Tooltip text</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <form action="#">
+                    <div class="df-row">
+                      <div class="col-xs-12 col-sm-5 col-md-4 col-xl-3">
+                        <div class="select-date orders-date" style="width: 100%">
+                          <input
+                          class="flatpickr-range flatpickr-input"
+                          type="text"
+                          placeholder="Select Date.."
+                          readonly="readonly"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- <div class="card-bg-text">You Have No Past Payments</div> -->
+                  <table class="order-table w-100">
+                    <thead>
+                      <tr>
+                        <th>Order Name</th>
+                        <th>Roles</th>
+                        <th>Status</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Order Name">1234</td>
+                        <td data-label="Roles">10 Nov 21:34</td>
+                        <td data-label="Status">
+                          <span class="inactive">Delivered</span>
+                        </td>
+                        <td data-label="Subtotal">$12.40</td>
+                        <td>
+                          <a href="#" class="text-black"
+                            ><i class="icon-more"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Order Name">1234</td>
+                        <td data-label="Roles">10 Nov 21:34</td>
+                        <td data-label="Status">
+                          <span class="inactive">Delivered</span>
+                        </td>
+                        <td data-label="Subtotal">$12.40</td>
+                        <td>
+                          <a href="#" class="text-black"
+                            ><i class="icon-more"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Order Name">1234</td>
+                        <td data-label="Roles">10 Nov 21:34</td>
+                        <td data-label="Status">Pending</td>
+                        <td data-label="Subtotal">$12.40</td>
+                        <td>
+                          <a href="#" class="text-black"
+                            ><i class="icon-more"></i
+                          ></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="tab" id="tab-3"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

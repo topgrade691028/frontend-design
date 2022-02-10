@@ -1,0 +1,306 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="stylesheet" href="./tailwind.css" />
+  <title>Let's Build: With Tailwind CSS - Responsive Navbar</title>
+</head>
+
+<body class="antialiased">
+  <header class="w-screen fixed z-50 bg-white">
+    <div class="flex justify-around p-4 shadow-lg h-20 ">
+      <img src="./images/logo.svg" alt="logo" class="w-36 h-8" />
+      <div class="hidden sm:flex divide-x-2 divide-gray-300 p-2 rounded-full bg-gray-200 gap-4">
+        <input type="text" class="px-2 py-1 bg-gray-200 outline-none w-64" placeholder="Find accounts" />
+        <button>
+          <img src="./images/ic_search.svg" alt="serch" class="mx-2 w-5" />
+        </button>
+      </div>
+      <button class="px-10 xl:px-20 bg-red-500 rounded-md text-white font-bold hover:bg-red-700">Register</button>
+    </div>
+  </header>
+  <header class="
+        lg:px-60
+        px-6
+        bg-white
+        flex flex-wrap
+        items-center
+        lg:py-0
+        py-2
+        justify-between
+        border-b
+      " style="height: 90px; display: none;">
+    <a href="#">
+      <img src="./images/logo.png" />
+    </a>
+    <div class="flex rounded-l-full rounded-r-full">
+      <input type="text" style="background-color: rgba(196, 196, 196, 0.3)"
+        class="px-4 py-2 w-80 rounded-l-full outline-none" placeholder="Find accounts" />
+      <button class="flex items-center justify-center px-4 border-l rounded-r-full"
+        style="background-color: rgba(196, 196, 196, 0.3)">
+        <img src="./images/search.png" style="width: 16px" />
+      </button>
+    </div>
+    <button class="flex items-center justify-center px-4" style="
+          background-color: #e81224;
+          border-radius: 5px;
+          width: 186px;
+          height: 50px;
+          color: white; ;
+        ">
+      Register
+    </button>
+  </header>
+  <div class="
+        lg:px-60
+        px-6
+        bg-white
+        lg:py-0
+        py-2
+        mt-3
+      ">
+    <div class="grid grid-cols-3">
+      <div class="pb-3">
+        <div class="w-full  border-b ">
+          <div class="flex items-center my-4 cursor-pointer">
+            <img class="w-6 h-6" src="./images/home_selected.png">
+            <div class="font-semibold ml-4" style="color:#E81224;">
+              Home
+            </div>
+          </div>
+          <div class="flex items-center my-4 cursor-pointer">
+            <img class="w-6 h-6" src="./images/explore.png">
+            <div class="font-semibold ml-4" style="color:#000000;">
+              Explore
+            </div>
+          </div>
+          <div class="flex items-center my-4 cursor-pointer">
+            <img class="w-6 h-6" src="./images/followers.png">
+            <div class="font-semibold ml-4" style="color:#000000;">
+              Followers
+            </div>
+          </div>
+          <div class="flex items-center my-4 cursor-pointer">
+            <img class="w-6 h-6" src="./images/home_selected.png">
+            <div class="font-semibold ml-4" style="color:#000000;">
+              Following
+            </div>
+          </div>
+          <div class="flex items-center my-4 cursor-pointer">
+            <img class="w-6 h-6" src="./images/home_selected.png">
+            <div class="font-semibold ml-4" style="color:#000000;">
+              Friends
+            </div>
+          </div>
+          <div class="flex items-center my-4 cursor-pointer">
+            <img class="w-6 h-6" src="./images/favorite.png">
+            <div class="font-semibold ml-4" style="color:#000000;">
+              Favorite
+            </div>
+          </div>
+        </div>
+        <div class="w-full pt-3">
+          <p style="color:#50525A"> Suggested people</p>
+          <div class="flex items-center justify-between my-4">
+            <div class="w-10">
+              <img class="w-8 h-8 rounded-full" src="./images/man1.png">
+            </div>
+            <div class="flex-1 pl-2">
+              <div class="text-black font-semibold" style="font-size: 13px;">
+                willsmith
+              </div>
+              <div class="text-gray flex items-center">
+                <p style="font-size: 12px;">willsmith</p>
+                <img class="w-4 h-auto ml-1" src="./images/canada.png">
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between my-4">
+            <div class="w-10">
+              <img class="w-8 h-8 rounded-full" src="./images/man1.png">
+            </div>
+            <div class="flex-1 pl-2">
+              <div class="text-black font-semibold" style="font-size: 13px;">
+                willsmith
+              </div>
+              <div class="text-gray flex items-center">
+                <p style="font-size: 12px;">willsmith</p>
+                <img class="w-4 h-auto ml-1" src="./images/canada.png">
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between my-4">
+            <div class="w-10">
+              <img class="w-8 h-8 rounded-full" src="./images/man1.png">
+            </div>
+            <div class="flex-1 pl-2">
+              <div class="text-black font-semibold" style="font-size: 13px;">
+                willsmith
+              </div>
+              <div class="text-gray flex items-center">
+                <p style="font-size: 12px;">willsmith</p>
+                <img class="w-4 h-auto ml-1" src="./images/canada.png">
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between my-4">
+            <div class="w-10">
+              <img class="w-8 h-8 rounded-full" src="./images/man1.png">
+            </div>
+            <div class="flex-1 pl-2">
+              <div class="text-black font-semibold" style="font-size: 13px;">
+                willsmith
+              </div>
+              <div class="text-gray flex items-center">
+                <p style="font-size: 12px;">willsmith</p>
+                <img class="w-4 h-auto ml-1" src="./images/canada.png">
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between my-4">
+            <div class="w-10">
+              <img class="w-8 h-8 rounded-full" src="./images/man1.png">
+            </div>
+            <div class="flex-1 pl-2">
+              <div class="text-black font-semibold" style="font-size: 13px;">
+                willsmith
+              </div>
+              <div class="text-gray flex items-center">
+                <p style="font-size: 12px;">willsmith</p>
+                <img class="w-4 h-auto ml-1" src="./images/canada.png">
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="color: #E81224;">show all</p>
+      </div>
+      <div class="col-span-2 px-4">
+        <div class="flex flex-col pb-8 border-b">
+          <div class="flex items-center justify-between my-4">
+            <div class="flex items-center">
+              <div class="w-14">
+                <img class="w-12 h-12 rounded-full" src="./images/man1.png">
+              </div>
+              <div class="flex-1 pl-2">
+                <div class="text-black flex items-center  font-semibold">
+                  <p style="font-size: 15px;">manuelneuer</p>
+                  <img class="w-5 h-auto ml-1" src="./images/canada.png">
+                </div>
+                <div class="text-gray" style="font-size: 13px;">
+                  Hey, I’m looking for new people nearby and you so?
+                </div>
+              </div>
+            </div>
+            <button style="width: 122px; height: 38px; border-radius: 5px; border: 1px solid #E81224; box-sizing: border-box;
+            filter: drop-shadow(0px 10px 21px rgba(232, 18, 36, 0.07)); color: #E81224;">Follow</button>
+          </div>
+          <div class="flex items-center place-content-between">
+            <div class="flex flex-row pl-14">
+              <img src="./images/image.png" class="w-2/3" />
+              <div class="flex flex-col justify-between h-auto  ml-5 items-center">
+                <div class="flex flex-col w-auto">
+                  <button style="background-color: #F1F1F2; border-radius: 5px; width:33px; height: 55px;"
+                    class="flex items-center justify-center my-2">
+                    <img src="./images/button_up.png" />
+                  </button>
+                  <button style="background-color: #F1F1F2; border-radius: 5px; width:33px; height: 55px;"
+                    class="flex items-center justify-center my-2">
+                    <img src="./images/button_down.png" />
+                  </button>
+                </div>
+                <div class="flex flex-col w-auto">
+                  <div class="flex flex-col w-auto items-center">
+                    <button style="background-color: #F1F1F2; border-radius: 33px; width:55px; height: 55px;"
+                      class="flex items-center justify-center my-2">
+                      <img src="./images/heart.png" style="width: 25px;" />
+                    </button>
+                    <span>3.6M</span>
+                  </div>
+                  <div class="flex flex-col w-auto items-center">
+                    <button style="background-color: #F1F1F2; border-radius: 33px; width:55px; height: 55px;"
+                      class="flex items-center justify-center my-2">
+                      <img src="./images/comment.png" style="width: 25px;" />
+                    </button>
+                    <span>112K</span>
+                  </div>
+                  <div class="flex flex-col w-auto items-center">
+                    <button style="background-color: #F1F1F2; border-radius: 33px; width:55px; height: 55px;"
+                      class="flex items-center justify-center my-2">
+                      <img src="./images/star.png" style="width: 25px;" />
+                    </button>
+                    <span>2.1M</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col pb-8 border-b">
+          <div class="flex items-center justify-between my-4">
+            <div class="flex items-center">
+              <div class="w-14">
+                <img class="w-12 h-12 rounded-full" src="./images/man1.png">
+              </div>
+              <div class="flex-1 pl-2">
+                <div class="text-black flex items-center  font-semibold">
+                  <p style="font-size: 15px;">manuelneuer</p>
+                  <img class="w-5 h-auto ml-1" src="./images/canada.png">
+                </div>
+                <div class="text-gray" style="font-size: 13px;">
+                  Hey, I’m looking for new people nearby and you so?
+                </div>
+              </div>
+            </div>
+            <button style="width: 122px; height: 38px; border-radius: 5px; border: 1px solid #E81224; box-sizing: border-box;
+            filter: drop-shadow(0px 10px 21px rgba(232, 18, 36, 0.07)); color: #E81224;">Follow</button>
+          </div>
+          <div class="flex items-center place-content-between">
+            <div class="flex flex-row pl-14">
+              <img src="./images/image.png" class="w-2/3" />
+              <div class="flex flex-col justify-between h-auto  ml-5 items-center">
+                <div class="flex flex-col w-auto">
+                  <button style="background-color: #F1F1F2; border-radius: 5px; width:33px; height: 55px;"
+                    class="flex items-center justify-center my-2">
+                    <img src="./images/button_up.png" />
+                  </button>
+                  <button style="background-color: #F1F1F2; border-radius: 5px; width:33px; height: 55px;"
+                    class="flex items-center justify-center my-2">
+                    <img src="./images/button_down.png" />
+                  </button>
+                </div>
+                <div class="flex flex-col w-auto">
+                  <div class="flex flex-col w-auto items-center">
+                    <button style="background-color: #F1F1F2; border-radius: 33px; width:55px; height: 55px;"
+                      class="flex items-center justify-center my-2">
+                      <img src="./images/heart.png" style="width: 25px;" />
+                    </button>
+                    <span>3.6M</span>
+                  </div>
+                  <div class="flex flex-col w-auto items-center">
+                    <button style="background-color: #F1F1F2; border-radius: 33px; width:55px; height: 55px;"
+                      class="flex items-center justify-center my-2">
+                      <img src="./images/comment.png" style="width: 25px;" />
+                    </button>
+                    <span>112K</span>
+                  </div>
+                  <div class="flex flex-col w-auto items-center">
+                    <button style="background-color: #F1F1F2; border-radius: 33px; width:55px; height: 55px;"
+                      class="flex items-center justify-center my-2">
+                      <img src="./images/star.png" style="width: 25px;" />
+                    </button>
+                    <span>2.1M</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

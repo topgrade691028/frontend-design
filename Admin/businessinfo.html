@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<title>Uber Eats</title>
+		<link media="all" rel="stylesheet" href="css/style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')</script>
+		<script src="js/select2.min.js" defer></script>
+		<script src="js/jquery.main.js" defer></script>
+		<script src="js/businessinfo.js" defer></script>
+	</head>
+	<body>
+		<div id="wrapper">	
+			<div class="notify"><span id="notifyType" class=""></span></div>
+			<header id="header">
+				<div class="header-holder"><strong class="logo"><a href="#"><img src="images/logo.png" alt="Uber Eats Logo" width="177" height="45"></a></strong>
+					<nav id="nav"><a class="nav-opener" href="#"><span>Open</span></a>
+						<div class="nav-drop">
+							<ul class="primary-menu">
+								<li class="menu-item"><a href="index.html"><i class="icon-dashboard"></i><i class="icon-dashboard-active"></i>Dashboard</a></li>
+								<li class="menu-item"><a href="orders.html"><i class="icon-orders"></i><i class="icon-orders-active"></i>Orders</a></li>
+								<li class="menu-item"><a href="payments.html"><i class="icon-payment"></i><i class="icon-payment-active"></i>Payments<i class="notification">03</i></a></li>
+								<li class="menu-item"><a href="products.html"><i class="icon-products"></i><i class="icon-products-active"></i>Products</a></li>
+								<li class="menu-item"><a href="categories.html"><i class="icon-category"></i><i class="icon-category-active"></i>Categories</a></li>
+								<li class="menu-item"><a href="#" class="active"><i class="icon-dashboard"></i><i class="icon-dashboard-active"></i>Settings</a>
+									<ul style="margin-top: 20px;display: block;">
+									  <li class="menu-item active"><a class="active" href="businessinfo.html"><i class="icon-help"></i><i class="icon-help-active"></i>Bussiness Info</a></li>
+									  <li class="menu-item"><a href="holiday-hours.html"><i class="icon-calendar"></i><i class="icon-calendar-active"></i>Holiday Hours</a></li>
+									  <li class="menu-item"><a href="pickup-times.html"><i class="icon-times"></i><i class="icon-times-active"></i>Pickup Times</a></li>      
+									  <li class="menu-item" style="margin-bottom: 0;"><a href="opening-hours.html"><i class="icon-calendar"></i><i class="icon-calendar-active"></i>Opening Hours</a></li>
+								   </ul>
+								</li>
+								<li class="menu-item"><a href="user.html"><i class="icon-user"></i><i class="icon-user-active"></i>Users</a></li>
+								<li class="menu-item"><a href="help.html"><i class="icon-info_circle"></i><i class="icon-help-active"></i>Help</a></li>
+								<li class="menu-item active"><a class="active" href="#"><i class="icon-logout"></i><i class="icon-logout-active"></i>Logout</a></li>
+							 </ul>
+						</div>
+					</nav>
+	               <div class="mobile_bel_icon mobile_only notification_drop">
+	                  <a href="#"><i class="icon-notification"></i><span>4</span></a>
+	                  <div class="notify_menu">
+	                     <a href="#">Notification <span>1</span></a>
+	                     <a href="#">Notification <span>2</span></a>
+	                     <a href="#">Notification <span>3</span></a>
+	                     <a href="#">Notification <span>4</span></a>
+	                  </div>
+	               </div>
+				</div>
+			</header>
+			<main id="main">
+				<div class="container">
+					<div class="title-wrapper">
+						<h1>Business Info</h1>
+							
+	                  <ul class="top-icons desktopOnly">
+	                     <li class="notification_drop">
+	                        <a href="#"><i class="icon-notification"></i><span>4</span></a>
+	                        <div class="notify_menu">
+	                           <a href="#">Notification <span>1</span></a>
+	                           <a href="#">Notification <span>2</span></a>
+	                           <a href="#">Notification <span>3</span></a>
+	                           <a href="#">Notification <span>4</span></a>
+	                        </div>
+	                     </li>
+	                  </ul>
+					</div>
+					<div class="df-row" style="justify-content: flex-end;">
+						<div class="col-xs-12 col-sm-6 col-lg-3" style="text-align: right;">
+							<a class="btn btn-default inactive btn-submit" href="#">Update</a>
+						</div>
+					</div>
+					<div class="card">
+						<div class="df-row">
+							<div class="col-xs-12 col-sm-6 col-lg-3">
+								<div class="addtimeBoxInner">
+									<label>App Name</label>
+									<input type="text" >
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-lg-6">
+								<div class="addtimeBoxInner">
+									<label>Address</label>
+									<input type="text" >
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-lg-3">
+								<div class="addtimeBoxInner">
+									<label>City</label>
+									<input type="text" >
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-lg-3">
+								<div class="addtimeBoxInner">
+									<label>Postcode</label>
+									<input type="text" >
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-lg-3">
+								<div class="addtimeBoxInner">
+									<label>Phone Number</label>
+									<input type="text" >
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-lg-3">
+								<div class="addtimeBoxInner">
+									<label>Logo</label>
+									<div class="input_btn">
+										<input type="text" >
+										<button class="upload_btn">Browse</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-lg-3">
+								<div class="addtimeBoxInner">
+									<label>App Icon</label>
+									<div class="input_btn">
+										<input type="text" >
+										<button class="upload_btn">Browse</button>
+									</div>
+								</div>
+							</div>
+						 </div>						
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

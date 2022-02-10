@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<title>Uber Eats</title>
+		<link media="all" rel="stylesheet" href="css/style.css">
+
+
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+      <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')</script>
+      <script src="js/select2.min.js" defer></script>
+      <script src="js/jquery.main.js" defer></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts" defer></script>
+
+		<script>
+			var options = {
+				  chart: {
+				    type: 'bar'
+				  },
+				  series: [{
+				              name: 'Net Profit',
+				              data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+				            }, {
+				              name: 'Revenue',
+				              data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+				            }, {
+				              name: 'Free Cash Flow',
+				              data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+				            }],
+				  xaxis: {
+				    categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+				  }
+				}
+
+				var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+				chart.render();
+		</script>	
+
+	</head>
+	<body>
+		<div id="wrapper">
+			<header id="header">
+				<div class="header-holder"><strong class="logo"><a href="#"><img src="images/logo.png" alt="Uber Eats Logo" width="177" height="45"></a></strong>
+					<nav id="nav"><a class="nav-opener" href="#"><span>Open</span></a>
+						<div class="nav-drop">
+							<ul class="primary-menu">
+								<li class="menu-item active"><a class="active" href="index.html"><i class="icon-dashboard"></i><i class="icon-dashboard-active"></i>Dashboard</a></li>
+								<li class="menu-item"><a href="orders.html"><i class="icon-orders"></i><i class="icon-orders-active"></i>Orders</a></li>
+								<li class="menu-item"><a href="payments.html"><i class="icon-payment"></i><i class="icon-payment-active"></i>Payments<i class="notification">03</i></a></li>
+								<li class="menu-item"><a href="products.html"><i class="icon-products"></i><i class="icon-products-active"></i>Products</a></li>
+								<li class="menu-item"><a href="categories.html"><i class="icon-category"></i><i class="icon-category-active"></i>Categories</a></li>
+								<li class="menu-item"><a href="#"><i class="icon-dashboard"></i><i class="icon-dashboard-active"></i>Settings</a>
+								   <ul style="margin-top: 20px;">
+									  <li class="menu-item"><a href="businessinfo.html"><i class="icon-help"></i><i class="icon-help-active"></i>Bussiness Info</a></li>
+									  <li class="menu-item"><a href="holiday-hours.html"><i class="icon-calendar"></i><i class="icon-calendar-active"></i>Holiday Hours</a></li>
+									  <li class="menu-item"><a href="pickup-times.html"><i class="icon-times"></i><i class="icon-times-active"></i>Pickup Times</a></li>      
+									  <li class="menu-item" style="margin-bottom: 0;"><a href="opening-hours.html"><i class="icon-calendar"></i><i class="icon-calendar-active"></i>Opening Hours</a></li>
+								   </ul>
+								</li>
+								<li class="menu-item"><a href="user.html"><i class="icon-user"></i><i class="icon-user-active"></i>Users</a></li>
+								<li class="menu-item"><a href="help.html"><i class="icon-info_circle"></i><i class="icon-help-active"></i>Help</a></li>
+								<li class="menu-item active"><a class="active" href="#"><i class="icon-logout"></i><i class="icon-logout-active"></i>Logout</a></li>
+							 </ul>
+						</div>
+					</nav>
+	               <div class="mobile_bel_icon mobile_only notification_drop">
+	                  <a href="#"><i class="icon-notification"></i><span>4</span></a>
+	                  <div class="notify_menu">
+	                     <a href="#">Notification <span>1</span></a>
+	                     <a href="#">Notification <span>2</span></a>
+	                     <a href="#">Notification <span>3</span></a>
+	                     <a href="#">Notification <span>4</span></a>
+	                  </div>
+	               </div>
+				</div>
+			</header>
+			<main class="dashboard" id="main">
+				<div class="container">
+					<div class="title-wrapper">
+						<h1>Dashboard</h1>
+	                  <ul class="top-icons desktopOnly">
+	                     <li class="notification_drop">
+	                        <a href="#"><i class="icon-notification"></i><span>4</span></a>
+	                        <div class="notify_menu">
+	                           <a href="#">Notification <span>1</span></a>
+	                           <a href="#">Notification <span>2</span></a>
+	                           <a href="#">Notification <span>3</span></a>
+	                           <a href="#">Notification <span>4</span></a>
+	                        </div>
+	                     </li>
+	                  </ul>
+					</div>
+					<div class="card no-padd">
+						<div class="top-bar">
+							<div class="col"><img class="top-bar-img" src="images/sangrilla.png" srcset="images/sangrilla.png 1x, images/sangrilla@2x.png 2x, images/sangrilla@3x.png 3x" alt="image description">
+								<div class="heading">
+									<h3>Sangrilla Resto-Bar</h3>
+									<address><i class="icon-location"></i>Connaught Circle, New Delhi, Delhi 110001</address>
+								</div>
+							</div>
+							<div class="col-auto"><a class="btn">Go to Settings</a>
+								<ul class="ratings">
+									<li>Cuisines<span class="value">32</span></li>
+									<li>Avg. Rating<span class="value">4.5</span></li>
+									<li>Monthly Users<span class="value">5100+</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="select-option">
+						<select>
+							<option>Last 7 days</option>
+							<option>Last 6 days</option>
+							<option>Last 5 days</option>
+							<option>Last 4 days</option>
+						</select>
+					</div>
+					<div class="df-row flex-start">
+						<div class="col-xs-12 col-lg-8">
+							<div class="card-title">Summery 
+								<div class="custome_toltip">
+									<a href="#"><i class="icon-info_circle"></i></a>
+									<span class="toltip_text">Tooltip text</span>
+								</div>
+							</div>
+							<div class="card">
+								<ul class="tabset">
+									<li class="active"><a href="#tab-1">Sales ($2,111)</a></li>
+									<li><a href="#tab-2">Order Volume (173)</a></li>
+									<li><a href="#tab-3">Ticket Size ($12.20)</a></li>
+								</ul>
+								<ul class="graph-list graph-list_gray">
+									<li><span class="list-dot">Last 7-14 days</span>
+										<h3 class="graph-list__value-block"> <span class="graph-list__value">$1,587</span></h3>
+									</li>
+									<li><span class="list-dot">Last 7 days</span>
+										<h3 class="graph-list__value-block"><span class="graph-list__value">$2,111</span><span class="trending trending_up">33%</span></h3>
+									</li>
+								</ul>
+								<div class="graph-summery">
+									<div id="summeryChart"></div>
+								</div>
+							</div>
+							<div class="card-title">top selling items 
+								<div class="custome_toltip">
+									<a href="#"><i class="icon-info_circle"></i></a>
+									<span class="toltip_text">Tooltip text</span>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card__title-right">Ranked by Order Volume</div>
+								<div class="circle-items-block">
+									<div class="circle-item circle-item_up">
+										<div class="circle-item__value">56</div>
+										<div class="circle-item__name">Can 330ml</div>
+									</div>
+									<div class="circle-item">
+										<div class="circle-item__value">51</div>
+										<div class="circle-item__name">Sausage (X2)</div>
+									</div>
+									<div class="circle-item">
+										<div class="circle-item__value">49</div>
+										<div class="circle-item__name">Pickled Onion</div>
+									</div>
+									<div class="circle-item">
+										<div class="circle-item__value">43</div>
+										<div class="circle-item__name">Fish</div>
+									</div>
+									<div class="circle-item">
+										<div class="circle-item__value">37</div>
+										<div class="circle-item__name">Fish (X2)</div>
+									</div>
+									<div class="circle-item">
+										<div class="circle-item__value">31</div>
+										<div class="circle-item__name">Chips & Cheese</div>
+									</div>
+									<div class="circle-item">
+										<div class="circle-item__value">30</div>
+										<div class="circle-item__name">Bottle 500ml</div>
+									</div>
+									<div class="circle-item">
+										<div class="circle-item__value">30</div>
+										<div class="circle-item__name">Pumpkin Soup</div>
+									</div>
+									<div class="circle-item">
+										<div class="circle-item__value">26</div>
+										<div class="circle-item__name">Salad (large)</div>
+									</div>
+									<div class="circle-item">
+										<div class="circle-item__value">17</div>
+										<div class="circle-item__name">Fish & Chips</div>
+									</div>
+								</div>
+							</div>
+							<div class="df-row small-blocks">
+								<div class="col-xs-12 col-sm-6">
+									<div class="card-title">top eats
+										<div class="custome_toltip">
+											<a href="#"><i class="icon-info_circle"></i></a>
+											<span class="toltip_text">Tooltip text</span>
+										</div>
+									</div>
+									<div class="card card_top-eats">
+										<div class="card__title-right">Earn Benefits for Great Performance</div>
+										<ul class="items-list">
+											<li>
+												<div class="card-item">
+													<p>December Progress</p><span>Not on Track</span>
+												</div>
+												<div class="card-icon card-icon_gray"><i class="icon-trending_down"></i></div>
+											</li>
+											<li>
+												<div class="card-item card-item_failed">
+													<p>November Status</p><span>Failed</span>
+												</div>
+												<div class="card-icon card-icon_gray"><i class="icon-close"></i></div>
+											</li>
+										</ul><a class="btn btn-default btn_customers" href="#">View Details</a>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<div class="card-title">Skills 
+										<div class="custome_toltip">
+											<a href="#"><i class="icon-info_circle"></i></a>
+											<span class="toltip_text">Tooltip text</span>
+										</div>
+									</div>
+									<div class="card dark-bg">
+										<div class="skills-wrap">
+											<div class="sub-title">Want To Learn More About</div>
+											<h2>Restaurant Manager?</h2>
+											<p>See the official guide for tips, tricks and help.</p><a class="btn btn-default w-100" href="#">View Guide</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-lg-4">
+							<div class="card-title">customers 
+								<div class="custome_toltip">
+									<a href="#"><i class="icon-info_circle"></i></a>
+									<span class="toltip_text">Tooltip text</span>
+								</div>
+							</div>
+							<div class="card card_customers">
+								<div class="row d-flex jc-space-between">
+									<div class="card-item">
+										<p>Total Customers</p><span>131</span>
+									</div>
+									<div class="card-icon"><i class="icon-friends"></i></div>
+								</div>
+								<div class="row"><span class="trending trending_up">5%</span><span class="trending-text">Compared to the Last 7-14 days</span>
+									<div class="progressCol">
+										<div class="progress progress1">
+											<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<div class="progress progress2">
+											<div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<ul class="graph-list">
+										<li><span class="list-dot">Repeat Customers</span>
+											<h3 class="graph-list__value-block"> <span class="graph-list__value">75</span></h3>
+										</li>
+										<li><span class="list-dot">New Customers</span>
+											<h3 class="graph-list__value-block"><span class="graph-list__value">56</span></h3>
+										</li>
+									</ul>
+								</div><a class="btn btn-default btn_customers" href="#">View Details</a>
+							</div>
+							<div class="card-title">Menu item feedback
+								<div class="custome_toltip">
+									<a href="#"><i class="icon-info_circle"></i></a>
+									<span class="toltip_text">Tooltip text</span>
+								</div>
+							</div>
+							<div class="card card_feedback">
+								<div class="card__title-right">29 Ratings</div>
+								<ul class="items-list">
+									<li>
+										<div class="card-item">
+											<p>Like Items</p><span>20</span>
+										</div>
+									</li>
+									<li>
+										<div class="card-item card-item_failed">
+											<p>Disliked Items</p><span>09</span>
+										</div>
+									</li>
+								</ul>
+								<ul class="feedback-items">
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Bottle 500ml</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Half Pizza Crunch Deep Fried</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+									<li class="feedback-item feedback-item_down">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Chips & Cheese</span>
+										<div class="feedback-item__date">Mon 16</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Fish (X2)</span>
+										<div class="feedback-item__date">Mon 16</div>
+									</li>
+									<li class="feedback-item feedback-item_down">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Fish & Chips</span>
+										<div class="feedback-item__date">Mon 16</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Bottle 500ml</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Bottle 500ml</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Bottle 500ml</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Bottle 500ml</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Bottle 500ml</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Bottle 500ml</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Bottle 500ml</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Bottle 500ml</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Bottle 500ml</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+									<li class="feedback-item">
+										<div class="feedback-item__icon"><i class="icon-thumbs"></i></div><span>Bottle 500ml</span>
+										<div class="feedback-item__date">Tue 17</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script>	
+		var options = {
+		  chart: {
+		    type: 'bar'
+		  },
+		  series: [
+		  			{
+		             name: 'Net Profit',
+		              color: "#A7A7A7",
+		              data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+		            }, 
+		            {
+		              name: 'Revenue',
+		              color: "#2B2B2B",
+		              data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+		            }
+		          ],
+		  xaxis: {
+		    categories: ['Nov 17','Nov 18','Nov 19','Nov 20','Nov 21','Nov 22','Nov 23','Nov 24']
+		  }
+		}
+
+		var chart = new ApexCharts(document.querySelector("#summeryChart"), options);
+
+		chart.render();
+	</script>
+
+
+	</body>
+</html>
+
